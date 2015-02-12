@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A79ED3B3-F855-44AE-AE7E-E2B352F746B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Building_Permit_and_Licensing.My.MyApplication</StartupObject>
+    <RootNamespace>Building_Permit_and_Licensing</RootNamespace>
+    <AssemblyName>Building Permit and Licensing</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Building Permit and Licensing.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Building Permit and Licensing.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Building Permit and Licensing.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Building Permit and Licensing.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>City-Logo300px.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="formLogin.Designer.vb">
+      <DependentUpon>formLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMain.Designer.vb">
+      <DependentUpon>formMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formReport.Designer.vb">
+      <DependentUpon>formReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdlGlobal.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\dsPaymentReport.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPaymentReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsPaymentReport.vb">
+      <DependentUpon>dsPaymentReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsReportSummary.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReportSummary.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rptPayments.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPayments.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptReportSummary.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptReportSummary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptSummary.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMain.resx">
+      <DependentUpon>formMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formReport.resx">
+      <DependentUpon>formReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptPayments.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPayments.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptReportSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptReportSummary.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummary.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Report\dsPaymentReport.xsc">
+      <DependentUpon>dsPaymentReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsPaymentReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPaymentReport.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Report\dsPaymentReport.xss">
+      <DependentUpon>dsPaymentReport.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsReportSummary.xsc">
+      <DependentUpon>dsReportSummary.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsReportSummary.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReportSummary.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Report\dsReportSummary.xss">
+      <DependentUpon>dsReportSummary.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Icon_Maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Subdivision.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Building.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Barangay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Building2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Barangay2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Subdivision2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Subdivision3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogInError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximized_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimized_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restored_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximized_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restored_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimized_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Barangay_Navy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Building_Navy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Chart_Navy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Subdivision_Navy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Users_Navy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Calcu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Calcu_Navy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Assessment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Assessment_Navy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Occupancy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Occupancy_Navy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\City-Logo100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\City-Logo300px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\City-Logo500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Search_TIny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10918329_678889768886106_1176651398_o.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Opacity.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Calculator_Navy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon-Dollar_Navy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="City-Logo300px.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

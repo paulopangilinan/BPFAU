@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReportSummary" targetNamespace="http://tempuri.org/dsReportSummary.xsd" xmlns:mstns="http://tempuri.org/dsReportSummary.xsd" xmlns="http://tempuri.org/dsReportSummary.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReportSummary" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReportSummary" msprop:Generator_UserDSName="dsReportSummary">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtReportSummary" msprop:Generator_TableClassName="dtReportSummaryDataTable" msprop:Generator_TableVarName="tabledtReportSummary" msprop:Generator_TablePropName="dtReportSummary" msprop:Generator_RowDeletingName="dtReportSummaryRowDeleting" msprop:Generator_UserTableName="dtReportSummary" msprop:Generator_RowChangingName="dtReportSummaryRowChanging" msprop:Generator_RowEvHandlerName="dtReportSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="dtReportSummaryRowDeleted" msprop:Generator_RowEvArgName="dtReportSummaryRowChangeEvent" msprop:Generator_RowChangedName="dtReportSummaryRowChanged" msprop:Generator_RowClassName="dtReportSummaryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BuildConst" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="BuildConst" msprop:Generator_ColumnVarNameInTable="columnBuildConst" msprop:Generator_ColumnPropNameInTable="BuildConstColumn" msprop:Generator_UserColumnName="BuildConst" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="ElecInst" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="ElecInst" msprop:Generator_ColumnVarNameInTable="columnElecInst" msprop:Generator_ColumnPropNameInTable="ElecInstColumn" msprop:Generator_UserColumnName="ElecInst" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="MechIns" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="MechIns" msprop:Generator_ColumnVarNameInTable="columnMechIns" msprop:Generator_ColumnPropNameInTable="MechInsColumn" msprop:Generator_UserColumnName="MechIns" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="PlumbIns" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="PlumbIns" msprop:Generator_ColumnVarNameInTable="columnPlumbIns" msprop:Generator_ColumnPropNameInTable="PlumbInsColumn" msprop:Generator_UserColumnName="PlumbIns" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="ElectroIns" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="ElectroIns" msprop:Generator_ColumnVarNameInTable="columnElectroIns" msprop:Generator_ColumnPropNameInTable="ElectroInsColumn" msprop:Generator_UserColumnName="ElectroIns" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="BuildAcc" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="BuildAcc" msprop:Generator_ColumnVarNameInTable="columnBuildAcc" msprop:Generator_ColumnPropNameInTable="BuildAccColumn" msprop:Generator_UserColumnName="BuildAcc" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="OtherAcc" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="OtherAcc" msprop:Generator_ColumnVarNameInTable="columnOtherAcc" msprop:Generator_ColumnPropNameInTable="OtherAccColumn" msprop:Generator_UserColumnName="OtherAcc" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="BuildOcc" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="BuildOcc" msprop:Generator_ColumnVarNameInTable="columnBuildOcc" msprop:Generator_ColumnPropNameInTable="BuildOccColumn" msprop:Generator_UserColumnName="BuildOcc" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="BuildInsp" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="BuildInsp" msprop:Generator_ColumnVarNameInTable="columnBuildInsp" msprop:Generator_ColumnPropNameInTable="BuildInspColumn" msprop:Generator_UserColumnName="BuildInsp" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="CertFee" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="CertFee" msprop:Generator_ColumnVarNameInTable="columnCertFee" msprop:Generator_ColumnPropNameInTable="CertFeeColumn" msprop:Generator_UserColumnName="CertFee" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="Fines" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="Fines" msprop:Generator_ColumnVarNameInTable="columnFines" msprop:Generator_ColumnPropNameInTable="FinesColumn" msprop:Generator_UserColumnName="Fines" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="TotalAssess" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="TotalAssess" msprop:Generator_ColumnVarNameInTable="columnTotalAssess" msprop:Generator_ColumnPropNameInTable="TotalAssessColumn" msprop:Generator_UserColumnName="TotalAssess" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="Local" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="Local" msprop:Generator_ColumnVarNameInTable="columnLocal" msprop:Generator_ColumnPropNameInTable="LocalColumn" msprop:Generator_UserColumnName="Local" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="Natl" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="Natl" msprop:Generator_ColumnVarNameInTable="columnNatl" msprop:Generator_ColumnPropNameInTable="NatlColumn" msprop:Generator_UserColumnName="Natl" type="xs:string" default="0.00" minOccurs="0" />
+              <xs:element name="OBO" msprop:nullValue="0.00" msprop:Generator_ColumnPropNameInRow="OBO" msprop:Generator_ColumnVarNameInTable="columnOBO" msprop:Generator_ColumnPropNameInTable="OBOColumn" msprop:Generator_UserColumnName="OBO" type="xs:string" default="0.00" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

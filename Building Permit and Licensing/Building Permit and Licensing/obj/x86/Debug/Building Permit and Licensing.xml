@@ -1,0 +1,100 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+BuildingPermitandLicensing
+</name>
+</assembly>
+<members>
+<member name="P:Building_Permit_and_Licensing.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.DatabaseNameRegistryPath">
+	<summary>
+  Looks up a localized string similar to MySQLDatabase.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.DatabasePasswordRegistryPath">
+	<summary>
+  Looks up a localized string similar to MySQLPassword.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.DatabasePortRegistryPath">
+	<summary>
+  Looks up a localized string similar to MySQLPort.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.DatabaseServerRegistryPath">
+	<summary>
+  Looks up a localized string similar to MySQLServer.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.DatabaseUserRegistryPath">
+	<summary>
+  Looks up a localized string similar to MySQLUserID.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Icon_Barangay">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Icon_Barangay2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Icon_Building">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Icon_Building2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Icon_Chart">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Icon_Maximize">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Icon_Minimize">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Icon_Pointer">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Icon_Restore">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Icon_Subdivision">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Icon_Subdivision2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Icon_Subdivision3">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Icon_Users">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.PopupTitle">
+	<summary>
+  Looks up a localized string similar to BFPAU.
+</summary>
+</member><member name="T:Building_Permit_and_Licensing.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

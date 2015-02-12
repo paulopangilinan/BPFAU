@@ -1,0 +1,38 @@
+C:\Users\Paulo\documents\visual studio 2010\Projects\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.exe
+C:\Users\Paulo\documents\visual studio 2010\Projects\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.pdb
+C:\Users\Paulo\documents\visual studio 2010\Projects\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.xml
+C:\Users\Paulo\documents\visual studio 2010\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building_Permit_and_Licensing.formMain.resources
+C:\Users\Paulo\documents\visual studio 2010\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building_Permit_and_Licensing.Resources.resources
+C:\Users\Paulo\documents\visual studio 2010\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.vbproj.GenerateResource.Cache
+C:\Users\Paulo\documents\visual studio 2010\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.exe
+C:\Users\Paulo\documents\visual studio 2010\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.xml
+C:\Users\Paulo\documents\visual studio 2010\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.pdb
+C:\Users\ppangilinan.DEV\Desktop\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.exe
+C:\Users\ppangilinan.DEV\Desktop\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.xml
+C:\Users\ppangilinan.DEV\Desktop\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.pdb
+C:\Users\ppangilinan.DEV\Desktop\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.exe
+C:\Users\ppangilinan.DEV\Desktop\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.pdb
+C:\Users\ppangilinan.DEV\Desktop\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.xml
+C:\Users\ppangilinan.DEV\Desktop\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building_Permit_and_Licensing.formMain.resources
+C:\Users\ppangilinan.DEV\Desktop\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building_Permit_and_Licensing.Resources.resources
+C:\Users\ppangilinan.DEV\Desktop\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.vbproj.GenerateResource.Cache
+C:\Users\Paulo\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.exe
+C:\Users\Paulo\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.xml
+C:\Users\Paulo\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.pdb
+C:\Users\Paulo\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.exe
+C:\Users\Paulo\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.pdb
+C:\Users\Paulo\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.xml
+C:\Users\Paulo\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building_Permit_and_Licensing.formMain.resources
+C:\Users\Paulo\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building_Permit_and_Licensing.Resources.resources
+C:\Users\Paulo\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.vbproj.GenerateResource.Cache
+C:\Users\Paulo\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building_Permit_and_Licensing.formLogin.resources
+C:\Users\ppangilinan.DEV\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.exe
+C:\Users\ppangilinan.DEV\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.xml
+C:\Users\ppangilinan.DEV\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.pdb
+C:\Users\ppangilinan.DEV\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.exe
+C:\Users\ppangilinan.DEV\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.pdb
+C:\Users\ppangilinan.DEV\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.xml
+C:\Users\ppangilinan.DEV\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building_Permit_and_Licensing.formLogin.resources
+C:\Users\ppangilinan.DEV\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building_Permit_and_Licensing.formMain.resources
+C:\Users\ppangilinan.DEV\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building_Permit_and_Licensing.Resources.resources
+C:\Users\ppangilinan.DEV\Desktop\Projects\Building Permit and Licensing\Building Permit and Licensing\obj\x86\Debug\Building Permit and Licensing.vbproj.GenerateResource.Cache

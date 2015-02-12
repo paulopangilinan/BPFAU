@@ -1,0 +1,104 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+BuildingPermitandLicensing
+</name>
+</assembly>
+<members>
+<member name="P:Building_Permit_and_Licensing.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.DatabaseNameRegistryPath">
+	<summary>
+  Looks up a localized string similar to MySQLDatabase.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.DatabasePasswordRegistryPath">
+	<summary>
+  Looks up a localized string similar to MySQLPassword.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.DatabasePortRegistryPath">
+	<summary>
+  Looks up a localized string similar to MySQLPort.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.DatabaseServerRegistryPath">
+	<summary>
+  Looks up a localized string similar to MySQLServer.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.DatabaseUserRegistryPath">
+	<summary>
+  Looks up a localized string similar to MySQLUserID.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.formNormalHeight">
+	<summary>
+  Looks up a localized string similar to 600.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.formNormalWidth">
+	<summary>
+  Looks up a localized string similar to 1018.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.PopupTitle">
+	<summary>
+  Looks up a localized string similar to BPFAU.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.programmerLogin">
+	<summary>
+  Looks up a localized string similar to SysAdmin.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.programmerPassword">
+	<summary>
+  Looks up a localized string similar to SysAdm1o1.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.slideNormalHeight">
+	<summary>
+  Looks up a localized string similar to 514.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.slideNormalWidth">
+	<summary>
+  Looks up a localized string similar to 809.
+</summary>
+</member><member name="T:Building_Permit_and_Licensing.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:Building_Permit_and_Licensing.dsReportSummary.dtReportSummaryDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Building_Permit_and_Licensing.dsReportSummary.dtReportSummaryRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Building_Permit_and_Licensing.dsReportSummary.dtReportSummaryRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Building_Permit_and_Licensing.dsReportSummary">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Building_Permit_and_Licensing.dsPaymentReport.dtPaymentDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Building_Permit_and_Licensing.dsPaymentReport.dtPaymentRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Building_Permit_and_Licensing.dsPaymentReport.dtPaymentRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Building_Permit_and_Licensing.dsPaymentReport">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+</members>
+</doc>
