@@ -43,7 +43,6 @@ Partial Class formLogin
         Me.Button8 = New System.Windows.Forms.Button()
         Me.txtUserPassword = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.cboUsernames = New System.Windows.Forms.ComboBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.PanelEx4 = New DevComponents.DotNetBar.PanelEx()
         Me.picLogin = New System.Windows.Forms.PictureBox()
@@ -52,13 +51,11 @@ Partial Class formLogin
         Me.panelLogin = New DevComponents.DotNetBar.PanelEx()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtUsername = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.PanelEx5 = New DevComponents.DotNetBar.PanelEx()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TextBoxX2 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.Label182 = New System.Windows.Forms.Label()
-        Me.TextBoxX1 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.Label181 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -98,7 +95,6 @@ Partial Class formLogin
         Me.TextBoxX4 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.TextBoxX6 = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.TextBoxX5 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -106,6 +102,8 @@ Partial Class formLogin
         Me.PanelEx10 = New DevComponents.DotNetBar.PanelEx()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.PanelEx8 = New DevComponents.DotNetBar.PanelEx()
+        Me.cboQuestion = New System.Windows.Forms.ComboBox()
+        Me.cboForgotQUestion = New System.Windows.Forms.ComboBox()
         Me.panelDB.SuspendLayout()
         Me.panelMySQL.SuspendLayout()
         Me.PanelEx1.SuspendLayout()
@@ -367,14 +365,12 @@ Partial Class formLogin
         Me.PanelEx1.Controls.Add(Me.Button8)
         Me.PanelEx1.Controls.Add(Me.txtUserPassword)
         Me.PanelEx1.Controls.Add(Me.Label9)
-        Me.PanelEx1.Controls.Add(Me.cboUsernames)
         Me.PanelEx1.Controls.Add(Me.Button5)
         Me.PanelEx1.Controls.Add(Me.PanelEx4)
         Me.PanelEx1.Controls.Add(Me.btnEnd)
         Me.PanelEx1.Controls.Add(Me.btnLogin)
         Me.PanelEx1.Controls.Add(Me.panelLogin)
         Me.PanelEx1.Controls.Add(Me.txtUsername)
-        Me.PanelEx1.Controls.Add(Me.Label6)
         Me.PanelEx1.Controls.Add(Me.Label8)
         Me.PanelEx1.Location = New System.Drawing.Point(0, 93)
         Me.PanelEx1.Name = "PanelEx1"
@@ -412,7 +408,7 @@ Partial Class formLogin
         Me.txtUserPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
         Me.txtUserPassword.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUserPassword.ForeColor = System.Drawing.Color.Black
-        Me.txtUserPassword.Location = New System.Drawing.Point(254, 137)
+        Me.txtUserPassword.Location = New System.Drawing.Point(254, 126)
         Me.txtUserPassword.Name = "txtUserPassword"
         Me.txtUserPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txtUserPassword.Size = New System.Drawing.Size(180, 31)
@@ -425,24 +421,11 @@ Partial Class formLogin
         Me.Label9.BackColor = System.Drawing.Color.White
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(162, 146)
+        Me.Label9.Location = New System.Drawing.Point(162, 135)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(68, 15)
         Me.Label9.TabIndex = 37
         Me.Label9.Text = "Password : "
-        '
-        'cboUsernames
-        '
-        Me.cboUsernames.BackColor = System.Drawing.Color.White
-        Me.cboUsernames.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboUsernames.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.cboUsernames.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboUsernames.ForeColor = System.Drawing.Color.Black
-        Me.cboUsernames.FormattingEnabled = True
-        Me.cboUsernames.Location = New System.Drawing.Point(254, 66)
-        Me.cboUsernames.Name = "cboUsernames"
-        Me.cboUsernames.Size = New System.Drawing.Size(180, 28)
-        Me.cboUsernames.TabIndex = 1
         '
         'Button5
         '
@@ -554,23 +537,11 @@ Partial Class formLogin
         Me.txtUsername.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
         Me.txtUsername.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsername.ForeColor = System.Drawing.Color.Black
-        Me.txtUsername.Location = New System.Drawing.Point(254, 100)
+        Me.txtUsername.Location = New System.Drawing.Point(254, 89)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(180, 31)
         Me.txtUsername.TabIndex = 2
         Me.txtUsername.WatermarkText = "System Username"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.White
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(162, 73)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(42, 15)
-        Me.Label6.TabIndex = 26
-        Me.Label6.Text = "User : "
         '
         'Label8
         '
@@ -578,7 +549,7 @@ Partial Class formLogin
         Me.Label8.BackColor = System.Drawing.Color.White
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(162, 109)
+        Me.Label8.Location = New System.Drawing.Point(162, 98)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(73, 15)
         Me.Label8.TabIndex = 27
@@ -588,10 +559,10 @@ Partial Class formLogin
         '
         Me.PanelEx5.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelEx5.Controls.Add(Me.cboQuestion)
         Me.PanelEx5.Controls.Add(Me.Label17)
         Me.PanelEx5.Controls.Add(Me.TextBoxX2)
         Me.PanelEx5.Controls.Add(Me.Label182)
-        Me.PanelEx5.Controls.Add(Me.TextBoxX1)
         Me.PanelEx5.Controls.Add(Me.Label181)
         Me.PanelEx5.Controls.Add(Me.Button3)
         Me.PanelEx5.Controls.Add(Me.Button4)
@@ -612,7 +583,7 @@ Partial Class formLogin
         Me.PanelEx5.Controls.Add(Me.Label5)
         Me.PanelEx5.Location = New System.Drawing.Point(0, 0)
         Me.PanelEx5.Name = "PanelEx5"
-        Me.PanelEx5.Size = New System.Drawing.Size(460, 395)
+        Me.PanelEx5.Size = New System.Drawing.Size(460, 350)
         Me.PanelEx5.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx5.Style.BackColor1.Color = System.Drawing.Color.White
         Me.PanelEx5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
@@ -643,7 +614,7 @@ Partial Class formLogin
         Me.TextBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
         Me.TextBoxX2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxX2.ForeColor = System.Drawing.Color.Black
-        Me.TextBoxX2.Location = New System.Drawing.Point(91, 313)
+        Me.TextBoxX2.Location = New System.Drawing.Point(91, 263)
         Me.TextBoxX2.MaxLength = 100
         Me.TextBoxX2.Name = "TextBoxX2"
         Me.TextBoxX2.Size = New System.Drawing.Size(359, 31)
@@ -655,30 +626,11 @@ Partial Class formLogin
         Me.Label182.BackColor = System.Drawing.Color.White
         Me.Label182.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label182.ForeColor = System.Drawing.Color.Black
-        Me.Label182.Location = New System.Drawing.Point(7, 314)
+        Me.Label182.Location = New System.Drawing.Point(7, 264)
         Me.Label182.Name = "Label182"
         Me.Label182.Size = New System.Drawing.Size(63, 30)
         Me.Label182.TabIndex = 111
         Me.Label182.Text = "Security" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Answer : *"
-        '
-        'TextBoxX1
-        '
-        Me.TextBoxX1.BackColor = System.Drawing.Color.White
-        '
-        '
-        '
-        Me.TextBoxX1.Border.BorderGradientAngle = 0
-        Me.TextBoxX1.Border.Class = "TextBoxBorder"
-        Me.TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.TextBoxX1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxX1.ForeColor = System.Drawing.Color.Black
-        Me.TextBoxX1.Location = New System.Drawing.Point(91, 219)
-        Me.TextBoxX1.MaxLength = 300
-        Me.TextBoxX1.Multiline = True
-        Me.TextBoxX1.Name = "TextBoxX1"
-        Me.TextBoxX1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBoxX1.Size = New System.Drawing.Size(359, 88)
-        Me.TextBoxX1.TabIndex = 110
         '
         'Label181
         '
@@ -698,7 +650,7 @@ Partial Class formLogin
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(245, 350)
+        Me.Button3.Location = New System.Drawing.Point(251, 303)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(134, 37)
         Me.Button3.TabIndex = 47
@@ -712,7 +664,7 @@ Partial Class formLogin
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Location = New System.Drawing.Point(82, 350)
+        Me.Button4.Location = New System.Drawing.Point(88, 303)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(134, 37)
         Me.Button4.TabIndex = 46
@@ -856,7 +808,7 @@ Partial Class formLogin
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(73, 30)
         Me.Label12.TabIndex = 37
-        Me.Label12.Text = "Re-Enter" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Password : *"
+        Me.Label12.Text = "Confirm" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Password : *"
         '
         'txtRegPass
         '
@@ -1060,9 +1012,9 @@ Partial Class formLogin
         Me.slideNewUser.BackColor = System.Drawing.Color.White
         Me.slideNewUser.Controls.Add(Me.PanelEx5)
         Me.slideNewUser.ForeColor = System.Drawing.Color.Black
-        Me.slideNewUser.Location = New System.Drawing.Point(0, 22)
+        Me.slideNewUser.Location = New System.Drawing.Point(0, 42)
         Me.slideNewUser.Name = "slideNewUser"
-        Me.slideNewUser.Size = New System.Drawing.Size(460, 396)
+        Me.slideNewUser.Size = New System.Drawing.Size(460, 356)
         Me.slideNewUser.SlideOutButtonVisible = False
         Me.slideNewUser.TabIndex = 13
         Me.slideNewUser.Text = "SlidePanel1"
@@ -1110,8 +1062,8 @@ Partial Class formLogin
         Me.PanelEx9.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx9.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx9.Controls.Add(Me.panelNewPassword)
+        Me.PanelEx9.Controls.Add(Me.cboForgotQUestion)
         Me.PanelEx9.Controls.Add(Me.TextBoxX6)
-        Me.PanelEx9.Controls.Add(Me.TextBoxX5)
         Me.PanelEx9.Controls.Add(Me.Button7)
         Me.PanelEx9.Controls.Add(Me.Label18)
         Me.PanelEx9.Controls.Add(Me.Label20)
@@ -1138,9 +1090,9 @@ Partial Class formLogin
         Me.panelNewPassword.Controls.Add(Me.TextBoxX3)
         Me.panelNewPassword.Controls.Add(Me.TextBoxX4)
         Me.panelNewPassword.Controls.Add(Me.Label22)
-        Me.panelNewPassword.Location = New System.Drawing.Point(3, 57)
+        Me.panelNewPassword.Location = New System.Drawing.Point(5, 57)
         Me.panelNewPassword.Name = "panelNewPassword"
-        Me.panelNewPassword.Size = New System.Drawing.Size(454, 189)
+        Me.panelNewPassword.Size = New System.Drawing.Size(451, 189)
         Me.panelNewPassword.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.panelNewPassword.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.panelNewPassword.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
@@ -1234,30 +1186,11 @@ Partial Class formLogin
         Me.TextBoxX6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
         Me.TextBoxX6.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxX6.ForeColor = System.Drawing.Color.Black
-        Me.TextBoxX6.Location = New System.Drawing.Point(82, 154)
+        Me.TextBoxX6.Location = New System.Drawing.Point(87, 137)
         Me.TextBoxX6.MaxLength = 100
         Me.TextBoxX6.Name = "TextBoxX6"
         Me.TextBoxX6.Size = New System.Drawing.Size(359, 31)
         Me.TextBoxX6.TabIndex = 120
-        '
-        'TextBoxX5
-        '
-        Me.TextBoxX5.BackColor = System.Drawing.Color.White
-        '
-        '
-        '
-        Me.TextBoxX5.Border.BorderGradientAngle = 0
-        Me.TextBoxX5.Border.Class = "TextBoxBorder"
-        Me.TextBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.TextBoxX5.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxX5.ForeColor = System.Drawing.Color.Black
-        Me.TextBoxX5.Location = New System.Drawing.Point(82, 62)
-        Me.TextBoxX5.MaxLength = 300
-        Me.TextBoxX5.Multiline = True
-        Me.TextBoxX5.Name = "TextBoxX5"
-        Me.TextBoxX5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBoxX5.Size = New System.Drawing.Size(359, 88)
-        Me.TextBoxX5.TabIndex = 119
         '
         'Button7
         '
@@ -1279,7 +1212,7 @@ Partial Class formLogin
         Me.Label18.BackColor = System.Drawing.Color.White
         Me.Label18.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label18.ForeColor = System.Drawing.Color.Black
-        Me.Label18.Location = New System.Drawing.Point(9, 155)
+        Me.Label18.Location = New System.Drawing.Point(14, 138)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(63, 30)
         Me.Label18.TabIndex = 115
@@ -1291,7 +1224,7 @@ Partial Class formLogin
         Me.Label20.BackColor = System.Drawing.Color.White
         Me.Label20.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Label20.ForeColor = System.Drawing.Color.Black
-        Me.Label20.Location = New System.Drawing.Point(9, 64)
+        Me.Label20.Location = New System.Drawing.Point(14, 86)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(71, 30)
         Me.Label20.TabIndex = 113
@@ -1355,6 +1288,31 @@ Partial Class formLogin
         Me.PanelEx8.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx8.Style.GradientAngle = 90
         Me.PanelEx8.TabIndex = 15
+        '
+        'cboQuestion
+        '
+        Me.cboQuestion.BackColor = System.Drawing.Color.White
+        Me.cboQuestion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboQuestion.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboQuestion.ForeColor = System.Drawing.Color.Black
+        Me.cboQuestion.FormattingEnabled = True
+        Me.cboQuestion.Location = New System.Drawing.Point(91, 223)
+        Me.cboQuestion.Name = "cboQuestion"
+        Me.cboQuestion.Size = New System.Drawing.Size(359, 28)
+        Me.cboQuestion.TabIndex = 114
+        '
+        'cboForgotQUestion
+        '
+        Me.cboForgotQUestion.BackColor = System.Drawing.Color.White
+        Me.cboForgotQUestion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboForgotQUestion.Enabled = False
+        Me.cboForgotQUestion.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboForgotQUestion.ForeColor = System.Drawing.Color.Black
+        Me.cboForgotQUestion.FormattingEnabled = True
+        Me.cboForgotQUestion.Location = New System.Drawing.Point(87, 87)
+        Me.cboForgotQUestion.Name = "cboForgotQUestion"
+        Me.cboForgotQUestion.Size = New System.Drawing.Size(359, 28)
+        Me.cboForgotQUestion.TabIndex = 121
         '
         'formLogin
         '
@@ -1425,7 +1383,6 @@ Partial Class formLogin
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents PanelEx1 As DevComponents.DotNetBar.PanelEx
-    Friend WithEvents cboUsernames As System.Windows.Forms.ComboBox
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents PanelEx4 As DevComponents.DotNetBar.PanelEx
     Friend WithEvents btnEnd As System.Windows.Forms.Button
@@ -1433,7 +1390,6 @@ Partial Class formLogin
     Friend WithEvents panelLogin As DevComponents.DotNetBar.PanelEx
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtUsername As DevComponents.DotNetBar.Controls.TextBoxX
-    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents PanelEx5 As DevComponents.DotNetBar.PanelEx
     Friend WithEvents cboDesignation As System.Windows.Forms.ComboBox
@@ -1469,7 +1425,6 @@ Partial Class formLogin
     Friend WithEvents StyleManager1 As DevComponents.DotNetBar.StyleManager
     Friend WithEvents PanelEx6 As DevComponents.DotNetBar.PanelEx
     Friend WithEvents PanelEx8 As DevComponents.DotNetBar.PanelEx
-    Friend WithEvents TextBoxX1 As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents Label181 As System.Windows.Forms.Label
     Friend WithEvents TextBoxX2 As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents Label182 As System.Windows.Forms.Label
@@ -1490,5 +1445,6 @@ Partial Class formLogin
     Friend WithEvents TextBoxX4 As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents TextBoxX6 As DevComponents.DotNetBar.Controls.TextBoxX
-    Friend WithEvents TextBoxX5 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents cboQuestion As System.Windows.Forms.ComboBox
+    Friend WithEvents cboForgotQUestion As System.Windows.Forms.ComboBox
 End Class

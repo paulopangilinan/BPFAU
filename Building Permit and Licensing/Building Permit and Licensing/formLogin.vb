@@ -56,7 +56,8 @@ Public Class formLogin
 
         If testSQLConnection(mySQLConnectionString(server, sqlport, database, sqluser, sqlpassword)) Then
             Call establishSQLConnection(mySQLConnectionString(server, sqlport, database, sqluser, sqlpassword))
-            Call loadAdminAccounts()
+            picLogin.Image = My.Resources.DefaultUser
+            Call loadQuestions()
         Else
             MessageBoxEx.Show("Cannot establish connection to the database." & vbNewLine & "Please configure your database connectivity.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
@@ -75,20 +76,32 @@ Public Class formLogin
         slideNewUser.IsOpen = True
     End Sub
 
-    Sub loadAdminAccounts()
-        Dim query As String = "SELECT UserID, CONCAT(FirstName,' ',LastName), UserDescription, UserImage FROM tblUsers"
-        Dim dataAccounts As DataTable = executeQuery(query, "tblUsers")
-        If dataAccounts.Rows.Count > 0 Then
-            cboUsernames.Items.Clear()
-            For userCount As Integer = 0 To dataAccounts.Rows.Count - 1
-                ReDim Preserve userList(userList.Length)
-                userList(userList.Length - 1) = dataAccounts.Rows(userCount)(0).ToString
-                cboUsernames.Items.Add(dataAccounts.Rows(userCount)(1).ToString)
+    Sub loadQuestions()
+        cboQuestion.Items.Clear()
+        cboForgotQUestion.Items.Clear()
+        Dim q As String = "SELECT Question FROM tblquestions ORDER BY ID ASC"
+        Dim dtq As DataTable = executeQuery(q, "getQuestions")
+        If dtq.Rows.Count > 0 Then
+            For i As Integer = 0 To dtq.Rows.Count - 1
+                cboQuestion.Items.Add(dtq.Rows(i)(0).ToString)
+                cboForgotQUestion.Items.Add(dtq.Rows(i)(0).ToString)
             Next
-            cboUsernames.SelectedIndex = 0
         End If
-        dataAccounts.Dispose()
     End Sub
+    'Sub loadAdminAccounts()
+    '    Dim query As String = "SELECT UserID, CONCAT(FirstName,' ',LastName), UserDescription, UserImage FROM tblUsers"
+    '    Dim dataAccounts As DataTable = executeQuery(query, "tblUsers")
+    '    If dataAccounts.Rows.Count > 0 Then
+    '        cboUsernames.Items.Clear()
+    '        For userCount As Integer = 0 To dataAccounts.Rows.Count - 1
+    '            ReDim Preserve userList(userList.Length)
+    '            userList(userList.Length - 1) = dataAccounts.Rows(userCount)(0).ToString
+    '            cboUsernames.Items.Add(dataAccounts.Rows(userCount)(1).ToString)
+    '        Next
+    '        cboUsernames.SelectedIndex = 0
+    '    End If
+    '    dataAccounts.Dispose()
+    'End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         If testSQLConnection(mySQLConnectionString(Trim(txtDBServer.Text), Trim(txtDBPort.Text), Trim(txtDBdatabasename.Text), _
@@ -99,7 +112,7 @@ Public Class formLogin
             Call establishSQLConnection(mySQLConnectionString(server, sqlport, database, sqluser, sqlpassword))
             MessageBoxEx.Show("Connected to server : ." & server, My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Information)
             slideMySQL.IsOpen = False
-            Call loadAdminAccounts()
+            'Call loadAdminAccounts()
         Else
             MessageBoxEx.Show("Cannot establish connection to the database." & vbNewLine & "Please check entered configuration keys.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Call clearAllInput(panelDB)
@@ -115,14 +128,20 @@ Public Class formLogin
             If txtUsername.Text.Trim = My.Resources.programmerLogin And txtUserPassword.Text.Trim = My.Resources.programmerPassword Then
                 slideMySQL.IsOpen = True
             Else
-                If checkLoginCredentials(userIDLogin, txtUsername.Text, txtUserPassword.Text) Then
-                    Call logtrail(userIDLogin, btnLogin.Text, "Accounts", cboUsernames.SelectedItem.ToString)
+                If checkLoginCredentials(txtUsername.Text, txtUserPassword.Text) Then
+                    Call logtrail(userIDLogin, btnLogin.Text, "Accounts", btnLogin.Text)
                     userID = userIDLogin
                     frmMain1 = New formMain
                     frmMain1.lblLoggedName.Text = displayname
                     frmMain1.lblLoggedDesign.Text = designation
-                    frmMain1.picLoggedImage.Image = picLogin.Image
-                    frmMain1.picAccount.Image = picLogin.Image
+                    If IO.File.Exists(userImage) Then
+                        frmMain1.picLoggedImage.Image = Image.FromFile(userImage)
+                        frmMain1.picAccount.Image = Image.FromFile(userImage)
+                    Else
+                        frmMain1.picLoggedImage.Image = My.Resources.DefaultUser
+                        frmMain1.picAccount.Image = My.Resources.DefaultUser
+                    End If
+
                     frmMain1.Show()
                     Me.Hide()
                 Else
@@ -132,15 +151,16 @@ Public Class formLogin
             End If
         Catch ex As Exception
         End Try
-        
+
     End Sub
 
-    Public Function checkLoginCredentials(ByVal userID As String, ByVal username As String, ByVal password As String, Optional ByVal hash As Boolean = True) As Boolean
-        Dim query As String = "SELECT UserID, UserType, UserDescription, Username, CONCAT(FirstName,' ',LastName), MiddleName, UserPwd, UserImage FROM tblUsers WHERE UserID = '" & userID & "' " & _
-                        "AND UserName = '" & initializeQueryEntry(username, True) & "' " & _
+    Public Function checkLoginCredentials(ByVal username As String, ByVal password As String, Optional ByVal hash As Boolean = True) As Boolean
+        Dim query As String = "SELECT UserID, UserType, UserDescription, Username, CONCAT(FirstName,' ',LastName), MiddleName, UserPwd, UserImage FROM tblUsers WHERE " & _
+                        "UserName = '" & initializeQueryEntry(username, True) & "' " & _
                         "AND UserPwd = " & IIf(hash = True, "MD5('" & initializeQueryEntry(password, True) & "')", "'" & initializeQueryEntry(password, True) & "'")
         Dim dtLogin As DataTable = executeQuery(query, "tblUsers")
         If dtLogin.Rows.Count > 0 Then
+            userIDLogin = dtLogin.Rows(dtLogin.Rows.Count - 1)(0).ToString
             displayname = dtLogin.Rows(dtLogin.Rows.Count - 1)(4).ToString
             designation = dtLogin.Rows(dtLogin.Rows.Count - 1)(2).ToString
             userImage = dtLogin.Rows(dtLogin.Rows.Count - 1)(7).ToString
@@ -151,11 +171,6 @@ Public Class formLogin
             Return False
         End If
     End Function
-
-    Private Sub cboUsernames_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cboUsernames.SelectedIndexChanged
-        userIDLogin = userList(cboUsernames.SelectedIndex)
-        Call updateAdminImageDisplay(picLogin, userIDLogin)
-    End Sub
 
     Private Sub btnEnd_Click(sender As System.Object, e As System.EventArgs) Handles btnEnd.Click
         Application.Exit()
@@ -202,9 +217,9 @@ Public Class formLogin
             txtRegPass.Focus()
             Exit Sub
         End If
-        If TextBoxX1.Text.Trim = "" Then
+        If cboQuestion.SelectedIndex = -1 Then
             MessageBoxEx.Show("Security question is required.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            TextBoxX1.Focus()
+            cboQuestion.Focus()
             Exit Sub
         End If
         If TextBoxX2.Text.Trim = "" Then
@@ -215,7 +230,7 @@ Public Class formLogin
         Call saveNewAccount()
         MessageBoxEx.Show("New account successfully saved.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Information)
         ReDim userList(-1)
-        Call loadAdminAccounts()
+        'Call loadAdminAccounts()
         Call logtrail(userIDLogin, "New User", "Accounts", txtRegUser.Text.Trim)
         slideNewUser.IsOpen = False
     End Sub
@@ -225,13 +240,18 @@ Public Class formLogin
             "VALUES('" & cboDesignation.SelectedIndex + 1 & "','" & cboDesignation.SelectedItem.ToString() & "','" & initializeQueryEntry(txtRegUser.Text.Trim, False) & _
             "','" & initializeQueryEntry(txtRegF.Text.Trim, False) & "','" & initializeQueryEntry(txtRegL.Text.Trim, False) & _
             "','" & initializeQueryEntry(txtRegM.Text.Trim, False) & "',MD5('" & initializeQueryEntry(txtRegPass.Text.Trim, False) & "')," & _
-            "'" & initializeQueryEntry(TextBoxX1.Text.Trim, False) & "','" & initializeQueryEntry(TextBoxX2.Text.Trim, False) & "')"
+            "'" & initializeQueryEntry(cboQuestion.SelectedIndex + 1, False) & "','" & initializeQueryEntry(TextBoxX2.Text.Trim, False) & "')"
         Dim dtLoginSave As DataTable = executeQuery(q, "tblUserSave")
 
     End Sub
 
     Private Sub Button8_Click(sender As System.Object, e As System.EventArgs) Handles Button8.Click
-        slideForgot.IsOpen = True
+        Call loadQuestions()
+        If txtUsername.Text.Trim = "" Then
+            MessageBoxEx.Show("Please enter your username to proceed.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            txtUsername.Focus()
+            Exit Sub
+        End If
         Call getSecurityQuestion()
     End Sub
 
@@ -240,11 +260,16 @@ Public Class formLogin
     End Sub
 
     Sub getSecurityQuestion()
-        Dim q As String = "SELECT Question, Answer FROM tblUsers WHERE UserID = '" & userIDLogin & "'"
+        Dim q As String = "SELECT Question, Answer FROM tblUsers WHERE Username = '" & initializeQueryEntry(txtUsername.Text.Trim, True) & "'"
         Dim dt As DataTable = executeQuery(q, "getSecurity")
         If dt.Rows.Count > 0 Then
-            TextBoxX5.Text = dt.Rows(0)(0).ToString
+            cboForgotQUestion.SelectedIndex = CInt(dt.Rows(0)(0).ToString) - 1
             answer = dt.Rows(0)(1).ToString
+            slideForgot.IsOpen = True
+        Else
+            MessageBoxEx.Show("User not found. Please check your username.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            txtUsername.Focus()
+            Exit Sub
         End If
     End Sub
 
@@ -256,9 +281,12 @@ Public Class formLogin
         End If
         If TextBoxX6.Text.Trim.ToLower = answer.ToLower Then
             panelNewPassword.Visible = True
+            TextBoxX6.Text = ""
             Call logtrail(userIDLogin, "Forgot Password", "Accounts", "***")
         Else
             MessageBoxEx.Show("Incorrect answer to security question.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            TextBoxX6.Text = ""
+            TextBoxX6.Focus()
         End If
     End Sub
 
@@ -274,7 +302,7 @@ Public Class formLogin
             TextBoxX3.Focus()
             Exit Sub
         End If
-        Dim q As String = "UPDATE tblUsers SET UserPwd = MD5('" & initializeQueryEntry(TextBoxX3.Text.Trim, False) & "') WHERE UserID = '" & initializeQueryEntry(userIDLogin, True) & "'"
+        Dim q As String = "UPDATE tblUsers SET UserPwd = MD5('" & initializeQueryEntry(TextBoxX3.Text.Trim, False) & "') WHERE Username = '" & initializeQueryEntry(txtUsername.Text.Trim, True) & "'"
         Dim dtSavePass As DataTable = executeQuery(q, "tblSavePass")
         MessageBoxEx.Show("Password successfully changed.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Information)
         Call logtrail(userIDLogin, "Reset Password", "Accounts", "***")

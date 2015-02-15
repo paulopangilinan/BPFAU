@@ -538,6 +538,17 @@ Public Class formMain
         End If
     End Sub
 
+    Sub loadQuestions()
+        cboProfileQuestions.Items.Clear()
+        Dim q As String = "SELECT Question FROM tblquestions ORDER BY ID ASC"
+        Dim dtq As DataTable = executeQuery(q, "getQuestions")
+        If dtq.Rows.Count > 0 Then
+            For i As Integer = 0 To dtq.Rows.Count - 1
+                cboProfileQuestions.Items.Add(dtq.Rows(i)(0).ToString)
+            Next
+        End If
+    End Sub
+
     Sub loadSystemAccount(ByVal username As String)
         Dim query As String = "SELECT UserID, UserType, UserDescription, Username, FirstName, LastName, MiddleName, UserPwd, UserImage, Question, Answer FROM tblUsers WHERE UserID = '" & initializeQueryEntry(username, True) & "'"
         Dim dtAssessors As DataTable = executeQuery(query, "tblAssessors")
@@ -560,7 +571,7 @@ Public Class formMain
             txtUSerDesignation.Text = dtAssessors.Rows(0)(2).ToString
             profilePassword = dtAssessors.Rows(0)(7).ToString
             userNameEdit = dtAssessors.Rows(0)(3).ToString
-            TextBoxX1.Text = dtAssessors.Rows(0)(9).ToString
+            cboProfileQuestions.SelectedIndex = CInt(dtAssessors.Rows(0)(9).ToString) - 1
             TextBoxX2.Text = dtAssessors.Rows(0)(10).ToString
         End If
     End Sub
@@ -1486,6 +1497,7 @@ Public Class formMain
     End Sub
 
     Private Sub ButtonX3_Click(sender As System.Object, e As System.EventArgs) Handles ButtonX3.Click
+        Call loadQuestions()
         Call loadSystemAccount(userID)
         Call logtrail(userID, "View Profile", "Accounts", lblLoggedName.Text)
         panelAccount.Visible = False
@@ -1586,9 +1598,9 @@ Public Class formMain
             txtSystemLastname.Focus()
             Exit Sub
         End If
-        If TextBoxX1.Text.Trim = "" Then
+        If cboProfileQuestions.SelectedIndex = -1 Then
             MessageBoxEx.Show("Security question is required.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            TextBoxX1.Focus()
+            cboProfileQuestions.Focus()
             Exit Sub
         End If
         If TextBoxX2.Text.Trim = "" Then
@@ -1600,7 +1612,7 @@ Public Class formMain
                     "LastName = '" & initializeQueryEntry(txtSystemLastname.Text.Trim, False) & "'," & _
                     "MiddleName = '" & initializeQueryEntry(txtSystemMiddleName.Text.Trim, False) & "'," & _
                     "UserImage = '" & initializeQueryEntry(imageUpload, False) & "', " & _
-                    "Question = '" & initializeQueryEntry(TextBoxX1.Text, False) & "', " & _
+                    "Question = '" & cboProfileQuestions.SelectedIndex + 1 & "', " & _
                     "Answer = '" & initializeQueryEntry(TextBoxX2.Text, False) & "' " & _
                     "WHERE UserID = '" & initializeQueryEntry(userID, True) & "'"
         Dim dtSave As DataTable = executeQuery(q, "tblSaveProfile")
@@ -3202,7 +3214,12 @@ Public Class formMain
     End Sub
 
     Private Sub txtOccCost_Leave(sender As System.Object, e As System.EventArgs) Handles txtOccCost.Leave
-        txtOccCost.Text = FormatNumber(txtOccCost.Text, 2)
+        If txtOccCost.Text.Trim = "" Then
+            txtOccCost.Text = FormatNumber(0, 2)
+        Else
+            txtOccCost.Text = FormatNumber(txtOccCost.Text, 2)
+        End If
+
     End Sub
 
     Sub searchOccupancy()
@@ -3967,6 +3984,87 @@ Public Class formMain
         If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub txtOccStorey_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtOccStorey.TextChanged
+
+    End Sub
+
+    Private Sub txtOccStorey_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtOccStorey.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtOccAreaP_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtOccAreaP.KeyPress
+        Dim FullStop As Char
+        FullStop = "."
+
+        ' if the '.' key was pressed see if there already is a '.' in the string
+        ' if so, dont handle the keypress
+        If e.KeyChar = FullStop And txtOccAreaP.Text.IndexOf(FullStop) <> -1 Then
+            e.Handled = True
+            Return
+        End If
+
+        ' If the key aint a digit
+        If Not Char.IsDigit(e.KeyChar) Then
+            ' verify whether special keys were pressed
+            ' (i.e. all allowed non digit keys - in this example
+            ' only space and the '.' are validated)
+            If (e.KeyChar <> FullStop) And
+               (e.KeyChar <> Convert.ToChar(Keys.Back)) Then
+                ' if its a non-allowed key, dont handle the keypress
+                e.Handled = True
+                Return
+            End If
+        End If
+    End Sub
+
+    Private Sub txtOccAreaA_KeyPress(sender As System.Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtOccAreaA.KeyPress
+        Dim FullStop As Char
+        FullStop = "."
+
+        ' if the '.' key was pressed see if there already is a '.' in the string
+        ' if so, dont handle the keypress
+        If e.KeyChar = FullStop And txtOccAreaA.Text.IndexOf(FullStop) <> -1 Then
+            e.Handled = True
+            Return
+        End If
+
+        ' If the key aint a digit
+        If Not Char.IsDigit(e.KeyChar) Then
+            ' verify whether special keys were pressed
+            ' (i.e. all allowed non digit keys - in this example
+            ' only space and the '.' are validated)
+            If (e.KeyChar <> FullStop) And
+               (e.KeyChar <> Convert.ToChar(Keys.Back)) Then
+                ' if its a non-allowed key, dont handle the keypress
+                e.Handled = True
+                Return
+            End If
+        End If
+    End Sub
+
+    Private Sub txtOccAreaP_Leave(sender As Object, e As System.EventArgs) Handles txtOccAreaP.Leave
+        If txtOccAreaP.Text.Trim = "" Then
+            txtOccAreaP.Text = FormatNumber(0, 2)
+        Else
+            txtOccAreaP.Text = FormatNumber(txtOccAreaP.Text, 2)
+        End If
+    End Sub
+
+    Private Sub txtOccAreaA_Leave(sender As Object, e As System.EventArgs) Handles txtOccAreaA.Leave
+        If txtOccAreaA.Text.Trim = "" Then
+            txtOccAreaA.Text = FormatNumber(0, 2)
+        Else
+            txtOccAreaA.Text = FormatNumber(txtOccAreaA.Text, 2)
+        End If
+    End Sub
+
+    Private Sub LinkLabel2_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+        imageUpload = ""
+        picSystemProfile.Image = My.Resources.DefaultUser
     End Sub
 End Class
 

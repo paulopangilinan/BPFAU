@@ -6,7 +6,23 @@ BuildingPermitandLicensing
 </name>
 </assembly>
 <members>
-<member name="P:Building_Permit_and_Licensing.My.Resources.Resources.ResourceManager">
+<member name="T:Building_Permit_and_Licensing.dsPaymentReport.dtPaymentDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Building_Permit_and_Licensing.dsPaymentReport.dtPaymentRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Building_Permit_and_Licensing.dsPaymentReport.dtPaymentRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Building_Permit_and_Licensing.dsPaymentReport">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="P:Building_Permit_and_Licensing.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
@@ -80,22 +96,6 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member><member name="T:Building_Permit_and_Licensing.dsReportSummary">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:Building_Permit_and_Licensing.dsPaymentReport.dtPaymentDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:Building_Permit_and_Licensing.dsPaymentReport.dtPaymentRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:Building_Permit_and_Licensing.dsPaymentReport.dtPaymentRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:Building_Permit_and_Licensing.dsPaymentReport">
 	<summary>
 Represents a strongly typed in-memory cache of data.
 </summary>

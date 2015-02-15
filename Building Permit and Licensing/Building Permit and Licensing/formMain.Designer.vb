@@ -174,7 +174,6 @@ Partial Class formMain
         Me.Label168 = New System.Windows.Forms.Label()
         Me.TextBoxX2 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.Label182 = New System.Windows.Forms.Label()
-        Me.TextBoxX1 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.Label181 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.txtSystemMiddleName = New DevComponents.DotNetBar.Controls.TextBoxX()
@@ -651,6 +650,7 @@ Partial Class formMain
         Me.Button4 = New System.Windows.Forms.Button()
         Me.PanelEx58 = New DevComponents.DotNetBar.PanelEx()
         Me.Label193 = New System.Windows.Forms.Label()
+        Me.cboProfileQuestions = New System.Windows.Forms.ComboBox()
         Me.panelActionBar.SuspendLayout
         CType(Me.picBtnMini,System.ComponentModel.ISupportInitialize).BeginInit
         Me.PanelEx1.SuspendLayout
@@ -2106,7 +2106,7 @@ Partial Class formMain
         Me.Label187.BackColor = System.Drawing.Color.Transparent
         Me.Label187.Font = New System.Drawing.Font("Segoe UI", 9!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label187.ForeColor = System.Drawing.Color.Black
-        Me.Label187.Location = New System.Drawing.Point(15, 1597)
+        Me.Label187.Location = New System.Drawing.Point(15, 2655)
         Me.Label187.Name = "Label187"
         Me.Label187.Size = New System.Drawing.Size(163, 15)
         Me.Label187.TabIndex = 217
@@ -2135,7 +2135,7 @@ Partial Class formMain
         'btnBrgyAdd
         '
         Me.btnBrgyAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBrgyAdd.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBrgyAdd.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnBrgyAdd.ForeColor = System.Drawing.Color.Black
         Me.btnBrgyAdd.Location = New System.Drawing.Point(10, 7)
         Me.btnBrgyAdd.Name = "btnBrgyAdd"
@@ -2143,12 +2143,12 @@ Partial Class formMain
         Me.btnBrgyAdd.TabIndex = 6
         Me.btnBrgyAdd.Tag = "Navy Encode"
         Me.btnBrgyAdd.Text = "Add"
-        Me.btnBrgyAdd.UseVisualStyleBackColor = True
+        Me.btnBrgyAdd.UseVisualStyleBackColor = true
         '
         'btnBrgyClose
         '
         Me.btnBrgyClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBrgyClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBrgyClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnBrgyClose.ForeColor = System.Drawing.Color.Black
         Me.btnBrgyClose.Location = New System.Drawing.Point(310, 7)
         Me.btnBrgyClose.Name = "btnBrgyClose"
@@ -2156,12 +2156,12 @@ Partial Class formMain
         Me.btnBrgyClose.TabIndex = 9
         Me.btnBrgyClose.Tag = "Navy"
         Me.btnBrgyClose.Text = "Close"
-        Me.btnBrgyClose.UseVisualStyleBackColor = True
+        Me.btnBrgyClose.UseVisualStyleBackColor = true
         '
         'btnBrgyEdit
         '
         Me.btnBrgyEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBrgyEdit.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBrgyEdit.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnBrgyEdit.ForeColor = System.Drawing.Color.Black
         Me.btnBrgyEdit.Location = New System.Drawing.Point(110, 7)
         Me.btnBrgyEdit.Name = "btnBrgyEdit"
@@ -2169,12 +2169,12 @@ Partial Class formMain
         Me.btnBrgyEdit.TabIndex = 7
         Me.btnBrgyEdit.Tag = "Navy Encode"
         Me.btnBrgyEdit.Text = "Edit"
-        Me.btnBrgyEdit.UseVisualStyleBackColor = True
+        Me.btnBrgyEdit.UseVisualStyleBackColor = true
         '
         'btnBrgyDelete
         '
         Me.btnBrgyDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBrgyDelete.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBrgyDelete.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnBrgyDelete.ForeColor = System.Drawing.Color.Black
         Me.btnBrgyDelete.Location = New System.Drawing.Point(210, 7)
         Me.btnBrgyDelete.Name = "btnBrgyDelete"
@@ -2182,7 +2182,7 @@ Partial Class formMain
         Me.btnBrgyDelete.TabIndex = 8
         Me.btnBrgyDelete.Tag = "Navy Encode"
         Me.btnBrgyDelete.Text = "Delete"
-        Me.btnBrgyDelete.UseVisualStyleBackColor = True
+        Me.btnBrgyDelete.UseVisualStyleBackColor = true
         '
         'txtBrgyName
         '
@@ -2193,21 +2193,21 @@ Partial Class formMain
         Me.txtBrgyName.Border.BorderGradientAngle = 0
         Me.txtBrgyName.Border.Class = "TextBoxBorder"
         Me.txtBrgyName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtBrgyName.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBrgyName.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtBrgyName.ForeColor = System.Drawing.Color.Black
         Me.txtBrgyName.Location = New System.Drawing.Point(121, 78)
         Me.txtBrgyName.MaxLength = 100
         Me.txtBrgyName.Name = "txtBrgyName"
-        Me.txtBrgyName.ReadOnly = True
+        Me.txtBrgyName.ReadOnly = true
         Me.txtBrgyName.Size = New System.Drawing.Size(277, 31)
         Me.txtBrgyName.TabIndex = 43
         Me.txtBrgyName.WatermarkText = "Barangay Name"
         '
         'Label8
         '
-        Me.Label8.AutoSize = True
+        Me.Label8.AutoSize = true
         Me.Label8.BackColor = System.Drawing.Color.White
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(14, 85)
         Me.Label8.Name = "Label8"
@@ -2224,20 +2224,20 @@ Partial Class formMain
         Me.txtBrgyID.Border.BorderGradientAngle = 0
         Me.txtBrgyID.Border.Class = "TextBoxBorder"
         Me.txtBrgyID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtBrgyID.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBrgyID.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtBrgyID.ForeColor = System.Drawing.Color.Black
         Me.txtBrgyID.Location = New System.Drawing.Point(121, 37)
         Me.txtBrgyID.Name = "txtBrgyID"
-        Me.txtBrgyID.ReadOnly = True
+        Me.txtBrgyID.ReadOnly = true
         Me.txtBrgyID.Size = New System.Drawing.Size(92, 31)
         Me.txtBrgyID.TabIndex = 2
         Me.txtBrgyID.WatermarkText = "Barangay ID"
         '
         'Label10
         '
-        Me.Label10.AutoSize = True
+        Me.Label10.AutoSize = true
         Me.Label10.BackColor = System.Drawing.Color.White
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.Color.Black
         Me.Label10.Location = New System.Drawing.Point(13, 43)
         Me.Label10.Name = "Label10"
@@ -2255,7 +2255,7 @@ Partial Class formMain
         Me.PanelEx5.Name = "PanelEx5"
         Me.PanelEx5.Size = New System.Drawing.Size(869, 65)
         Me.PanelEx5.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.PanelEx5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.PanelEx5.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelEx5.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
@@ -2264,8 +2264,8 @@ Partial Class formMain
         '
         'Label11
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.AutoSize = true
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
         Me.Label11.Location = New System.Drawing.Point(12, 18)
         Me.Label11.Name = "Label11"
@@ -2276,9 +2276,9 @@ Partial Class formMain
         '
         'slideSubdivision
         '
-        Me.slideSubdivision.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.slideSubdivision.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.slideSubdivision.BackColor = System.Drawing.Color.White
         Me.slideSubdivision.Controls.Add(Me.listSubdivisions)
         Me.slideSubdivision.Controls.Add(Me.ExpandableSplitter3)
@@ -2288,27 +2288,27 @@ Partial Class formMain
         Me.slideSubdivision.Location = New System.Drawing.Point(199, 78)
         Me.slideSubdivision.Name = "slideSubdivision"
         Me.slideSubdivision.Size = New System.Drawing.Size(869, 594)
-        Me.slideSubdivision.SlideOutButtonVisible = False
+        Me.slideSubdivision.SlideOutButtonVisible = false
         Me.slideSubdivision.SlideSide = DevComponents.DotNetBar.Controls.eSlideSide.Right
         Me.slideSubdivision.TabIndex = 6
         Me.slideSubdivision.Tag = "Forms"
-        Me.slideSubdivision.UsesBlockingAnimation = False
+        Me.slideSubdivision.UsesBlockingAnimation = false
         '
         'listSubdivisions
         '
         Me.listSubdivisions.BackColor = System.Drawing.Color.White
         Me.listSubdivisions.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader8, Me.ColumnHeader9})
         Me.listSubdivisions.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.listSubdivisions.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.listSubdivisions.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.listSubdivisions.ForeColor = System.Drawing.Color.Black
-        Me.listSubdivisions.FullRowSelect = True
-        Me.listSubdivisions.GridLines = True
+        Me.listSubdivisions.FullRowSelect = true
+        Me.listSubdivisions.GridLines = true
         Me.listSubdivisions.Location = New System.Drawing.Point(414, 65)
-        Me.listSubdivisions.MultiSelect = False
+        Me.listSubdivisions.MultiSelect = false
         Me.listSubdivisions.Name = "listSubdivisions"
         Me.listSubdivisions.Size = New System.Drawing.Size(455, 529)
         Me.listSubdivisions.TabIndex = 7
-        Me.listSubdivisions.UseCompatibleStateImageBehavior = False
+        Me.listSubdivisions.UseCompatibleStateImageBehavior = false
         Me.listSubdivisions.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader8
@@ -2323,29 +2323,29 @@ Partial Class formMain
         '
         'ExpandableSplitter3
         '
-        Me.ExpandableSplitter3.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.ExpandableSplitter3.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.ExpandableSplitter3.BackColor = System.Drawing.Color.FromArgb(CType(CType(242,Byte),Integer), CType(CType(242,Byte),Integer), CType(CType(242,Byte),Integer))
+        Me.ExpandableSplitter3.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer))
         Me.ExpandableSplitter3.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.ExpandableSplitter3.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.ExpandableSplitter3.ExpandableControl = Me.panelSubdivisionEntry
-        Me.ExpandableSplitter3.ExpandFillColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.ExpandableSplitter3.ExpandFillColor = System.Drawing.Color.FromArgb(CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer))
         Me.ExpandableSplitter3.ExpandFillColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
-        Me.ExpandableSplitter3.ExpandLineColor = System.Drawing.Color.FromArgb(CType(CType(135, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(135, Byte), Integer))
+        Me.ExpandableSplitter3.ExpandLineColor = System.Drawing.Color.FromArgb(CType(CType(135,Byte),Integer), CType(CType(135,Byte),Integer), CType(CType(135,Byte),Integer))
         Me.ExpandableSplitter3.ExpandLineColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
         Me.ExpandableSplitter3.ForeColor = System.Drawing.Color.Black
-        Me.ExpandableSplitter3.GripDarkColor = System.Drawing.Color.FromArgb(CType(CType(135, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(135, Byte), Integer))
+        Me.ExpandableSplitter3.GripDarkColor = System.Drawing.Color.FromArgb(CType(CType(135,Byte),Integer), CType(CType(135,Byte),Integer), CType(CType(135,Byte),Integer))
         Me.ExpandableSplitter3.GripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
         Me.ExpandableSplitter3.GripLightColor = System.Drawing.Color.White
         Me.ExpandableSplitter3.GripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
-        Me.ExpandableSplitter3.HotBackColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.ExpandableSplitter3.HotBackColor = System.Drawing.Color.FromArgb(CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer))
         Me.ExpandableSplitter3.HotBackColor2 = System.Drawing.Color.Empty
         Me.ExpandableSplitter3.HotBackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBackground2
         Me.ExpandableSplitter3.HotBackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBackground
-        Me.ExpandableSplitter3.HotExpandFillColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.ExpandableSplitter3.HotExpandFillColor = System.Drawing.Color.FromArgb(CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer))
         Me.ExpandableSplitter3.HotExpandFillColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
-        Me.ExpandableSplitter3.HotExpandLineColor = System.Drawing.Color.FromArgb(CType(CType(135, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(135, Byte), Integer))
+        Me.ExpandableSplitter3.HotExpandLineColor = System.Drawing.Color.FromArgb(CType(CType(135,Byte),Integer), CType(CType(135,Byte),Integer), CType(CType(135,Byte),Integer))
         Me.ExpandableSplitter3.HotExpandLineColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
-        Me.ExpandableSplitter3.HotGripDarkColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.ExpandableSplitter3.HotGripDarkColor = System.Drawing.Color.FromArgb(CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer))
         Me.ExpandableSplitter3.HotGripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.ExpandableSplitter3.HotGripLightColor = System.Drawing.Color.White
         Me.ExpandableSplitter3.HotGripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
@@ -2354,7 +2354,7 @@ Partial Class formMain
         Me.ExpandableSplitter3.Size = New System.Drawing.Size(6, 529)
         Me.ExpandableSplitter3.Style = DevComponents.DotNetBar.eSplitterStyle.Office2007
         Me.ExpandableSplitter3.TabIndex = 6
-        Me.ExpandableSplitter3.TabStop = False
+        Me.ExpandableSplitter3.TabStop = false
         '
         'panelSubdivisionEntry
         '
@@ -2383,12 +2383,12 @@ Partial Class formMain
         '
         'Label188
         '
-        Me.Label188.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label188.AutoSize = True
+        Me.Label188.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.Label188.AutoSize = true
         Me.Label188.BackColor = System.Drawing.Color.Transparent
-        Me.Label188.Font = New System.Drawing.Font("Segoe UI", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label188.Font = New System.Drawing.Font("Segoe UI", 9!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label188.ForeColor = System.Drawing.Color.Black
-        Me.Label188.Location = New System.Drawing.Point(13, 1600)
+        Me.Label188.Location = New System.Drawing.Point(13, 2658)
         Me.Label188.Name = "Label188"
         Me.Label188.Size = New System.Drawing.Size(163, 15)
         Me.Label188.TabIndex = 217
@@ -2396,12 +2396,12 @@ Partial Class formMain
         '
         'Label169
         '
-        Me.Label169.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label169.AutoSize = True
+        Me.Label169.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
+        Me.Label169.AutoSize = true
         Me.Label169.BackColor = System.Drawing.Color.Transparent
-        Me.Label169.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label169.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label169.ForeColor = System.Drawing.Color.Black
-        Me.Label169.Location = New System.Drawing.Point(9, 7334)
+        Me.Label169.Location = New System.Drawing.Point(9, 8392)
         Me.Label169.Name = "Label169"
         Me.Label169.Size = New System.Drawing.Size(185, 15)
         Me.Label169.TabIndex = 206
@@ -2430,7 +2430,7 @@ Partial Class formMain
         'btnSubAdd
         '
         Me.btnSubAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSubAdd.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSubAdd.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnSubAdd.ForeColor = System.Drawing.Color.Black
         Me.btnSubAdd.Location = New System.Drawing.Point(10, 7)
         Me.btnSubAdd.Name = "btnSubAdd"
@@ -2438,12 +2438,12 @@ Partial Class formMain
         Me.btnSubAdd.TabIndex = 6
         Me.btnSubAdd.Tag = "Navy Encode"
         Me.btnSubAdd.Text = "Add"
-        Me.btnSubAdd.UseVisualStyleBackColor = True
+        Me.btnSubAdd.UseVisualStyleBackColor = true
         '
         'btnSubClose
         '
         Me.btnSubClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSubClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSubClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnSubClose.ForeColor = System.Drawing.Color.Black
         Me.btnSubClose.Location = New System.Drawing.Point(310, 7)
         Me.btnSubClose.Name = "btnSubClose"
@@ -2451,12 +2451,12 @@ Partial Class formMain
         Me.btnSubClose.TabIndex = 9
         Me.btnSubClose.Tag = "Navy"
         Me.btnSubClose.Text = "Close"
-        Me.btnSubClose.UseVisualStyleBackColor = True
+        Me.btnSubClose.UseVisualStyleBackColor = true
         '
         'btnSubEdit
         '
         Me.btnSubEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSubEdit.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSubEdit.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnSubEdit.ForeColor = System.Drawing.Color.Black
         Me.btnSubEdit.Location = New System.Drawing.Point(110, 7)
         Me.btnSubEdit.Name = "btnSubEdit"
@@ -2464,12 +2464,12 @@ Partial Class formMain
         Me.btnSubEdit.TabIndex = 7
         Me.btnSubEdit.Tag = "Navy Encode"
         Me.btnSubEdit.Text = "Edit"
-        Me.btnSubEdit.UseVisualStyleBackColor = True
+        Me.btnSubEdit.UseVisualStyleBackColor = true
         '
         'btnSubDelete
         '
         Me.btnSubDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSubDelete.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSubDelete.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnSubDelete.ForeColor = System.Drawing.Color.Black
         Me.btnSubDelete.Location = New System.Drawing.Point(210, 7)
         Me.btnSubDelete.Name = "btnSubDelete"
@@ -2477,7 +2477,7 @@ Partial Class formMain
         Me.btnSubDelete.TabIndex = 8
         Me.btnSubDelete.Tag = "Navy Encode"
         Me.btnSubDelete.Text = "Delete"
-        Me.btnSubDelete.UseVisualStyleBackColor = True
+        Me.btnSubDelete.UseVisualStyleBackColor = true
         '
         'txtSubdName
         '
@@ -2488,21 +2488,21 @@ Partial Class formMain
         Me.txtSubdName.Border.BorderGradientAngle = 0
         Me.txtSubdName.Border.Class = "TextBoxBorder"
         Me.txtSubdName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSubdName.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSubdName.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSubdName.ForeColor = System.Drawing.Color.Black
         Me.txtSubdName.Location = New System.Drawing.Point(130, 83)
         Me.txtSubdName.MaxLength = 100
         Me.txtSubdName.Name = "txtSubdName"
-        Me.txtSubdName.ReadOnly = True
+        Me.txtSubdName.ReadOnly = true
         Me.txtSubdName.Size = New System.Drawing.Size(268, 31)
         Me.txtSubdName.TabIndex = 43
         Me.txtSubdName.WatermarkText = "Subdivision Name"
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
+        Me.Label2.AutoSize = true
         Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(12, 90)
         Me.Label2.Name = "Label2"
@@ -2519,20 +2519,20 @@ Partial Class formMain
         Me.txtSubdID.Border.BorderGradientAngle = 0
         Me.txtSubdID.Border.Class = "TextBoxBorder"
         Me.txtSubdID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSubdID.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSubdID.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSubdID.ForeColor = System.Drawing.Color.Black
         Me.txtSubdID.Location = New System.Drawing.Point(130, 42)
         Me.txtSubdID.Name = "txtSubdID"
-        Me.txtSubdID.ReadOnly = True
+        Me.txtSubdID.ReadOnly = true
         Me.txtSubdID.Size = New System.Drawing.Size(95, 31)
         Me.txtSubdID.TabIndex = 2
         Me.txtSubdID.WatermarkText = "Subdivision ID"
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
+        Me.Label3.AutoSize = true
         Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(11, 48)
         Me.Label3.Name = "Label3"
@@ -2550,7 +2550,7 @@ Partial Class formMain
         Me.PanelEx7.Name = "PanelEx7"
         Me.PanelEx7.Size = New System.Drawing.Size(869, 65)
         Me.PanelEx7.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.PanelEx7.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx7.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx7.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.PanelEx7.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelEx7.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
@@ -2559,8 +2559,8 @@ Partial Class formMain
         '
         'Label9
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.AutoSize = true
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(12, 18)
         Me.Label9.Name = "Label9"
@@ -2571,9 +2571,9 @@ Partial Class formMain
         '
         'slideAssessor
         '
-        Me.slideAssessor.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.slideAssessor.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.slideAssessor.BackColor = System.Drawing.Color.White
         Me.slideAssessor.Controls.Add(Me.listUsers)
         Me.slideAssessor.Controls.Add(Me.ExpandableSplitter4)
@@ -2583,27 +2583,27 @@ Partial Class formMain
         Me.slideAssessor.Location = New System.Drawing.Point(199, 78)
         Me.slideAssessor.Name = "slideAssessor"
         Me.slideAssessor.Size = New System.Drawing.Size(869, 594)
-        Me.slideAssessor.SlideOutButtonVisible = False
+        Me.slideAssessor.SlideOutButtonVisible = false
         Me.slideAssessor.SlideSide = DevComponents.DotNetBar.Controls.eSlideSide.Right
         Me.slideAssessor.TabIndex = 7
         Me.slideAssessor.Tag = "Forms"
-        Me.slideAssessor.UsesBlockingAnimation = False
+        Me.slideAssessor.UsesBlockingAnimation = false
         '
         'listUsers
         '
         Me.listUsers.BackColor = System.Drawing.Color.White
         Me.listUsers.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14})
         Me.listUsers.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.listUsers.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.listUsers.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.listUsers.ForeColor = System.Drawing.Color.Black
-        Me.listUsers.FullRowSelect = True
-        Me.listUsers.GridLines = True
+        Me.listUsers.FullRowSelect = true
+        Me.listUsers.GridLines = true
         Me.listUsers.Location = New System.Drawing.Point(414, 65)
-        Me.listUsers.MultiSelect = False
+        Me.listUsers.MultiSelect = false
         Me.listUsers.Name = "listUsers"
         Me.listUsers.Size = New System.Drawing.Size(455, 529)
         Me.listUsers.TabIndex = 7
-        Me.listUsers.UseCompatibleStateImageBehavior = False
+        Me.listUsers.UseCompatibleStateImageBehavior = false
         Me.listUsers.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader10
@@ -2633,29 +2633,29 @@ Partial Class formMain
         '
         'ExpandableSplitter4
         '
-        Me.ExpandableSplitter4.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.ExpandableSplitter4.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.ExpandableSplitter4.BackColor = System.Drawing.Color.FromArgb(CType(CType(242,Byte),Integer), CType(CType(242,Byte),Integer), CType(CType(242,Byte),Integer))
+        Me.ExpandableSplitter4.BackColor2 = System.Drawing.Color.FromArgb(CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer))
         Me.ExpandableSplitter4.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.ExpandableSplitter4.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.ExpandableSplitter4.ExpandableControl = Me.PanelEx3
-        Me.ExpandableSplitter4.ExpandFillColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.ExpandableSplitter4.ExpandFillColor = System.Drawing.Color.FromArgb(CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer))
         Me.ExpandableSplitter4.ExpandFillColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
-        Me.ExpandableSplitter4.ExpandLineColor = System.Drawing.Color.FromArgb(CType(CType(135, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(135, Byte), Integer))
+        Me.ExpandableSplitter4.ExpandLineColor = System.Drawing.Color.FromArgb(CType(CType(135,Byte),Integer), CType(CType(135,Byte),Integer), CType(CType(135,Byte),Integer))
         Me.ExpandableSplitter4.ExpandLineColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
         Me.ExpandableSplitter4.ForeColor = System.Drawing.Color.Black
-        Me.ExpandableSplitter4.GripDarkColor = System.Drawing.Color.FromArgb(CType(CType(135, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(135, Byte), Integer))
+        Me.ExpandableSplitter4.GripDarkColor = System.Drawing.Color.FromArgb(CType(CType(135,Byte),Integer), CType(CType(135,Byte),Integer), CType(CType(135,Byte),Integer))
         Me.ExpandableSplitter4.GripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
         Me.ExpandableSplitter4.GripLightColor = System.Drawing.Color.White
         Me.ExpandableSplitter4.GripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
-        Me.ExpandableSplitter4.HotBackColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.ExpandableSplitter4.HotBackColor = System.Drawing.Color.FromArgb(CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer))
         Me.ExpandableSplitter4.HotBackColor2 = System.Drawing.Color.Empty
         Me.ExpandableSplitter4.HotBackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBackground2
         Me.ExpandableSplitter4.HotBackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemPressedBackground
-        Me.ExpandableSplitter4.HotExpandFillColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.ExpandableSplitter4.HotExpandFillColor = System.Drawing.Color.FromArgb(CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer))
         Me.ExpandableSplitter4.HotExpandFillColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
-        Me.ExpandableSplitter4.HotExpandLineColor = System.Drawing.Color.FromArgb(CType(CType(135, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(135, Byte), Integer))
+        Me.ExpandableSplitter4.HotExpandLineColor = System.Drawing.Color.FromArgb(CType(CType(135,Byte),Integer), CType(CType(135,Byte),Integer), CType(CType(135,Byte),Integer))
         Me.ExpandableSplitter4.HotExpandLineColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
-        Me.ExpandableSplitter4.HotGripDarkColor = System.Drawing.Color.FromArgb(CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.ExpandableSplitter4.HotGripDarkColor = System.Drawing.Color.FromArgb(CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer), CType(CType(170,Byte),Integer))
         Me.ExpandableSplitter4.HotGripDarkColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.ExpandableSplitter4.HotGripLightColor = System.Drawing.Color.White
         Me.ExpandableSplitter4.HotGripLightColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground
@@ -2664,7 +2664,7 @@ Partial Class formMain
         Me.ExpandableSplitter4.Size = New System.Drawing.Size(6, 529)
         Me.ExpandableSplitter4.Style = DevComponents.DotNetBar.eSplitterStyle.Office2007
         Me.ExpandableSplitter4.TabIndex = 6
-        Me.ExpandableSplitter4.TabStop = False
+        Me.ExpandableSplitter4.TabStop = false
         '
         'PanelEx3
         '
@@ -2704,11 +2704,11 @@ Partial Class formMain
         Me.txtAssessLastName.Border.BorderGradientAngle = 0
         Me.txtAssessLastName.Border.Class = "TextBoxBorder"
         Me.txtAssessLastName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessLastName.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessLastName.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessLastName.ForeColor = System.Drawing.Color.Black
         Me.txtAssessLastName.Location = New System.Drawing.Point(130, 58)
         Me.txtAssessLastName.Name = "txtAssessLastName"
-        Me.txtAssessLastName.ReadOnly = True
+        Me.txtAssessLastName.ReadOnly = true
         Me.txtAssessLastName.Size = New System.Drawing.Size(268, 31)
         Me.txtAssessLastName.TabIndex = 92
         Me.txtAssessLastName.WatermarkText = "Assessor's Username"
@@ -2722,21 +2722,21 @@ Partial Class formMain
         Me.txtAssessDesignation.Border.BorderGradientAngle = 0
         Me.txtAssessDesignation.Border.Class = "TextBoxBorder"
         Me.txtAssessDesignation.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessDesignation.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessDesignation.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessDesignation.ForeColor = System.Drawing.Color.Black
         Me.txtAssessDesignation.Location = New System.Drawing.Point(130, 184)
         Me.txtAssessDesignation.MaxLength = 100
         Me.txtAssessDesignation.Name = "txtAssessDesignation"
-        Me.txtAssessDesignation.ReadOnly = True
+        Me.txtAssessDesignation.ReadOnly = true
         Me.txtAssessDesignation.Size = New System.Drawing.Size(268, 31)
         Me.txtAssessDesignation.TabIndex = 95
         Me.txtAssessDesignation.WatermarkText = "Assessor's Designation"
         '
         'Label17
         '
-        Me.Label17.AutoSize = True
+        Me.Label17.AutoSize = true
         Me.Label17.BackColor = System.Drawing.Color.White
-        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label17.ForeColor = System.Drawing.Color.Black
         Me.Label17.Location = New System.Drawing.Point(14, 190)
         Me.Label17.Name = "Label17"
@@ -2753,21 +2753,21 @@ Partial Class formMain
         Me.txtAssessMiddleName.Border.BorderGradientAngle = 0
         Me.txtAssessMiddleName.Border.Class = "TextBoxBorder"
         Me.txtAssessMiddleName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessMiddleName.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessMiddleName.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessMiddleName.ForeColor = System.Drawing.Color.Black
         Me.txtAssessMiddleName.Location = New System.Drawing.Point(130, 142)
         Me.txtAssessMiddleName.MaxLength = 100
         Me.txtAssessMiddleName.Name = "txtAssessMiddleName"
-        Me.txtAssessMiddleName.ReadOnly = True
+        Me.txtAssessMiddleName.ReadOnly = true
         Me.txtAssessMiddleName.Size = New System.Drawing.Size(268, 31)
         Me.txtAssessMiddleName.TabIndex = 94
         Me.txtAssessMiddleName.WatermarkText = "Assessor's Middle Name"
         '
         'Label16
         '
-        Me.Label16.AutoSize = True
+        Me.Label16.AutoSize = true
         Me.Label16.BackColor = System.Drawing.Color.White
-        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label16.ForeColor = System.Drawing.Color.Black
         Me.Label16.Location = New System.Drawing.Point(14, 148)
         Me.Label16.Name = "Label16"
@@ -2784,21 +2784,21 @@ Partial Class formMain
         Me.txtAssessFirstName.Border.BorderGradientAngle = 0
         Me.txtAssessFirstName.Border.Class = "TextBoxBorder"
         Me.txtAssessFirstName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessFirstName.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessFirstName.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessFirstName.ForeColor = System.Drawing.Color.Black
         Me.txtAssessFirstName.Location = New System.Drawing.Point(130, 100)
         Me.txtAssessFirstName.MaxLength = 100
         Me.txtAssessFirstName.Name = "txtAssessFirstName"
-        Me.txtAssessFirstName.ReadOnly = True
+        Me.txtAssessFirstName.ReadOnly = true
         Me.txtAssessFirstName.Size = New System.Drawing.Size(268, 31)
         Me.txtAssessFirstName.TabIndex = 93
         Me.txtAssessFirstName.WatermarkText = "Assessor's First Name"
         '
         'Label15
         '
-        Me.Label15.AutoSize = True
+        Me.Label15.AutoSize = true
         Me.Label15.BackColor = System.Drawing.Color.White
-        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label15.ForeColor = System.Drawing.Color.Black
         Me.Label15.Location = New System.Drawing.Point(14, 106)
         Me.Label15.Name = "Label15"
@@ -2826,7 +2826,7 @@ Partial Class formMain
         'btnCloseUsers
         '
         Me.btnCloseUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCloseUsers.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCloseUsers.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnCloseUsers.ForeColor = System.Drawing.Color.Black
         Me.btnCloseUsers.Location = New System.Drawing.Point(10, 7)
         Me.btnCloseUsers.Name = "btnCloseUsers"
@@ -2834,13 +2834,13 @@ Partial Class formMain
         Me.btnCloseUsers.TabIndex = 9
         Me.btnCloseUsers.Tag = "Navy"
         Me.btnCloseUsers.Text = "Close"
-        Me.btnCloseUsers.UseVisualStyleBackColor = True
+        Me.btnCloseUsers.UseVisualStyleBackColor = true
         '
         'Label12
         '
-        Me.Label12.AutoSize = True
+        Me.Label12.AutoSize = true
         Me.Label12.BackColor = System.Drawing.Color.White
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.Color.Black
         Me.Label12.Location = New System.Drawing.Point(14, 64)
         Me.Label12.Name = "Label12"
@@ -2857,20 +2857,20 @@ Partial Class formMain
         Me.txtAssessUsername.Border.BorderGradientAngle = 0
         Me.txtAssessUsername.Border.Class = "TextBoxBorder"
         Me.txtAssessUsername.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessUsername.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessUsername.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessUsername.ForeColor = System.Drawing.Color.Black
         Me.txtAssessUsername.Location = New System.Drawing.Point(130, 16)
         Me.txtAssessUsername.Name = "txtAssessUsername"
-        Me.txtAssessUsername.ReadOnly = True
+        Me.txtAssessUsername.ReadOnly = true
         Me.txtAssessUsername.Size = New System.Drawing.Size(268, 31)
         Me.txtAssessUsername.TabIndex = 91
         Me.txtAssessUsername.WatermarkText = "Assessor's Username"
         '
         'Label13
         '
-        Me.Label13.AutoSize = True
+        Me.Label13.AutoSize = true
         Me.Label13.BackColor = System.Drawing.Color.White
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label13.ForeColor = System.Drawing.Color.Black
         Me.Label13.Location = New System.Drawing.Point(13, 22)
         Me.Label13.Name = "Label13"
@@ -2888,7 +2888,7 @@ Partial Class formMain
         Me.PanelEx9.Name = "PanelEx9"
         Me.PanelEx9.Size = New System.Drawing.Size(869, 65)
         Me.PanelEx9.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.PanelEx9.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx9.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx9.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.PanelEx9.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelEx9.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
@@ -2897,8 +2897,8 @@ Partial Class formMain
         '
         'Label14
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.AutoSize = true
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label14.ForeColor = System.Drawing.Color.Black
         Me.Label14.Location = New System.Drawing.Point(12, 18)
         Me.Label14.Name = "Label14"
@@ -2909,9 +2909,9 @@ Partial Class formMain
         '
         'slideFees
         '
-        Me.slideFees.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.slideFees.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.slideFees.BackColor = System.Drawing.Color.White
         Me.slideFees.Controls.Add(Me.PanelEx41)
         Me.slideFees.Controls.Add(Me.txtFees)
@@ -2920,11 +2920,11 @@ Partial Class formMain
         Me.slideFees.Location = New System.Drawing.Point(199, 78)
         Me.slideFees.Name = "slideFees"
         Me.slideFees.Size = New System.Drawing.Size(869, 594)
-        Me.slideFees.SlideOutButtonVisible = False
+        Me.slideFees.SlideOutButtonVisible = false
         Me.slideFees.SlideSide = DevComponents.DotNetBar.Controls.eSlideSide.Right
         Me.slideFees.TabIndex = 8
         Me.slideFees.Tag = "Forms"
-        Me.slideFees.UsesBlockingAnimation = False
+        Me.slideFees.UsesBlockingAnimation = false
         '
         'PanelEx41
         '
@@ -2946,7 +2946,7 @@ Partial Class formMain
         'btnFeeClose
         '
         Me.btnFeeClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFeeClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFeeClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnFeeClose.ForeColor = System.Drawing.Color.Black
         Me.btnFeeClose.Location = New System.Drawing.Point(10, 7)
         Me.btnFeeClose.Name = "btnFeeClose"
@@ -2954,13 +2954,13 @@ Partial Class formMain
         Me.btnFeeClose.TabIndex = 9
         Me.btnFeeClose.Tag = "Navy"
         Me.btnFeeClose.Text = "Close"
-        Me.btnFeeClose.UseVisualStyleBackColor = True
+        Me.btnFeeClose.UseVisualStyleBackColor = true
         '
         'txtFees
         '
-        Me.txtFees.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtFees.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.txtFees.BackColor = System.Drawing.Color.White
         '
         '
@@ -2968,12 +2968,12 @@ Partial Class formMain
         Me.txtFees.Border.BorderGradientAngle = 0
         Me.txtFees.Border.Class = "TextBoxBorder"
         Me.txtFees.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtFees.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFees.Font = New System.Drawing.Font("Lucida Console", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtFees.ForeColor = System.Drawing.Color.Black
         Me.txtFees.Location = New System.Drawing.Point(4, 68)
-        Me.txtFees.Multiline = True
+        Me.txtFees.Multiline = true
         Me.txtFees.Name = "txtFees"
-        Me.txtFees.ReadOnly = True
+        Me.txtFees.ReadOnly = true
         Me.txtFees.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtFees.Size = New System.Drawing.Size(860, 473)
         Me.txtFees.TabIndex = 92
@@ -2988,7 +2988,7 @@ Partial Class formMain
         Me.PanelEx13.Name = "PanelEx13"
         Me.PanelEx13.Size = New System.Drawing.Size(869, 65)
         Me.PanelEx13.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.PanelEx13.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx13.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx13.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.PanelEx13.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelEx13.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
@@ -2997,8 +2997,8 @@ Partial Class formMain
         '
         'Label23
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.AutoSize = true
+        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label23.ForeColor = System.Drawing.Color.Black
         Me.Label23.Location = New System.Drawing.Point(12, 18)
         Me.Label23.Name = "Label23"
@@ -3009,9 +3009,9 @@ Partial Class formMain
         '
         'slideProfile
         '
-        Me.slideProfile.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.slideProfile.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.slideProfile.BackColor = System.Drawing.Color.White
         Me.slideProfile.Controls.Add(Me.PanelEx17)
         Me.slideProfile.Controls.Add(Me.PanelEx15)
@@ -3021,11 +3021,11 @@ Partial Class formMain
         Me.slideProfile.Location = New System.Drawing.Point(199, 78)
         Me.slideProfile.Name = "slideProfile"
         Me.slideProfile.Size = New System.Drawing.Size(869, 594)
-        Me.slideProfile.SlideOutButtonVisible = False
+        Me.slideProfile.SlideOutButtonVisible = false
         Me.slideProfile.SlideSide = DevComponents.DotNetBar.Controls.eSlideSide.Right
         Me.slideProfile.TabIndex = 9
         Me.slideProfile.Tag = "Forms"
-        Me.slideProfile.UsesBlockingAnimation = False
+        Me.slideProfile.UsesBlockingAnimation = false
         '
         'PanelEx17
         '
@@ -3048,7 +3048,7 @@ Partial Class formMain
         'Button1
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
         Me.Button1.Location = New System.Drawing.Point(10, 7)
         Me.Button1.Name = "Button1"
@@ -3056,12 +3056,12 @@ Partial Class formMain
         Me.Button1.TabIndex = 6
         Me.Button1.Tag = "Navy"
         Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = true
         '
         'Button2
         '
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button2.ForeColor = System.Drawing.Color.Black
         Me.Button2.Location = New System.Drawing.Point(110, 7)
         Me.Button2.Name = "Button2"
@@ -3069,18 +3069,18 @@ Partial Class formMain
         Me.Button2.TabIndex = 9
         Me.Button2.Tag = "Navy"
         Me.Button2.Text = "Close"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = true
         '
         'PanelEx15
         '
-        Me.PanelEx15.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx15.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.PanelEx15.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx15.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx15.Controls.Add(Me.PanelEx16)
-        Me.PanelEx15.Location = New System.Drawing.Point(5, 317)
+        Me.PanelEx15.Location = New System.Drawing.Point(5, 356)
         Me.PanelEx15.Name = "PanelEx15"
-        Me.PanelEx15.Size = New System.Drawing.Size(862, 219)
+        Me.PanelEx15.Size = New System.Drawing.Size(862, 180)
         Me.PanelEx15.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx15.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelEx15.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
@@ -3093,10 +3093,10 @@ Partial Class formMain
         Me.PanelEx16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.PanelEx16.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx16.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelEx16.Controls.Add(Me.cboProfileQuestions)
         Me.PanelEx16.Controls.Add(Me.Label168)
         Me.PanelEx16.Controls.Add(Me.TextBoxX2)
         Me.PanelEx16.Controls.Add(Me.Label182)
-        Me.PanelEx16.Controls.Add(Me.TextBoxX1)
         Me.PanelEx16.Controls.Add(Me.Label181)
         Me.PanelEx16.Controls.Add(Me.Label20)
         Me.PanelEx16.Controls.Add(Me.txtSystemMiddleName)
@@ -3111,7 +3111,7 @@ Partial Class formMain
         Me.PanelEx16.Controls.Add(Me.txtUSerDesignation)
         Me.PanelEx16.Location = New System.Drawing.Point(35, 3)
         Me.PanelEx16.Name = "PanelEx16"
-        Me.PanelEx16.Size = New System.Drawing.Size(793, 213)
+        Me.PanelEx16.Size = New System.Drawing.Size(793, 174)
         Me.PanelEx16.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx16.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelEx16.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
@@ -3126,7 +3126,7 @@ Partial Class formMain
         Me.Label168.BackColor = System.Drawing.Color.Transparent
         Me.Label168.Font = New System.Drawing.Font("Segoe UI", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label168.ForeColor = System.Drawing.Color.Black
-        Me.Label168.Location = New System.Drawing.Point(8, 5)
+        Me.Label168.Location = New System.Drawing.Point(8, -34)
         Me.Label168.Name = "Label168"
         Me.Label168.Size = New System.Drawing.Size(163, 15)
         Me.Label168.TabIndex = 206
@@ -3161,26 +3161,6 @@ Partial Class formMain
         Me.Label182.Size = New System.Drawing.Size(112, 15)
         Me.Label182.TabIndex = 109
         Me.Label182.Text = "Security Answer : *"
-        '
-        'TextBoxX1
-        '
-        Me.TextBoxX1.BackColor = System.Drawing.Color.White
-        '
-        '
-        '
-        Me.TextBoxX1.Border.BorderGradientAngle = 0
-        Me.TextBoxX1.Border.Class = "TextBoxBorder"
-        Me.TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.TextBoxX1.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxX1.ForeColor = System.Drawing.Color.Black
-        Me.TextBoxX1.Location = New System.Drawing.Point(124, 135)
-        Me.TextBoxX1.MaxLength = 300
-        Me.TextBoxX1.Multiline = True
-        Me.TextBoxX1.Name = "TextBoxX1"
-        Me.TextBoxX1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBoxX1.Size = New System.Drawing.Size(268, 73)
-        Me.TextBoxX1.TabIndex = 108
-        Me.TextBoxX1.WatermarkText = "Security Question"
         '
         'Label181
         '
@@ -3370,7 +3350,7 @@ Partial Class formMain
         Me.PanelEx14.Controls.Add(Me.PanelEx12)
         Me.PanelEx14.Location = New System.Drawing.Point(5, 71)
         Me.PanelEx14.Name = "PanelEx14"
-        Me.PanelEx14.Size = New System.Drawing.Size(861, 240)
+        Me.PanelEx14.Size = New System.Drawing.Size(861, 278)
         Me.PanelEx14.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx14.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelEx14.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
@@ -3386,13 +3366,12 @@ Partial Class formMain
         Me.LinkLabel2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.LinkLabel2.ForeColor = System.Drawing.Color.Black
         Me.LinkLabel2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.LinkLabel2.Location = New System.Drawing.Point(436, 213)
+        Me.LinkLabel2.Location = New System.Drawing.Point(436, 236)
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(89, 15)
+        Me.LinkLabel2.Size = New System.Drawing.Size(92, 15)
         Me.LinkLabel2.TabIndex = 108
         Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "Capture Image"
-        Me.LinkLabel2.Visible = False
+        Me.LinkLabel2.Text = "Remove Image"
         Me.LinkLabel2.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
         '
         'LinkLabel1
@@ -3403,7 +3382,7 @@ Partial Class formMain
         Me.LinkLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.LinkLabel1.ForeColor = System.Drawing.Color.Black
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.LinkLabel1.Location = New System.Drawing.Point(332, 213)
+        Me.LinkLabel1.Location = New System.Drawing.Point(332, 236)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(84, 15)
         Me.LinkLabel1.TabIndex = 107
@@ -3417,7 +3396,7 @@ Partial Class formMain
         Me.PanelEx12.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx12.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx12.Controls.Add(Me.picSystemProfile)
-        Me.PanelEx12.Location = New System.Drawing.Point(330, 10)
+        Me.PanelEx12.Location = New System.Drawing.Point(330, 27)
         Me.PanelEx12.Name = "PanelEx12"
         Me.PanelEx12.Size = New System.Drawing.Size(200, 200)
         Me.PanelEx12.Style.Alignment = System.Drawing.StringAlignment.Center
@@ -3870,6 +3849,7 @@ Partial Class formMain
         Me.txtAssesCode.ReadOnly = True
         Me.txtAssesCode.Size = New System.Drawing.Size(48, 31)
         Me.txtAssesCode.TabIndex = 137
+        Me.txtAssesCode.Tag = "readonly"
         '
         'txtAssessUser
         '
@@ -3888,6 +3868,7 @@ Partial Class formMain
         Me.txtAssessUser.ReadOnly = True
         Me.txtAssessUser.Size = New System.Drawing.Size(150, 31)
         Me.txtAssessUser.TabIndex = 138
+        Me.txtAssessUser.Tag = "readonly"
         '
         'Label48
         '
@@ -4069,9 +4050,9 @@ Partial Class formMain
         Me.Label38.ForeColor = System.Drawing.Color.Black
         Me.Label38.Location = New System.Drawing.Point(223, 62)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(58, 13)
+        Me.Label38.Size = New System.Drawing.Size(66, 13)
         Me.Label38.TabIndex = 124
-        Me.Label38.Text = "First Name"
+        Me.Label38.Text = "First Name *"
         '
         'Label37
         '
@@ -4081,9 +4062,9 @@ Partial Class formMain
         Me.Label37.ForeColor = System.Drawing.Color.Black
         Me.Label37.Location = New System.Drawing.Point(83, 62)
         Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(69, 13)
+        Me.Label37.Size = New System.Drawing.Size(77, 13)
         Me.Label37.TabIndex = 123
-        Me.Label37.Text = "Family Name"
+        Me.Label37.Text = "Family Name *"
         '
         'txtAssessRemarks
         '
@@ -4347,9 +4328,9 @@ Partial Class formMain
         Me.Label32.ForeColor = System.Drawing.Color.Black
         Me.Label32.Location = New System.Drawing.Point(10, 82)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(54, 15)
+        Me.Label32.Size = New System.Drawing.Size(46, 15)
         Me.Label32.TabIndex = 107
-        Me.Label32.Text = "Name : *"
+        Me.Label32.Text = "Name :"
         '
         'Label31
         '
@@ -6946,7 +6927,7 @@ Partial Class formMain
         Me.txtOccStorey.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtOccStorey.ForeColor = System.Drawing.Color.Black
         Me.txtOccStorey.Location = New System.Drawing.Point(122, 427)
-        Me.txtOccStorey.MaxLength = 100
+        Me.txtOccStorey.MaxLength = 2
         Me.txtOccStorey.Name = "txtOccStorey"
         Me.txtOccStorey.ReadOnly = True
         Me.txtOccStorey.Size = New System.Drawing.Size(202, 29)
@@ -7312,9 +7293,9 @@ Partial Class formMain
         Me.Label92.ForeColor = System.Drawing.Color.Black
         Me.Label92.Location = New System.Drawing.Point(306, 70)
         Me.Label92.Name = "Label92"
-        Me.Label92.Size = New System.Drawing.Size(58, 13)
+        Me.Label92.Size = New System.Drawing.Size(66, 13)
         Me.Label92.TabIndex = 124
-        Me.Label92.Text = "First Name"
+        Me.Label92.Text = "First Name *"
         '
         'Label93
         '
@@ -7324,9 +7305,9 @@ Partial Class formMain
         Me.Label93.ForeColor = System.Drawing.Color.Black
         Me.Label93.Location = New System.Drawing.Point(125, 70)
         Me.Label93.Name = "Label93"
-        Me.Label93.Size = New System.Drawing.Size(69, 13)
+        Me.Label93.Size = New System.Drawing.Size(77, 13)
         Me.Label93.TabIndex = 123
-        Me.Label93.Text = "Family Name"
+        Me.Label93.Text = "Family Name *"
         '
         'Label94
         '
@@ -7580,9 +7561,9 @@ Partial Class formMain
         Me.Label97.ForeColor = System.Drawing.Color.Black
         Me.Label97.Location = New System.Drawing.Point(10, 89)
         Me.Label97.Name = "Label97"
-        Me.Label97.Size = New System.Drawing.Size(107, 15)
+        Me.Label97.Size = New System.Drawing.Size(102, 15)
         Me.Label97.TabIndex = 107
-        Me.Label97.Text = "Name of Owner: *"
+        Me.Label97.Text = "Name of Owner: "
         '
         'PanelEx44
         '
@@ -10022,6 +10003,16 @@ Partial Class formMain
         Me.Label193.Tag = "White"
         Me.Label193.Text = "System User"
         '
+        'cboProfileQuestions
+        '
+        Me.cboProfileQuestions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboProfileQuestions.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboProfileQuestions.FormattingEnabled = True
+        Me.cboProfileQuestions.Location = New System.Drawing.Point(123, 136)
+        Me.cboProfileQuestions.Name = "cboProfileQuestions"
+        Me.cboProfileQuestions.Size = New System.Drawing.Size(269, 25)
+        Me.cboProfileQuestions.TabIndex = 207
+        '
         'formMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -10039,12 +10030,12 @@ Partial Class formMain
         Me.Controls.Add(Me.panelActionBar)
         Me.Controls.Add(Me.slideTrail)
         Me.Controls.Add(Me.slideBarangays)
-        Me.Controls.Add(Me.slideProfile)
-        Me.Controls.Add(Me.slideOccupancy)
         Me.Controls.Add(Me.slideSummary)
         Me.Controls.Add(Me.slideSubdivision)
-        Me.Controls.Add(Me.slideAssessment)
         Me.Controls.Add(Me.slidePayment)
+        Me.Controls.Add(Me.slideOccupancy)
+        Me.Controls.Add(Me.slideProfile)
+        Me.Controls.Add(Me.slideAssessment)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
@@ -10789,7 +10780,6 @@ End Sub
     Friend WithEvents lblAssessStatus As System.Windows.Forms.Label
     Friend WithEvents TextBoxX2 As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents Label182 As System.Windows.Forms.Label
-    Friend WithEvents TextBoxX1 As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents Label181 As System.Windows.Forms.Label
     Friend WithEvents ButtonX4 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents PanelEx50 As DevComponents.DotNetBar.PanelEx
@@ -10825,5 +10815,6 @@ End Sub
     Friend WithEvents Label164 As System.Windows.Forms.Label
     Friend WithEvents Label166 As System.Windows.Forms.Label
     Friend WithEvents btnPrint1 As System.Windows.Forms.Button
+    Friend WithEvents cboProfileQuestions As System.Windows.Forms.ComboBox
 
 End Class
