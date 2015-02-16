@@ -171,6 +171,7 @@ Partial Class formMain
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PanelEx15 = New DevComponents.DotNetBar.PanelEx()
         Me.PanelEx16 = New DevComponents.DotNetBar.PanelEx()
+        Me.cboProfileQuestions = New System.Windows.Forms.ComboBox()
         Me.Label168 = New System.Windows.Forms.Label()
         Me.TextBoxX2 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.Label182 = New System.Windows.Forms.Label()
@@ -290,11 +291,12 @@ Partial Class formMain
         Me.PanelEx24 = New DevComponents.DotNetBar.PanelEx()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.PanelEx18 = New DevComponents.DotNetBar.PanelEx()
+        Me.btnAssessmentEdit = New System.Windows.Forms.Button()
         Me.btnAssessmentAdditional = New System.Windows.Forms.Button()
         Me.btnAssessmentFind = New System.Windows.Forms.Button()
-        Me.btnAssessmentMerge = New System.Windows.Forms.Button()
         Me.btnAssessmentNew = New System.Windows.Forms.Button()
         Me.btnAssessmentClose = New System.Windows.Forms.Button()
+        Me.btnAssessmentMerge = New System.Windows.Forms.Button()
         Me.PanelEx25 = New DevComponents.DotNetBar.PanelEx()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.panelSearch = New DevComponents.DotNetBar.PanelEx()
@@ -650,7 +652,10 @@ Partial Class formMain
         Me.Button4 = New System.Windows.Forms.Button()
         Me.PanelEx58 = New DevComponents.DotNetBar.PanelEx()
         Me.Label193 = New System.Windows.Forms.Label()
-        Me.cboProfileQuestions = New System.Windows.Forms.ComboBox()
+        Me.btnPending = New System.Windows.Forms.Button()
+        Me.panelPending = New DevComponents.DotNetBar.PanelEx()
+        Me.Label189 = New System.Windows.Forms.Label()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.panelActionBar.SuspendLayout
         CType(Me.picBtnMini,System.ComponentModel.ISupportInitialize).BeginInit
         Me.PanelEx1.SuspendLayout
@@ -758,6 +763,7 @@ Partial Class formMain
         Me.PanelEx53.SuspendLayout
         Me.PanelEx51.SuspendLayout
         Me.PanelEx58.SuspendLayout
+        Me.panelPending.SuspendLayout
         Me.SuspendLayout
         '
         'panelActionBar
@@ -2106,7 +2112,7 @@ Partial Class formMain
         Me.Label187.BackColor = System.Drawing.Color.Transparent
         Me.Label187.Font = New System.Drawing.Font("Segoe UI", 9!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label187.ForeColor = System.Drawing.Color.Black
-        Me.Label187.Location = New System.Drawing.Point(15, 2655)
+        Me.Label187.Location = New System.Drawing.Point(15, 4771)
         Me.Label187.Name = "Label187"
         Me.Label187.Size = New System.Drawing.Size(163, 15)
         Me.Label187.TabIndex = 217
@@ -2388,7 +2394,7 @@ Partial Class formMain
         Me.Label188.BackColor = System.Drawing.Color.Transparent
         Me.Label188.Font = New System.Drawing.Font("Segoe UI", 9!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label188.ForeColor = System.Drawing.Color.Black
-        Me.Label188.Location = New System.Drawing.Point(13, 2658)
+        Me.Label188.Location = New System.Drawing.Point(13, 4774)
         Me.Label188.Name = "Label188"
         Me.Label188.Size = New System.Drawing.Size(163, 15)
         Me.Label188.TabIndex = 217
@@ -2401,7 +2407,7 @@ Partial Class formMain
         Me.Label169.BackColor = System.Drawing.Color.Transparent
         Me.Label169.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label169.ForeColor = System.Drawing.Color.Black
-        Me.Label169.Location = New System.Drawing.Point(9, 8392)
+        Me.Label169.Location = New System.Drawing.Point(9, 10508)
         Me.Label169.Name = "Label169"
         Me.Label169.Size = New System.Drawing.Size(185, 15)
         Me.Label169.TabIndex = 206
@@ -3078,9 +3084,9 @@ Partial Class formMain
         Me.PanelEx15.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx15.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx15.Controls.Add(Me.PanelEx16)
-        Me.PanelEx15.Location = New System.Drawing.Point(5, 356)
+        Me.PanelEx15.Location = New System.Drawing.Point(5, 329)
         Me.PanelEx15.Name = "PanelEx15"
-        Me.PanelEx15.Size = New System.Drawing.Size(862, 180)
+        Me.PanelEx15.Size = New System.Drawing.Size(862, 207)
         Me.PanelEx15.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx15.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelEx15.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
@@ -3090,7 +3096,7 @@ Partial Class formMain
         '
         'PanelEx16
         '
-        Me.PanelEx16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom),System.Windows.Forms.AnchorStyles)
         Me.PanelEx16.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx16.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx16.Controls.Add(Me.cboProfileQuestions)
@@ -3111,7 +3117,7 @@ Partial Class formMain
         Me.PanelEx16.Controls.Add(Me.txtUSerDesignation)
         Me.PanelEx16.Location = New System.Drawing.Point(35, 3)
         Me.PanelEx16.Name = "PanelEx16"
-        Me.PanelEx16.Size = New System.Drawing.Size(793, 174)
+        Me.PanelEx16.Size = New System.Drawing.Size(793, 201)
         Me.PanelEx16.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx16.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelEx16.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
@@ -3119,14 +3125,26 @@ Partial Class formMain
         Me.PanelEx16.Style.GradientAngle = 90
         Me.PanelEx16.TabIndex = 107
         '
+        'cboProfileQuestions
+        '
+        Me.cboProfileQuestions.BackColor = System.Drawing.Color.White
+        Me.cboProfileQuestions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboProfileQuestions.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.cboProfileQuestions.ForeColor = System.Drawing.Color.Black
+        Me.cboProfileQuestions.FormattingEnabled = true
+        Me.cboProfileQuestions.Location = New System.Drawing.Point(123, 136)
+        Me.cboProfileQuestions.Name = "cboProfileQuestions"
+        Me.cboProfileQuestions.Size = New System.Drawing.Size(659, 25)
+        Me.cboProfileQuestions.TabIndex = 207
+        '
         'Label168
         '
-        Me.Label168.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label168.AutoSize = True
+        Me.Label168.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.Label168.AutoSize = true
         Me.Label168.BackColor = System.Drawing.Color.Transparent
-        Me.Label168.Font = New System.Drawing.Font("Segoe UI", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label168.Font = New System.Drawing.Font("Segoe UI", 9!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label168.ForeColor = System.Drawing.Color.Black
-        Me.Label168.Location = New System.Drawing.Point(8, -34)
+        Me.Label168.Location = New System.Drawing.Point(8, 7)
         Me.Label168.Name = "Label168"
         Me.Label168.Size = New System.Drawing.Size(163, 15)
         Me.Label168.TabIndex = 206
@@ -3141,22 +3159,22 @@ Partial Class formMain
         Me.TextBoxX2.Border.BorderGradientAngle = 0
         Me.TextBoxX2.Border.Class = "TextBoxBorder"
         Me.TextBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.TextBoxX2.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxX2.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.TextBoxX2.ForeColor = System.Drawing.Color.Black
-        Me.TextBoxX2.Location = New System.Drawing.Point(515, 135)
+        Me.TextBoxX2.Location = New System.Drawing.Point(123, 164)
         Me.TextBoxX2.MaxLength = 45
         Me.TextBoxX2.Name = "TextBoxX2"
-        Me.TextBoxX2.Size = New System.Drawing.Size(268, 31)
+        Me.TextBoxX2.Size = New System.Drawing.Size(659, 31)
         Me.TextBoxX2.TabIndex = 110
         Me.TextBoxX2.WatermarkText = "Security Answer"
         '
         'Label182
         '
-        Me.Label182.AutoSize = True
+        Me.Label182.AutoSize = true
         Me.Label182.BackColor = System.Drawing.Color.White
-        Me.Label182.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label182.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label182.ForeColor = System.Drawing.Color.Black
-        Me.Label182.Location = New System.Drawing.Point(399, 141)
+        Me.Label182.Location = New System.Drawing.Point(3, 174)
         Me.Label182.Name = "Label182"
         Me.Label182.Size = New System.Drawing.Size(112, 15)
         Me.Label182.TabIndex = 109
@@ -3164,9 +3182,9 @@ Partial Class formMain
         '
         'Label181
         '
-        Me.Label181.AutoSize = True
+        Me.Label181.AutoSize = true
         Me.Label181.BackColor = System.Drawing.Color.White
-        Me.Label181.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label181.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label181.ForeColor = System.Drawing.Color.Black
         Me.Label181.Location = New System.Drawing.Point(3, 141)
         Me.Label181.Name = "Label181"
@@ -3176,9 +3194,9 @@ Partial Class formMain
         '
         'Label20
         '
-        Me.Label20.AutoSize = True
+        Me.Label20.AutoSize = true
         Me.Label20.BackColor = System.Drawing.Color.White
-        Me.Label20.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label20.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label20.ForeColor = System.Drawing.Color.Black
         Me.Label20.Location = New System.Drawing.Point(3, 33)
         Me.Label20.Name = "Label20"
@@ -3195,7 +3213,7 @@ Partial Class formMain
         Me.txtSystemMiddleName.Border.BorderGradientAngle = 0
         Me.txtSystemMiddleName.Border.Class = "TextBoxBorder"
         Me.txtSystemMiddleName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSystemMiddleName.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSystemMiddleName.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSystemMiddleName.ForeColor = System.Drawing.Color.Black
         Me.txtSystemMiddleName.Location = New System.Drawing.Point(124, 99)
         Me.txtSystemMiddleName.MaxLength = 100
@@ -3206,24 +3224,24 @@ Partial Class formMain
         '
         'linkChangePassword
         '
-        Me.linkChangePassword.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.linkChangePassword.AutoSize = True
-        Me.linkChangePassword.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.linkChangePassword.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
+        Me.linkChangePassword.AutoSize = true
+        Me.linkChangePassword.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.linkChangePassword.ForeColor = System.Drawing.Color.Black
-        Me.linkChangePassword.LinkColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.linkChangePassword.LinkColor = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.linkChangePassword.Location = New System.Drawing.Point(401, 106)
         Me.linkChangePassword.Name = "linkChangePassword"
         Me.linkChangePassword.Size = New System.Drawing.Size(103, 15)
         Me.linkChangePassword.TabIndex = 106
-        Me.linkChangePassword.TabStop = True
+        Me.linkChangePassword.TabStop = true
         Me.linkChangePassword.Text = "Change Password"
-        Me.linkChangePassword.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.linkChangePassword.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         '
         'Label25
         '
-        Me.Label25.AutoSize = True
+        Me.Label25.AutoSize = true
         Me.Label25.BackColor = System.Drawing.Color.White
-        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label25.ForeColor = System.Drawing.Color.Black
         Me.Label25.Location = New System.Drawing.Point(398, 33)
         Me.Label25.Name = "Label25"
@@ -3233,9 +3251,9 @@ Partial Class formMain
         '
         'Label19
         '
-        Me.Label19.AutoSize = True
+        Me.Label19.AutoSize = true
         Me.Label19.BackColor = System.Drawing.Color.White
-        Me.Label19.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label19.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label19.ForeColor = System.Drawing.Color.Black
         Me.Label19.Location = New System.Drawing.Point(3, 69)
         Me.Label19.Name = "Label19"
@@ -3245,9 +3263,9 @@ Partial Class formMain
         '
         'Label21
         '
-        Me.Label21.AutoSize = True
+        Me.Label21.AutoSize = true
         Me.Label21.BackColor = System.Drawing.Color.White
-        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label21.ForeColor = System.Drawing.Color.Black
         Me.Label21.Location = New System.Drawing.Point(3, 105)
         Me.Label21.Name = "Label21"
@@ -3264,20 +3282,20 @@ Partial Class formMain
         Me.txtSystemUser.Border.BorderGradientAngle = 0
         Me.txtSystemUser.Border.Class = "TextBoxBorder"
         Me.txtSystemUser.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSystemUser.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSystemUser.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSystemUser.ForeColor = System.Drawing.Color.Black
         Me.txtSystemUser.Location = New System.Drawing.Point(514, 27)
         Me.txtSystemUser.Name = "txtSystemUser"
-        Me.txtSystemUser.ReadOnly = True
+        Me.txtSystemUser.ReadOnly = true
         Me.txtSystemUser.Size = New System.Drawing.Size(268, 31)
         Me.txtSystemUser.TabIndex = 104
         Me.txtSystemUser.WatermarkText = "Login Username"
         '
         'Label24
         '
-        Me.Label24.AutoSize = True
+        Me.Label24.AutoSize = true
         Me.Label24.BackColor = System.Drawing.Color.White
-        Me.Label24.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label24.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label24.ForeColor = System.Drawing.Color.Black
         Me.Label24.Location = New System.Drawing.Point(398, 69)
         Me.Label24.Name = "Label24"
@@ -3294,7 +3312,7 @@ Partial Class formMain
         Me.txtSystemFirstName.Border.BorderGradientAngle = 0
         Me.txtSystemFirstName.Border.Class = "TextBoxBorder"
         Me.txtSystemFirstName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSystemFirstName.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSystemFirstName.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSystemFirstName.ForeColor = System.Drawing.Color.Black
         Me.txtSystemFirstName.Location = New System.Drawing.Point(124, 63)
         Me.txtSystemFirstName.MaxLength = 100
@@ -3312,7 +3330,7 @@ Partial Class formMain
         Me.txtSystemLastname.Border.BorderGradientAngle = 0
         Me.txtSystemLastname.Border.Class = "TextBoxBorder"
         Me.txtSystemLastname.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSystemLastname.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSystemLastname.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSystemLastname.ForeColor = System.Drawing.Color.Black
         Me.txtSystemLastname.Location = New System.Drawing.Point(124, 27)
         Me.txtSystemLastname.Name = "txtSystemLastname"
@@ -3329,20 +3347,20 @@ Partial Class formMain
         Me.txtUSerDesignation.Border.BorderGradientAngle = 0
         Me.txtUSerDesignation.Border.Class = "TextBoxBorder"
         Me.txtUSerDesignation.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtUSerDesignation.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUSerDesignation.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtUSerDesignation.ForeColor = System.Drawing.Color.Black
         Me.txtUSerDesignation.Location = New System.Drawing.Point(514, 63)
         Me.txtUSerDesignation.MaxLength = 100
         Me.txtUSerDesignation.Name = "txtUSerDesignation"
-        Me.txtUSerDesignation.ReadOnly = True
+        Me.txtUSerDesignation.ReadOnly = true
         Me.txtUSerDesignation.Size = New System.Drawing.Size(268, 31)
         Me.txtUSerDesignation.TabIndex = 105
         Me.txtUSerDesignation.WatermarkText = "User's Designation"
         '
         'PanelEx14
         '
-        Me.PanelEx14.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx14.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.PanelEx14.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx14.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx14.Controls.Add(Me.LinkLabel2)
@@ -3350,7 +3368,7 @@ Partial Class formMain
         Me.PanelEx14.Controls.Add(Me.PanelEx12)
         Me.PanelEx14.Location = New System.Drawing.Point(5, 71)
         Me.PanelEx14.Name = "PanelEx14"
-        Me.PanelEx14.Size = New System.Drawing.Size(861, 278)
+        Me.PanelEx14.Size = New System.Drawing.Size(861, 255)
         Me.PanelEx14.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx14.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelEx14.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
@@ -3360,47 +3378,47 @@ Partial Class formMain
         '
         'LinkLabel2
         '
-        Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.LinkLabel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.LinkLabel2.AutoSize = true
+        Me.LinkLabel2.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.LinkLabel2.ForeColor = System.Drawing.Color.Black
-        Me.LinkLabel2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.LinkLabel2.Location = New System.Drawing.Point(436, 236)
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
+        Me.LinkLabel2.Location = New System.Drawing.Point(436, 223)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(92, 15)
         Me.LinkLabel2.TabIndex = 108
-        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.TabStop = true
         Me.LinkLabel2.Text = "Remove Image"
-        Me.LinkLabel2.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.LinkLabel2.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         '
         'LinkLabel1
         '
-        Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.LinkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.LinkLabel1.AutoSize = true
+        Me.LinkLabel1.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.LinkLabel1.ForeColor = System.Drawing.Color.Black
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.LinkLabel1.Location = New System.Drawing.Point(332, 236)
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
+        Me.LinkLabel1.Location = New System.Drawing.Point(332, 223)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(84, 15)
         Me.LinkLabel1.TabIndex = 107
-        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.TabStop = true
         Me.LinkLabel1.Text = "Upload Image"
-        Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         '
         'PanelEx12
         '
-        Me.PanelEx12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom),System.Windows.Forms.AnchorStyles)
         Me.PanelEx12.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx12.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx12.Controls.Add(Me.picSystemProfile)
-        Me.PanelEx12.Location = New System.Drawing.Point(330, 27)
+        Me.PanelEx12.Location = New System.Drawing.Point(330, 17)
         Me.PanelEx12.Name = "PanelEx12"
         Me.PanelEx12.Size = New System.Drawing.Size(200, 200)
         Me.PanelEx12.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.PanelEx12.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx12.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx12.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.PanelEx12.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelEx12.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
@@ -3416,7 +3434,7 @@ Partial Class formMain
         Me.picSystemProfile.Size = New System.Drawing.Size(190, 190)
         Me.picSystemProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picSystemProfile.TabIndex = 0
-        Me.picSystemProfile.TabStop = False
+        Me.picSystemProfile.TabStop = false
         '
         'PanelEx11
         '
@@ -3428,7 +3446,7 @@ Partial Class formMain
         Me.PanelEx11.Name = "PanelEx11"
         Me.PanelEx11.Size = New System.Drawing.Size(869, 65)
         Me.PanelEx11.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.PanelEx11.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx11.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx11.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.PanelEx11.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelEx11.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
@@ -3437,8 +3455,8 @@ Partial Class formMain
         '
         'Label18
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.AutoSize = true
+        Me.Label18.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label18.ForeColor = System.Drawing.Color.Black
         Me.Label18.Location = New System.Drawing.Point(12, 18)
         Me.Label18.Name = "Label18"
@@ -3453,7 +3471,7 @@ Partial Class formMain
         '
         'panelPassword
         '
-        Me.panelPassword.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.panelPassword.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.panelPassword.CanvasColor = System.Drawing.SystemColors.Control
         Me.panelPassword.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.panelPassword.Controls.Add(Me.PanelEx19)
@@ -3461,16 +3479,16 @@ Partial Class formMain
         Me.panelPassword.Name = "panelPassword"
         Me.panelPassword.Size = New System.Drawing.Size(869, 367)
         Me.panelPassword.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.panelPassword.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.panelPassword.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(213,Byte),Integer), CType(CType(222,Byte),Integer), CType(CType(231,Byte),Integer))
         Me.panelPassword.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.panelPassword.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.panelPassword.Style.GradientAngle = 90
         Me.panelPassword.TabIndex = 10
-        Me.panelPassword.Visible = False
+        Me.panelPassword.Visible = false
         '
         'PanelEx19
         '
-        Me.PanelEx19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom),System.Windows.Forms.AnchorStyles)
         Me.PanelEx19.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx19.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx19.Controls.Add(Me.PanelEx20)
@@ -3486,7 +3504,7 @@ Partial Class formMain
         Me.PanelEx19.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx19.Style.BackColor1.Color = System.Drawing.Color.White
         Me.PanelEx19.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx19.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx19.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx19.Style.BorderWidth = 2
         Me.PanelEx19.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx19.Style.GradientAngle = 90
@@ -3513,7 +3531,7 @@ Partial Class formMain
         'btnpassave
         '
         Me.btnpassave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnpassave.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnpassave.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnpassave.ForeColor = System.Drawing.Color.Black
         Me.btnpassave.Location = New System.Drawing.Point(10, 7)
         Me.btnpassave.Name = "btnpassave"
@@ -3521,12 +3539,12 @@ Partial Class formMain
         Me.btnpassave.TabIndex = 6
         Me.btnpassave.Tag = "Navy"
         Me.btnpassave.Text = "Save"
-        Me.btnpassave.UseVisualStyleBackColor = True
+        Me.btnpassave.UseVisualStyleBackColor = true
         '
         'btnpassClose
         '
         Me.btnpassClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnpassClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnpassClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnpassClose.ForeColor = System.Drawing.Color.Black
         Me.btnpassClose.Location = New System.Drawing.Point(110, 7)
         Me.btnpassClose.Name = "btnpassClose"
@@ -3534,7 +3552,7 @@ Partial Class formMain
         Me.btnpassClose.TabIndex = 9
         Me.btnpassClose.Tag = "Navy"
         Me.btnpassClose.Text = "Close"
-        Me.btnpassClose.UseVisualStyleBackColor = True
+        Me.btnpassClose.UseVisualStyleBackColor = true
         '
         'txtCPReNew
         '
@@ -3545,7 +3563,7 @@ Partial Class formMain
         Me.txtCPReNew.Border.BorderGradientAngle = 0
         Me.txtCPReNew.Border.Class = "TextBoxBorder"
         Me.txtCPReNew.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtCPReNew.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCPReNew.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtCPReNew.ForeColor = System.Drawing.Color.Black
         Me.txtCPReNew.Location = New System.Drawing.Point(198, 167)
         Me.txtCPReNew.MaxLength = 100
@@ -3557,9 +3575,9 @@ Partial Class formMain
         '
         'Label27
         '
-        Me.Label27.AutoSize = True
+        Me.Label27.AutoSize = true
         Me.Label27.BackColor = System.Drawing.Color.White
-        Me.Label27.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label27.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label27.ForeColor = System.Drawing.Color.Black
         Me.Label27.Location = New System.Drawing.Point(47, 174)
         Me.Label27.Name = "Label27"
@@ -3576,7 +3594,7 @@ Partial Class formMain
         Me.txtCPNew.Border.BorderGradientAngle = 0
         Me.txtCPNew.Border.Class = "TextBoxBorder"
         Me.txtCPNew.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtCPNew.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCPNew.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtCPNew.ForeColor = System.Drawing.Color.Black
         Me.txtCPNew.Location = New System.Drawing.Point(198, 115)
         Me.txtCPNew.MaxLength = 100
@@ -3588,9 +3606,9 @@ Partial Class formMain
         '
         'Label26
         '
-        Me.Label26.AutoSize = True
+        Me.Label26.AutoSize = true
         Me.Label26.BackColor = System.Drawing.Color.White
-        Me.Label26.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label26.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label26.ForeColor = System.Drawing.Color.Black
         Me.Label26.Location = New System.Drawing.Point(47, 122)
         Me.Label26.Name = "Label26"
@@ -3607,7 +3625,7 @@ Partial Class formMain
         Me.txtChangePass.Border.BorderGradientAngle = 0
         Me.txtChangePass.Border.Class = "TextBoxBorder"
         Me.txtChangePass.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtChangePass.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtChangePass.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtChangePass.ForeColor = System.Drawing.Color.Black
         Me.txtChangePass.Location = New System.Drawing.Point(198, 63)
         Me.txtChangePass.MaxLength = 100
@@ -3619,9 +3637,9 @@ Partial Class formMain
         '
         'Label22
         '
-        Me.Label22.AutoSize = True
+        Me.Label22.AutoSize = true
         Me.Label22.BackColor = System.Drawing.Color.White
-        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label22.ForeColor = System.Drawing.Color.Black
         Me.Label22.Location = New System.Drawing.Point(47, 70)
         Me.Label22.Name = "Label22"
@@ -3631,9 +3649,9 @@ Partial Class formMain
         '
         'slideAssessment
         '
-        Me.slideAssessment.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.slideAssessment.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.slideAssessment.BackColor = System.Drawing.Color.White
         Me.slideAssessment.Controls.Add(Me.PanelEx22)
         Me.slideAssessment.Controls.Add(Me.PanelEx21)
@@ -3643,11 +3661,11 @@ Partial Class formMain
         Me.slideAssessment.Location = New System.Drawing.Point(199, 78)
         Me.slideAssessment.Name = "slideAssessment"
         Me.slideAssessment.Size = New System.Drawing.Size(869, 594)
-        Me.slideAssessment.SlideOutButtonVisible = False
+        Me.slideAssessment.SlideOutButtonVisible = false
         Me.slideAssessment.SlideSide = DevComponents.DotNetBar.Controls.eSlideSide.Right
         Me.slideAssessment.TabIndex = 11
         Me.slideAssessment.Tag = "Forms"
-        Me.slideAssessment.UsesBlockingAnimation = False
+        Me.slideAssessment.UsesBlockingAnimation = false
         '
         'PanelEx22
         '
@@ -3662,7 +3680,7 @@ Partial Class formMain
         Me.PanelEx22.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx22.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelEx22.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx22.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx22.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx22.Style.BorderSide = DevComponents.DotNetBar.eBorderSide.Right
         Me.PanelEx22.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx22.Style.GradientAngle = 90
@@ -3670,7 +3688,7 @@ Partial Class formMain
         '
         'PanelEx27
         '
-        Me.PanelEx27.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx27.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.PanelEx27.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx27.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx27.Controls.Add(Me.panelAssessment)
@@ -3686,7 +3704,7 @@ Partial Class formMain
         '
         'panelAssessment
         '
-        Me.panelAssessment.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.panelAssessment.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom),System.Windows.Forms.AnchorStyles)
         Me.panelAssessment.CanvasColor = System.Drawing.SystemColors.Control
         Me.panelAssessment.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.panelAssessment.Controls.Add(Me.Label164)
@@ -3744,10 +3762,10 @@ Partial Class formMain
         '
         'Label164
         '
-        Me.Label164.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label164.AutoSize = True
+        Me.Label164.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.Label164.AutoSize = true
         Me.Label164.BackColor = System.Drawing.Color.Transparent
-        Me.Label164.Font = New System.Drawing.Font("Segoe UI", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label164.Font = New System.Drawing.Font("Segoe UI", 9!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label164.ForeColor = System.Drawing.Color.Black
         Me.Label164.Location = New System.Drawing.Point(10, 9)
         Me.Label164.Name = "Label164"
@@ -3764,21 +3782,21 @@ Partial Class formMain
         Me.txtAssessStatus.Border.BorderGradientAngle = 0
         Me.txtAssessStatus.Border.Class = "TextBoxBorder"
         Me.txtAssessStatus.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessStatus.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessStatus.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessStatus.ForeColor = System.Drawing.Color.Black
         Me.txtAssessStatus.Location = New System.Drawing.Point(286, 379)
         Me.txtAssessStatus.MaxLength = 100
         Me.txtAssessStatus.Name = "txtAssessStatus"
-        Me.txtAssessStatus.ReadOnly = True
+        Me.txtAssessStatus.ReadOnly = true
         Me.txtAssessStatus.Size = New System.Drawing.Size(198, 31)
         Me.txtAssessStatus.TabIndex = 143
         Me.txtAssessStatus.Tag = "readonly"
         '
         'lblAssessStatus
         '
-        Me.lblAssessStatus.AutoSize = True
+        Me.lblAssessStatus.AutoSize = true
         Me.lblAssessStatus.BackColor = System.Drawing.Color.Transparent
-        Me.lblAssessStatus.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.lblAssessStatus.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.lblAssessStatus.ForeColor = System.Drawing.Color.Black
         Me.lblAssessStatus.Location = New System.Drawing.Point(223, 388)
         Me.lblAssessStatus.Name = "lblAssessStatus"
@@ -3790,8 +3808,8 @@ Partial Class formMain
         '
         Me.dtPermitIssue.BackColor = System.Drawing.Color.White
         Me.dtPermitIssue.CustomFormat = "MM/dd/yyyy"
-        Me.dtPermitIssue.Enabled = False
-        Me.dtPermitIssue.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.dtPermitIssue.Enabled = false
+        Me.dtPermitIssue.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.dtPermitIssue.ForeColor = System.Drawing.Color.Black
         Me.dtPermitIssue.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtPermitIssue.Location = New System.Drawing.Point(301, 312)
@@ -3809,28 +3827,28 @@ Partial Class formMain
         Me.txtAssessAdditional.Border.Class = "TextBoxBorder"
         Me.txtAssessAdditional.Border.CornerDiameter = 6
         Me.txtAssessAdditional.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessAdditional.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessAdditional.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessAdditional.ForeColor = System.Drawing.Color.Black
         Me.txtAssessAdditional.Location = New System.Drawing.Point(75, 344)
         Me.txtAssessAdditional.MaxLength = 100
         Me.txtAssessAdditional.Name = "txtAssessAdditional"
-        Me.txtAssessAdditional.ReadOnly = True
+        Me.txtAssessAdditional.ReadOnly = true
         Me.txtAssessAdditional.Size = New System.Drawing.Size(131, 29)
         Me.txtAssessAdditional.TabIndex = 140
-        Me.txtAssessAdditional.Visible = False
+        Me.txtAssessAdditional.Visible = false
         '
         'lblAdd
         '
-        Me.lblAdd.AutoSize = True
+        Me.lblAdd.AutoSize = true
         Me.lblAdd.BackColor = System.Drawing.Color.White
-        Me.lblAdd.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.lblAdd.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.lblAdd.ForeColor = System.Drawing.Color.Black
         Me.lblAdd.Location = New System.Drawing.Point(4, 351)
         Me.lblAdd.Name = "lblAdd"
         Me.lblAdd.Size = New System.Drawing.Size(72, 15)
         Me.lblAdd.TabIndex = 139
         Me.lblAdd.Text = "Additional : "
-        Me.lblAdd.Visible = False
+        Me.lblAdd.Visible = false
         '
         'txtAssesCode
         '
@@ -3841,12 +3859,12 @@ Partial Class formMain
         Me.txtAssesCode.Border.BorderGradientAngle = 0
         Me.txtAssesCode.Border.Class = "TextBoxBorder"
         Me.txtAssesCode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssesCode.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssesCode.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssesCode.ForeColor = System.Drawing.Color.Black
         Me.txtAssesCode.Location = New System.Drawing.Point(286, 343)
         Me.txtAssesCode.MaxLength = 100
         Me.txtAssesCode.Name = "txtAssesCode"
-        Me.txtAssesCode.ReadOnly = True
+        Me.txtAssesCode.ReadOnly = true
         Me.txtAssesCode.Size = New System.Drawing.Size(48, 31)
         Me.txtAssesCode.TabIndex = 137
         Me.txtAssesCode.Tag = "readonly"
@@ -3860,21 +3878,21 @@ Partial Class formMain
         Me.txtAssessUser.Border.BorderGradientAngle = 0
         Me.txtAssessUser.Border.Class = "TextBoxBorder"
         Me.txtAssessUser.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessUser.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessUser.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessUser.ForeColor = System.Drawing.Color.Black
         Me.txtAssessUser.Location = New System.Drawing.Point(335, 343)
         Me.txtAssessUser.MaxLength = 100
         Me.txtAssessUser.Name = "txtAssessUser"
-        Me.txtAssessUser.ReadOnly = True
+        Me.txtAssessUser.ReadOnly = true
         Me.txtAssessUser.Size = New System.Drawing.Size(150, 31)
         Me.txtAssessUser.TabIndex = 138
         Me.txtAssessUser.Tag = "readonly"
         '
         'Label48
         '
-        Me.Label48.AutoSize = True
+        Me.Label48.AutoSize = true
         Me.Label48.BackColor = System.Drawing.Color.Transparent
-        Me.Label48.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label48.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label48.ForeColor = System.Drawing.Color.Black
         Me.Label48.Location = New System.Drawing.Point(222, 350)
         Me.Label48.Name = "Label48"
@@ -3884,9 +3902,9 @@ Partial Class formMain
         '
         'Label49
         '
-        Me.Label49.AutoSize = True
+        Me.Label49.AutoSize = true
         Me.Label49.BackColor = System.Drawing.Color.White
-        Me.Label49.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label49.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label49.ForeColor = System.Drawing.Color.Black
         Me.Label49.Location = New System.Drawing.Point(222, 316)
         Me.Label49.Name = "Label49"
@@ -3904,12 +3922,12 @@ Partial Class formMain
         Me.txtAssessPermitSub.Border.Class = "TextBoxBorder"
         Me.txtAssessPermitSub.Border.CornerDiameter = 6
         Me.txtAssessPermitSub.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessPermitSub.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessPermitSub.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessPermitSub.ForeColor = System.Drawing.Color.Black
         Me.txtAssessPermitSub.Location = New System.Drawing.Point(123, 307)
         Me.txtAssessPermitSub.MaxLength = 7
         Me.txtAssessPermitSub.Name = "txtAssessPermitSub"
-        Me.txtAssessPermitSub.ReadOnly = True
+        Me.txtAssessPermitSub.ReadOnly = true
         Me.txtAssessPermitSub.Size = New System.Drawing.Size(83, 29)
         Me.txtAssessPermitSub.TabIndex = 135
         Me.txtAssessPermitSub.Tag = "readonly"
@@ -3924,21 +3942,21 @@ Partial Class formMain
         Me.txtAssessPermitPre.Border.Class = "TextBoxBorder"
         Me.txtAssessPermitPre.Border.CornerDiameter = 6
         Me.txtAssessPermitPre.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessPermitPre.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessPermitPre.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessPermitPre.ForeColor = System.Drawing.Color.Black
         Me.txtAssessPermitPre.Location = New System.Drawing.Point(74, 307)
         Me.txtAssessPermitPre.MaxLength = 2
         Me.txtAssessPermitPre.Name = "txtAssessPermitPre"
-        Me.txtAssessPermitPre.ReadOnly = True
+        Me.txtAssessPermitPre.ReadOnly = true
         Me.txtAssessPermitPre.Size = New System.Drawing.Size(48, 29)
         Me.txtAssessPermitPre.TabIndex = 134
         Me.txtAssessPermitPre.Tag = "readonly"
         '
         'Label47
         '
-        Me.Label47.AutoSize = True
+        Me.Label47.AutoSize = true
         Me.Label47.BackColor = System.Drawing.Color.White
-        Me.Label47.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label47.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label47.ForeColor = System.Drawing.Color.Black
         Me.Label47.Location = New System.Drawing.Point(7, 316)
         Me.Label47.Name = "Label47"
@@ -3948,9 +3966,9 @@ Partial Class formMain
         '
         'Label46
         '
-        Me.Label46.AutoSize = True
+        Me.Label46.AutoSize = true
         Me.Label46.BackColor = System.Drawing.Color.White
-        Me.Label46.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label46.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label46.ForeColor = System.Drawing.Color.Black
         Me.Label46.Location = New System.Drawing.Point(354, 185)
         Me.Label46.Name = "Label46"
@@ -3960,9 +3978,9 @@ Partial Class formMain
         '
         'Label45
         '
-        Me.Label45.AutoSize = True
+        Me.Label45.AutoSize = true
         Me.Label45.BackColor = System.Drawing.Color.White
-        Me.Label45.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label45.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label45.ForeColor = System.Drawing.Color.Black
         Me.Label45.Location = New System.Drawing.Point(286, 185)
         Me.Label45.Name = "Label45"
@@ -3972,9 +3990,9 @@ Partial Class formMain
         '
         'Label44
         '
-        Me.Label44.AutoSize = True
+        Me.Label44.AutoSize = true
         Me.Label44.BackColor = System.Drawing.Color.White
-        Me.Label44.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label44.ForeColor = System.Drawing.Color.Black
         Me.Label44.Location = New System.Drawing.Point(82, 185)
         Me.Label44.Name = "Label44"
@@ -3984,9 +4002,9 @@ Partial Class formMain
         '
         'Label43
         '
-        Me.Label43.AutoSize = True
+        Me.Label43.AutoSize = true
         Me.Label43.BackColor = System.Drawing.Color.White
-        Me.Label43.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label43.ForeColor = System.Drawing.Color.Black
         Me.Label43.Location = New System.Drawing.Point(291, 139)
         Me.Label43.Name = "Label43"
@@ -3996,9 +4014,9 @@ Partial Class formMain
         '
         'Label42
         '
-        Me.Label42.AutoSize = True
+        Me.Label42.AutoSize = true
         Me.Label42.BackColor = System.Drawing.Color.White
-        Me.Label42.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label42.ForeColor = System.Drawing.Color.Black
         Me.Label42.Location = New System.Drawing.Point(215, 139)
         Me.Label42.Name = "Label42"
@@ -4008,9 +4026,9 @@ Partial Class formMain
         '
         'Label41
         '
-        Me.Label41.AutoSize = True
+        Me.Label41.AutoSize = true
         Me.Label41.BackColor = System.Drawing.Color.White
-        Me.Label41.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label41.ForeColor = System.Drawing.Color.Black
         Me.Label41.Location = New System.Drawing.Point(149, 139)
         Me.Label41.Name = "Label41"
@@ -4020,9 +4038,9 @@ Partial Class formMain
         '
         'Label40
         '
-        Me.Label40.AutoSize = True
+        Me.Label40.AutoSize = true
         Me.Label40.BackColor = System.Drawing.Color.White
-        Me.Label40.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label40.ForeColor = System.Drawing.Color.Black
         Me.Label40.Location = New System.Drawing.Point(82, 139)
         Me.Label40.Name = "Label40"
@@ -4032,9 +4050,9 @@ Partial Class formMain
         '
         'Label39
         '
-        Me.Label39.AutoSize = True
+        Me.Label39.AutoSize = true
         Me.Label39.BackColor = System.Drawing.Color.White
-        Me.Label39.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label39.ForeColor = System.Drawing.Color.Black
         Me.Label39.Location = New System.Drawing.Point(364, 62)
         Me.Label39.Name = "Label39"
@@ -4044,9 +4062,9 @@ Partial Class formMain
         '
         'Label38
         '
-        Me.Label38.AutoSize = True
+        Me.Label38.AutoSize = true
         Me.Label38.BackColor = System.Drawing.Color.White
-        Me.Label38.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label38.ForeColor = System.Drawing.Color.Black
         Me.Label38.Location = New System.Drawing.Point(223, 62)
         Me.Label38.Name = "Label38"
@@ -4056,9 +4074,9 @@ Partial Class formMain
         '
         'Label37
         '
-        Me.Label37.AutoSize = True
+        Me.Label37.AutoSize = true
         Me.Label37.BackColor = System.Drawing.Color.White
-        Me.Label37.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label37.ForeColor = System.Drawing.Color.Black
         Me.Label37.Location = New System.Drawing.Point(83, 62)
         Me.Label37.Name = "Label37"
@@ -4076,22 +4094,22 @@ Partial Class formMain
         Me.txtAssessRemarks.Border.Class = "TextBoxBorder"
         Me.txtAssessRemarks.Border.CornerDiameter = 6
         Me.txtAssessRemarks.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessRemarks.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessRemarks.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessRemarks.ForeColor = System.Drawing.Color.Black
         Me.txtAssessRemarks.Location = New System.Drawing.Point(75, 234)
         Me.txtAssessRemarks.MaxLength = 100
-        Me.txtAssessRemarks.Multiline = True
+        Me.txtAssessRemarks.Multiline = true
         Me.txtAssessRemarks.Name = "txtAssessRemarks"
-        Me.txtAssessRemarks.ReadOnly = True
+        Me.txtAssessRemarks.ReadOnly = true
         Me.txtAssessRemarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtAssessRemarks.Size = New System.Drawing.Size(409, 69)
         Me.txtAssessRemarks.TabIndex = 122
         '
         'Label36
         '
-        Me.Label36.AutoSize = True
+        Me.Label36.AutoSize = true
         Me.Label36.BackColor = System.Drawing.Color.White
-        Me.Label36.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label36.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label36.ForeColor = System.Drawing.Color.Black
         Me.Label36.Location = New System.Drawing.Point(10, 237)
         Me.Label36.Name = "Label36"
@@ -4103,10 +4121,10 @@ Partial Class formMain
         '
         Me.cbo_Barangay_Assess.BackColor = System.Drawing.Color.White
         Me.cbo_Barangay_Assess.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbo_Barangay_Assess.Enabled = False
-        Me.cbo_Barangay_Assess.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.cbo_Barangay_Assess.Enabled = false
+        Me.cbo_Barangay_Assess.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.cbo_Barangay_Assess.ForeColor = System.Drawing.Color.Black
-        Me.cbo_Barangay_Assess.FormattingEnabled = True
+        Me.cbo_Barangay_Assess.FormattingEnabled = true
         Me.cbo_Barangay_Assess.Location = New System.Drawing.Point(348, 200)
         Me.cbo_Barangay_Assess.Name = "cbo_Barangay_Assess"
         Me.cbo_Barangay_Assess.Size = New System.Drawing.Size(137, 23)
@@ -4122,12 +4140,12 @@ Partial Class formMain
         Me.txtAssessZone.Border.Class = "TextBoxBorder"
         Me.txtAssessZone.Border.CornerDiameter = 6
         Me.txtAssessZone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessZone.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessZone.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessZone.ForeColor = System.Drawing.Color.Black
         Me.txtAssessZone.Location = New System.Drawing.Point(280, 199)
         Me.txtAssessZone.MaxLength = 100
         Me.txtAssessZone.Name = "txtAssessZone"
-        Me.txtAssessZone.ReadOnly = True
+        Me.txtAssessZone.ReadOnly = true
         Me.txtAssessZone.Size = New System.Drawing.Size(64, 29)
         Me.txtAssessZone.TabIndex = 119
         '
@@ -4141,12 +4159,12 @@ Partial Class formMain
         Me.txtAssessOther.Border.Class = "TextBoxBorder"
         Me.txtAssessOther.Border.CornerDiameter = 6
         Me.txtAssessOther.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessOther.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessOther.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessOther.ForeColor = System.Drawing.Color.Black
         Me.txtAssessOther.Location = New System.Drawing.Point(76, 199)
         Me.txtAssessOther.MaxLength = 100
         Me.txtAssessOther.Name = "txtAssessOther"
-        Me.txtAssessOther.ReadOnly = True
+        Me.txtAssessOther.ReadOnly = true
         Me.txtAssessOther.Size = New System.Drawing.Size(201, 29)
         Me.txtAssessOther.TabIndex = 118
         '
@@ -4154,10 +4172,10 @@ Partial Class formMain
         '
         Me.cboSubdivision_Assess.BackColor = System.Drawing.Color.White
         Me.cboSubdivision_Assess.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboSubdivision_Assess.Enabled = False
-        Me.cboSubdivision_Assess.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.cboSubdivision_Assess.Enabled = false
+        Me.cboSubdivision_Assess.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.cboSubdivision_Assess.ForeColor = System.Drawing.Color.Black
-        Me.cboSubdivision_Assess.FormattingEnabled = True
+        Me.cboSubdivision_Assess.FormattingEnabled = true
         Me.cboSubdivision_Assess.Location = New System.Drawing.Point(283, 152)
         Me.cboSubdivision_Assess.Name = "cboSubdivision_Assess"
         Me.cboSubdivision_Assess.Size = New System.Drawing.Size(201, 23)
@@ -4173,12 +4191,12 @@ Partial Class formMain
         Me.txtAssessPhase.Border.Class = "TextBoxBorder"
         Me.txtAssessPhase.Border.CornerDiameter = 6
         Me.txtAssessPhase.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessPhase.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessPhase.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessPhase.ForeColor = System.Drawing.Color.Black
         Me.txtAssessPhase.Location = New System.Drawing.Point(213, 152)
         Me.txtAssessPhase.MaxLength = 100
         Me.txtAssessPhase.Name = "txtAssessPhase"
-        Me.txtAssessPhase.ReadOnly = True
+        Me.txtAssessPhase.ReadOnly = true
         Me.txtAssessPhase.Size = New System.Drawing.Size(64, 29)
         Me.txtAssessPhase.TabIndex = 116
         '
@@ -4192,12 +4210,12 @@ Partial Class formMain
         Me.txtAssessBlock.Border.Class = "TextBoxBorder"
         Me.txtAssessBlock.Border.CornerDiameter = 6
         Me.txtAssessBlock.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessBlock.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessBlock.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessBlock.ForeColor = System.Drawing.Color.Black
         Me.txtAssessBlock.Location = New System.Drawing.Point(144, 152)
         Me.txtAssessBlock.MaxLength = 100
         Me.txtAssessBlock.Name = "txtAssessBlock"
-        Me.txtAssessBlock.ReadOnly = True
+        Me.txtAssessBlock.ReadOnly = true
         Me.txtAssessBlock.Size = New System.Drawing.Size(64, 29)
         Me.txtAssessBlock.TabIndex = 115
         '
@@ -4211,12 +4229,12 @@ Partial Class formMain
         Me.txtAssessLot.Border.Class = "TextBoxBorder"
         Me.txtAssessLot.Border.CornerDiameter = 6
         Me.txtAssessLot.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessLot.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessLot.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessLot.ForeColor = System.Drawing.Color.Black
         Me.txtAssessLot.Location = New System.Drawing.Point(76, 152)
         Me.txtAssessLot.MaxLength = 100
         Me.txtAssessLot.Name = "txtAssessLot"
-        Me.txtAssessLot.ReadOnly = True
+        Me.txtAssessLot.ReadOnly = true
         Me.txtAssessLot.Size = New System.Drawing.Size(64, 29)
         Me.txtAssessLot.TabIndex = 114
         '
@@ -4230,12 +4248,12 @@ Partial Class formMain
         Me.txtAssessProject.Border.Class = "TextBoxBorder"
         Me.txtAssessProject.Border.CornerDiameter = 6
         Me.txtAssessProject.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessProject.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessProject.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessProject.ForeColor = System.Drawing.Color.Black
         Me.txtAssessProject.Location = New System.Drawing.Point(75, 108)
         Me.txtAssessProject.MaxLength = 100
         Me.txtAssessProject.Name = "txtAssessProject"
-        Me.txtAssessProject.ReadOnly = True
+        Me.txtAssessProject.ReadOnly = true
         Me.txtAssessProject.Size = New System.Drawing.Size(409, 29)
         Me.txtAssessProject.TabIndex = 113
         '
@@ -4249,12 +4267,12 @@ Partial Class formMain
         Me.txtAssessMiddle.Border.Class = "TextBoxBorder"
         Me.txtAssessMiddle.Border.CornerDiameter = 6
         Me.txtAssessMiddle.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessMiddle.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessMiddle.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessMiddle.ForeColor = System.Drawing.Color.Black
         Me.txtAssessMiddle.Location = New System.Drawing.Point(352, 76)
         Me.txtAssessMiddle.MaxLength = 100
         Me.txtAssessMiddle.Name = "txtAssessMiddle"
-        Me.txtAssessMiddle.ReadOnly = True
+        Me.txtAssessMiddle.ReadOnly = true
         Me.txtAssessMiddle.Size = New System.Drawing.Size(133, 29)
         Me.txtAssessMiddle.TabIndex = 112
         '
@@ -4268,12 +4286,12 @@ Partial Class formMain
         Me.txtAssessFirst.Border.Class = "TextBoxBorder"
         Me.txtAssessFirst.Border.CornerDiameter = 6
         Me.txtAssessFirst.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessFirst.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessFirst.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessFirst.ForeColor = System.Drawing.Color.Black
         Me.txtAssessFirst.Location = New System.Drawing.Point(214, 76)
         Me.txtAssessFirst.MaxLength = 100
         Me.txtAssessFirst.Name = "txtAssessFirst"
-        Me.txtAssessFirst.ReadOnly = True
+        Me.txtAssessFirst.ReadOnly = true
         Me.txtAssessFirst.Size = New System.Drawing.Size(133, 29)
         Me.txtAssessFirst.TabIndex = 111
         '
@@ -4287,20 +4305,20 @@ Partial Class formMain
         Me.txtAssessLast.Border.Class = "TextBoxBorder"
         Me.txtAssessLast.Border.CornerDiameter = 6
         Me.txtAssessLast.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtAssessLast.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAssessLast.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtAssessLast.ForeColor = System.Drawing.Color.Black
         Me.txtAssessLast.Location = New System.Drawing.Point(76, 76)
         Me.txtAssessLast.MaxLength = 100
         Me.txtAssessLast.Name = "txtAssessLast"
-        Me.txtAssessLast.ReadOnly = True
+        Me.txtAssessLast.ReadOnly = true
         Me.txtAssessLast.Size = New System.Drawing.Size(133, 29)
         Me.txtAssessLast.TabIndex = 110
         '
         'Label35
         '
-        Me.Label35.AutoSize = True
+        Me.Label35.AutoSize = true
         Me.Label35.BackColor = System.Drawing.Color.White
-        Me.Label35.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label35.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label35.ForeColor = System.Drawing.Color.Black
         Me.Label35.Location = New System.Drawing.Point(10, 162)
         Me.Label35.Name = "Label35"
@@ -4310,9 +4328,9 @@ Partial Class formMain
         '
         'Label34
         '
-        Me.Label34.AutoSize = True
+        Me.Label34.AutoSize = true
         Me.Label34.BackColor = System.Drawing.Color.White
-        Me.Label34.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label34.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label34.ForeColor = System.Drawing.Color.Black
         Me.Label34.Location = New System.Drawing.Point(8, 115)
         Me.Label34.Name = "Label34"
@@ -4322,9 +4340,9 @@ Partial Class formMain
         '
         'Label32
         '
-        Me.Label32.AutoSize = True
+        Me.Label32.AutoSize = true
         Me.Label32.BackColor = System.Drawing.Color.White
-        Me.Label32.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label32.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label32.ForeColor = System.Drawing.Color.Black
         Me.Label32.Location = New System.Drawing.Point(10, 82)
         Me.Label32.Name = "Label32"
@@ -4334,9 +4352,9 @@ Partial Class formMain
         '
         'Label31
         '
-        Me.Label31.AutoSize = True
+        Me.Label31.AutoSize = true
         Me.Label31.BackColor = System.Drawing.Color.White
-        Me.Label31.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label31.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label31.ForeColor = System.Drawing.Color.Black
         Me.Label31.Location = New System.Drawing.Point(336, 36)
         Me.Label31.Name = "Label31"
@@ -4348,8 +4366,8 @@ Partial Class formMain
         '
         Me.dtAssessDate.BackColor = System.Drawing.Color.White
         Me.dtAssessDate.CustomFormat = "MM/dd/yyyy"
-        Me.dtAssessDate.Enabled = False
-        Me.dtAssessDate.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.dtAssessDate.Enabled = false
+        Me.dtAssessDate.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.dtAssessDate.ForeColor = System.Drawing.Color.Black
         Me.dtAssessDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtAssessDate.Location = New System.Drawing.Point(382, 33)
@@ -4367,21 +4385,21 @@ Partial Class formMain
         Me.txtACN.Border.Class = "TextBoxBorder"
         Me.txtACN.Border.CornerDiameter = 6
         Me.txtACN.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtACN.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtACN.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtACN.ForeColor = System.Drawing.Color.Black
         Me.txtACN.Location = New System.Drawing.Point(75, 30)
         Me.txtACN.MaxLength = 100
         Me.txtACN.Name = "txtACN"
-        Me.txtACN.ReadOnly = True
+        Me.txtACN.ReadOnly = true
         Me.txtACN.Size = New System.Drawing.Size(102, 29)
         Me.txtACN.TabIndex = 104
         Me.txtACN.Tag = "readonly"
         '
         'Label30
         '
-        Me.Label30.AutoSize = True
+        Me.Label30.AutoSize = true
         Me.Label30.BackColor = System.Drawing.Color.White
-        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label30.ForeColor = System.Drawing.Color.Black
         Me.Label30.Location = New System.Drawing.Point(10, 39)
         Me.Label30.Name = "Label30"
@@ -4401,7 +4419,7 @@ Partial Class formMain
         Me.PanelEx23.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx23.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx23.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx23.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx23.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx23.Style.BorderSide = DevComponents.DotNetBar.eBorderSide.Right
         Me.PanelEx23.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx23.Style.GradientAngle = 90
@@ -4409,8 +4427,8 @@ Partial Class formMain
         '
         'Label28
         '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.AutoSize = true
+        Me.Label28.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label28.ForeColor = System.Drawing.Color.Black
         Me.Label28.Location = New System.Drawing.Point(19, 14)
         Me.Label28.Name = "Label28"
@@ -4432,7 +4450,7 @@ Partial Class formMain
         Me.PanelEx21.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx21.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelEx21.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx21.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx21.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx21.Style.BorderSide = DevComponents.DotNetBar.eBorderSide.Left
         Me.PanelEx21.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx21.Style.GradientAngle = 90
@@ -4440,7 +4458,7 @@ Partial Class formMain
         '
         'PanelEx28
         '
-        Me.PanelEx28.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx28.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.PanelEx28.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx28.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx28.Controls.Add(Me.panelAssessSum)
@@ -4456,7 +4474,7 @@ Partial Class formMain
         '
         'panelAssessSum
         '
-        Me.panelAssessSum.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.panelAssessSum.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom),System.Windows.Forms.AnchorStyles)
         Me.panelAssessSum.CanvasColor = System.Drawing.SystemColors.Control
         Me.panelAssessSum.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.panelAssessSum.Controls.Add(Me.txtOBO)
@@ -4509,13 +4527,13 @@ Partial Class formMain
         Me.txtOBO.Border.Class = "TextBoxBorder"
         Me.txtOBO.Border.CornerDiameter = 3
         Me.txtOBO.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOBO.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOBO.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOBO.ForeColor = System.Drawing.Color.Black
         Me.txtOBO.Location = New System.Drawing.Point(198, 396)
         Me.txtOBO.MaxLength = 100
         Me.txtOBO.Name = "txtOBO"
-        Me.txtOBO.ReadOnly = True
-        Me.txtOBO.ShortcutsEnabled = False
+        Me.txtOBO.ReadOnly = true
+        Me.txtOBO.ShortcutsEnabled = false
         Me.txtOBO.Size = New System.Drawing.Size(133, 24)
         Me.txtOBO.TabIndex = 142
         Me.txtOBO.Tag = "readonly"
@@ -4532,13 +4550,13 @@ Partial Class formMain
         Me.txtBuildConstFee.Border.Class = "TextBoxBorder"
         Me.txtBuildConstFee.Border.CornerDiameter = 3
         Me.txtBuildConstFee.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtBuildConstFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuildConstFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtBuildConstFee.ForeColor = System.Drawing.Color.Black
         Me.txtBuildConstFee.Location = New System.Drawing.Point(198, 4)
         Me.txtBuildConstFee.MaxLength = 100
         Me.txtBuildConstFee.Name = "txtBuildConstFee"
-        Me.txtBuildConstFee.ReadOnly = True
-        Me.txtBuildConstFee.ShortcutsEnabled = False
+        Me.txtBuildConstFee.ReadOnly = true
+        Me.txtBuildConstFee.ShortcutsEnabled = false
         Me.txtBuildConstFee.Size = New System.Drawing.Size(133, 24)
         Me.txtBuildConstFee.TabIndex = 112
         Me.txtBuildConstFee.Text = "0.00"
@@ -4546,9 +4564,9 @@ Partial Class formMain
         '
         'Label62
         '
-        Me.Label62.AutoSize = True
+        Me.Label62.AutoSize = true
         Me.Label62.BackColor = System.Drawing.Color.White
-        Me.Label62.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label62.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label62.ForeColor = System.Drawing.Color.Black
         Me.Label62.Location = New System.Drawing.Point(80, 400)
         Me.Label62.Name = "Label62"
@@ -4558,9 +4576,9 @@ Partial Class formMain
         '
         'Label50
         '
-        Me.Label50.AutoSize = True
+        Me.Label50.AutoSize = true
         Me.Label50.BackColor = System.Drawing.Color.White
-        Me.Label50.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label50.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label50.ForeColor = System.Drawing.Color.Black
         Me.Label50.Location = New System.Drawing.Point(34, 8)
         Me.Label50.Name = "Label50"
@@ -4578,13 +4596,13 @@ Partial Class formMain
         Me.txtNatlGov.Border.Class = "TextBoxBorder"
         Me.txtNatlGov.Border.CornerDiameter = 3
         Me.txtNatlGov.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtNatlGov.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNatlGov.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtNatlGov.ForeColor = System.Drawing.Color.Black
         Me.txtNatlGov.Location = New System.Drawing.Point(198, 370)
         Me.txtNatlGov.MaxLength = 100
         Me.txtNatlGov.Name = "txtNatlGov"
-        Me.txtNatlGov.ReadOnly = True
-        Me.txtNatlGov.ShortcutsEnabled = False
+        Me.txtNatlGov.ReadOnly = true
+        Me.txtNatlGov.ShortcutsEnabled = false
         Me.txtNatlGov.Size = New System.Drawing.Size(133, 24)
         Me.txtNatlGov.TabIndex = 140
         Me.txtNatlGov.Tag = "readonly"
@@ -4593,9 +4611,9 @@ Partial Class formMain
         '
         'Label51
         '
-        Me.Label51.AutoSize = True
+        Me.Label51.AutoSize = true
         Me.Label51.BackColor = System.Drawing.Color.White
-        Me.Label51.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label51.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label51.ForeColor = System.Drawing.Color.Black
         Me.Label51.Location = New System.Drawing.Point(39, 34)
         Me.Label51.Name = "Label51"
@@ -4605,9 +4623,9 @@ Partial Class formMain
         '
         'Label63
         '
-        Me.Label63.AutoSize = True
+        Me.Label63.AutoSize = true
         Me.Label63.BackColor = System.Drawing.Color.White
-        Me.Label63.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label63.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label63.ForeColor = System.Drawing.Color.Black
         Me.Label63.Location = New System.Drawing.Point(32, 374)
         Me.Label63.Name = "Label63"
@@ -4625,13 +4643,13 @@ Partial Class formMain
         Me.txtElecInsFee.Border.Class = "TextBoxBorder"
         Me.txtElecInsFee.Border.CornerDiameter = 3
         Me.txtElecInsFee.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtElecInsFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtElecInsFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtElecInsFee.ForeColor = System.Drawing.Color.Black
         Me.txtElecInsFee.Location = New System.Drawing.Point(198, 30)
         Me.txtElecInsFee.MaxLength = 100
         Me.txtElecInsFee.Name = "txtElecInsFee"
-        Me.txtElecInsFee.ReadOnly = True
-        Me.txtElecInsFee.ShortcutsEnabled = False
+        Me.txtElecInsFee.ReadOnly = true
+        Me.txtElecInsFee.ShortcutsEnabled = false
         Me.txtElecInsFee.Size = New System.Drawing.Size(133, 24)
         Me.txtElecInsFee.TabIndex = 114
         Me.txtElecInsFee.Text = "0.00"
@@ -4647,13 +4665,13 @@ Partial Class formMain
         Me.txtLocalGov.Border.Class = "TextBoxBorder"
         Me.txtLocalGov.Border.CornerDiameter = 3
         Me.txtLocalGov.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtLocalGov.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLocalGov.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtLocalGov.ForeColor = System.Drawing.Color.Black
         Me.txtLocalGov.Location = New System.Drawing.Point(198, 344)
         Me.txtLocalGov.MaxLength = 100
         Me.txtLocalGov.Name = "txtLocalGov"
-        Me.txtLocalGov.ReadOnly = True
-        Me.txtLocalGov.ShortcutsEnabled = False
+        Me.txtLocalGov.ReadOnly = true
+        Me.txtLocalGov.ShortcutsEnabled = false
         Me.txtLocalGov.Size = New System.Drawing.Size(133, 24)
         Me.txtLocalGov.TabIndex = 138
         Me.txtLocalGov.Tag = "readonly"
@@ -4662,9 +4680,9 @@ Partial Class formMain
         '
         'Label53
         '
-        Me.Label53.AutoSize = True
+        Me.Label53.AutoSize = true
         Me.Label53.BackColor = System.Drawing.Color.White
-        Me.Label53.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label53.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label53.ForeColor = System.Drawing.Color.Black
         Me.Label53.Location = New System.Drawing.Point(27, 60)
         Me.Label53.Name = "Label53"
@@ -4674,9 +4692,9 @@ Partial Class formMain
         '
         'Label64
         '
-        Me.Label64.AutoSize = True
+        Me.Label64.AutoSize = true
         Me.Label64.BackColor = System.Drawing.Color.White
-        Me.Label64.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label64.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label64.ForeColor = System.Drawing.Color.Black
         Me.Label64.Location = New System.Drawing.Point(43, 348)
         Me.Label64.Name = "Label64"
@@ -4694,13 +4712,13 @@ Partial Class formMain
         Me.txtMechInsFee.Border.Class = "TextBoxBorder"
         Me.txtMechInsFee.Border.CornerDiameter = 3
         Me.txtMechInsFee.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtMechInsFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMechInsFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtMechInsFee.ForeColor = System.Drawing.Color.Black
         Me.txtMechInsFee.Location = New System.Drawing.Point(198, 56)
         Me.txtMechInsFee.MaxLength = 100
         Me.txtMechInsFee.Name = "txtMechInsFee"
-        Me.txtMechInsFee.ReadOnly = True
-        Me.txtMechInsFee.ShortcutsEnabled = False
+        Me.txtMechInsFee.ReadOnly = true
+        Me.txtMechInsFee.ShortcutsEnabled = false
         Me.txtMechInsFee.Size = New System.Drawing.Size(133, 24)
         Me.txtMechInsFee.TabIndex = 116
         Me.txtMechInsFee.Text = "0.00"
@@ -4716,13 +4734,13 @@ Partial Class formMain
         Me.txtTotalAssessFee.Border.Class = "TextBoxBorder"
         Me.txtTotalAssessFee.Border.CornerDiameter = 3
         Me.txtTotalAssessFee.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtTotalAssessFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalAssessFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtTotalAssessFee.ForeColor = System.Drawing.Color.Black
         Me.txtTotalAssessFee.Location = New System.Drawing.Point(198, 318)
         Me.txtTotalAssessFee.MaxLength = 100
         Me.txtTotalAssessFee.Name = "txtTotalAssessFee"
-        Me.txtTotalAssessFee.ReadOnly = True
-        Me.txtTotalAssessFee.ShortcutsEnabled = False
+        Me.txtTotalAssessFee.ReadOnly = true
+        Me.txtTotalAssessFee.ShortcutsEnabled = false
         Me.txtTotalAssessFee.Size = New System.Drawing.Size(133, 24)
         Me.txtTotalAssessFee.TabIndex = 136
         Me.txtTotalAssessFee.Tag = "readonly"
@@ -4731,9 +4749,9 @@ Partial Class formMain
         '
         'Label52
         '
-        Me.Label52.AutoSize = True
+        Me.Label52.AutoSize = true
         Me.Label52.BackColor = System.Drawing.Color.White
-        Me.Label52.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label52.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label52.ForeColor = System.Drawing.Color.Black
         Me.Label52.Location = New System.Drawing.Point(37, 86)
         Me.Label52.Name = "Label52"
@@ -4743,9 +4761,9 @@ Partial Class formMain
         '
         'Label65
         '
-        Me.Label65.AutoSize = True
+        Me.Label65.AutoSize = true
         Me.Label65.BackColor = System.Drawing.Color.White
-        Me.Label65.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label65.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label65.ForeColor = System.Drawing.Color.Black
         Me.Label65.Location = New System.Drawing.Point(80, 322)
         Me.Label65.Name = "Label65"
@@ -4763,13 +4781,13 @@ Partial Class formMain
         Me.txtPlumbInsFee.Border.Class = "TextBoxBorder"
         Me.txtPlumbInsFee.Border.CornerDiameter = 3
         Me.txtPlumbInsFee.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPlumbInsFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPlumbInsFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPlumbInsFee.ForeColor = System.Drawing.Color.Black
         Me.txtPlumbInsFee.Location = New System.Drawing.Point(198, 82)
         Me.txtPlumbInsFee.MaxLength = 100
         Me.txtPlumbInsFee.Name = "txtPlumbInsFee"
-        Me.txtPlumbInsFee.ReadOnly = True
-        Me.txtPlumbInsFee.ShortcutsEnabled = False
+        Me.txtPlumbInsFee.ReadOnly = true
+        Me.txtPlumbInsFee.ShortcutsEnabled = false
         Me.txtPlumbInsFee.Size = New System.Drawing.Size(133, 24)
         Me.txtPlumbInsFee.TabIndex = 118
         Me.txtPlumbInsFee.Text = "0.00"
@@ -4785,13 +4803,13 @@ Partial Class formMain
         Me.txtFinesFee.Border.Class = "TextBoxBorder"
         Me.txtFinesFee.Border.CornerDiameter = 3
         Me.txtFinesFee.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtFinesFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFinesFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtFinesFee.ForeColor = System.Drawing.Color.Black
         Me.txtFinesFee.Location = New System.Drawing.Point(198, 265)
         Me.txtFinesFee.MaxLength = 100
         Me.txtFinesFee.Name = "txtFinesFee"
-        Me.txtFinesFee.ReadOnly = True
-        Me.txtFinesFee.ShortcutsEnabled = False
+        Me.txtFinesFee.ReadOnly = true
+        Me.txtFinesFee.ShortcutsEnabled = false
         Me.txtFinesFee.Size = New System.Drawing.Size(133, 24)
         Me.txtFinesFee.TabIndex = 132
         Me.txtFinesFee.Text = "0.00"
@@ -4799,9 +4817,9 @@ Partial Class formMain
         '
         'Label57
         '
-        Me.Label57.AutoSize = True
+        Me.Label57.AutoSize = true
         Me.Label57.BackColor = System.Drawing.Color.White
-        Me.Label57.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label57.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label57.ForeColor = System.Drawing.Color.Black
         Me.Label57.Location = New System.Drawing.Point(34, 112)
         Me.Label57.Name = "Label57"
@@ -4811,9 +4829,9 @@ Partial Class formMain
         '
         'Label59
         '
-        Me.Label59.AutoSize = True
+        Me.Label59.AutoSize = true
         Me.Label59.BackColor = System.Drawing.Color.White
-        Me.Label59.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label59.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label59.ForeColor = System.Drawing.Color.Black
         Me.Label59.Location = New System.Drawing.Point(26, 269)
         Me.Label59.Name = "Label59"
@@ -4831,13 +4849,13 @@ Partial Class formMain
         Me.txtElectroInsFee.Border.Class = "TextBoxBorder"
         Me.txtElectroInsFee.Border.CornerDiameter = 3
         Me.txtElectroInsFee.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtElectroInsFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtElectroInsFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtElectroInsFee.ForeColor = System.Drawing.Color.Black
         Me.txtElectroInsFee.Location = New System.Drawing.Point(198, 108)
         Me.txtElectroInsFee.MaxLength = 100
         Me.txtElectroInsFee.Name = "txtElectroInsFee"
-        Me.txtElectroInsFee.ReadOnly = True
-        Me.txtElectroInsFee.ShortcutsEnabled = False
+        Me.txtElectroInsFee.ReadOnly = true
+        Me.txtElectroInsFee.ShortcutsEnabled = false
         Me.txtElectroInsFee.Size = New System.Drawing.Size(133, 24)
         Me.txtElectroInsFee.TabIndex = 120
         Me.txtElectroInsFee.Text = "0.00"
@@ -4853,13 +4871,13 @@ Partial Class formMain
         Me.txtCertFee.Border.Class = "TextBoxBorder"
         Me.txtCertFee.Border.CornerDiameter = 3
         Me.txtCertFee.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtCertFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCertFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtCertFee.ForeColor = System.Drawing.Color.Black
         Me.txtCertFee.Location = New System.Drawing.Point(198, 239)
         Me.txtCertFee.MaxLength = 100
         Me.txtCertFee.Name = "txtCertFee"
-        Me.txtCertFee.ReadOnly = True
-        Me.txtCertFee.ShortcutsEnabled = False
+        Me.txtCertFee.ReadOnly = true
+        Me.txtCertFee.ShortcutsEnabled = false
         Me.txtCertFee.Size = New System.Drawing.Size(133, 24)
         Me.txtCertFee.TabIndex = 130
         Me.txtCertFee.Text = "0.00"
@@ -4867,9 +4885,9 @@ Partial Class formMain
         '
         'Label56
         '
-        Me.Label56.AutoSize = True
+        Me.Label56.AutoSize = true
         Me.Label56.BackColor = System.Drawing.Color.White
-        Me.Label56.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label56.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label56.ForeColor = System.Drawing.Color.Black
         Me.Label56.Location = New System.Drawing.Point(41, 138)
         Me.Label56.Name = "Label56"
@@ -4879,9 +4897,9 @@ Partial Class formMain
         '
         'Label60
         '
-        Me.Label60.AutoSize = True
+        Me.Label60.AutoSize = true
         Me.Label60.BackColor = System.Drawing.Color.White
-        Me.Label60.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label60.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label60.ForeColor = System.Drawing.Color.Black
         Me.Label60.Location = New System.Drawing.Point(84, 243)
         Me.Label60.Name = "Label60"
@@ -4899,13 +4917,13 @@ Partial Class formMain
         Me.txtBuildAccFee.Border.Class = "TextBoxBorder"
         Me.txtBuildAccFee.Border.CornerDiameter = 3
         Me.txtBuildAccFee.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtBuildAccFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuildAccFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtBuildAccFee.ForeColor = System.Drawing.Color.Black
         Me.txtBuildAccFee.Location = New System.Drawing.Point(198, 134)
         Me.txtBuildAccFee.MaxLength = 100
         Me.txtBuildAccFee.Name = "txtBuildAccFee"
-        Me.txtBuildAccFee.ReadOnly = True
-        Me.txtBuildAccFee.ShortcutsEnabled = False
+        Me.txtBuildAccFee.ReadOnly = true
+        Me.txtBuildAccFee.ShortcutsEnabled = false
         Me.txtBuildAccFee.Size = New System.Drawing.Size(133, 24)
         Me.txtBuildAccFee.TabIndex = 122
         Me.txtBuildAccFee.Text = "0.00"
@@ -4921,13 +4939,13 @@ Partial Class formMain
         Me.txtBuildInspFee.Border.Class = "TextBoxBorder"
         Me.txtBuildInspFee.Border.CornerDiameter = 3
         Me.txtBuildInspFee.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtBuildInspFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuildInspFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtBuildInspFee.ForeColor = System.Drawing.Color.Black
         Me.txtBuildInspFee.Location = New System.Drawing.Point(198, 213)
         Me.txtBuildInspFee.MaxLength = 100
         Me.txtBuildInspFee.Name = "txtBuildInspFee"
-        Me.txtBuildInspFee.ReadOnly = True
-        Me.txtBuildInspFee.ShortcutsEnabled = False
+        Me.txtBuildInspFee.ReadOnly = true
+        Me.txtBuildInspFee.ShortcutsEnabled = false
         Me.txtBuildInspFee.Size = New System.Drawing.Size(133, 24)
         Me.txtBuildInspFee.TabIndex = 128
         Me.txtBuildInspFee.Text = "0.00"
@@ -4935,9 +4953,9 @@ Partial Class formMain
         '
         'Label55
         '
-        Me.Label55.AutoSize = True
+        Me.Label55.AutoSize = true
         Me.Label55.BackColor = System.Drawing.Color.White
-        Me.Label55.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label55.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label55.ForeColor = System.Drawing.Color.Black
         Me.Label55.Location = New System.Drawing.Point(53, 164)
         Me.Label55.Name = "Label55"
@@ -4947,9 +4965,9 @@ Partial Class formMain
         '
         'Label61
         '
-        Me.Label61.AutoSize = True
+        Me.Label61.AutoSize = true
         Me.Label61.BackColor = System.Drawing.Color.White
-        Me.Label61.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label61.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label61.ForeColor = System.Drawing.Color.Black
         Me.Label61.Location = New System.Drawing.Point(47, 217)
         Me.Label61.Name = "Label61"
@@ -4967,13 +4985,13 @@ Partial Class formMain
         Me.txtOthrAccFee.Border.Class = "TextBoxBorder"
         Me.txtOthrAccFee.Border.CornerDiameter = 3
         Me.txtOthrAccFee.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOthrAccFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOthrAccFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOthrAccFee.ForeColor = System.Drawing.Color.Black
         Me.txtOthrAccFee.Location = New System.Drawing.Point(198, 160)
         Me.txtOthrAccFee.MaxLength = 100
         Me.txtOthrAccFee.Name = "txtOthrAccFee"
-        Me.txtOthrAccFee.ReadOnly = True
-        Me.txtOthrAccFee.ShortcutsEnabled = False
+        Me.txtOthrAccFee.ReadOnly = true
+        Me.txtOthrAccFee.ShortcutsEnabled = false
         Me.txtOthrAccFee.Size = New System.Drawing.Size(133, 24)
         Me.txtOthrAccFee.TabIndex = 124
         Me.txtOthrAccFee.Text = "0.00"
@@ -4989,13 +5007,13 @@ Partial Class formMain
         Me.txtBuildOccFee.Border.Class = "TextBoxBorder"
         Me.txtBuildOccFee.Border.CornerDiameter = 3
         Me.txtBuildOccFee.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtBuildOccFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuildOccFee.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtBuildOccFee.ForeColor = System.Drawing.Color.Black
         Me.txtBuildOccFee.Location = New System.Drawing.Point(198, 186)
         Me.txtBuildOccFee.MaxLength = 100
         Me.txtBuildOccFee.Name = "txtBuildOccFee"
-        Me.txtBuildOccFee.ReadOnly = True
-        Me.txtBuildOccFee.ShortcutsEnabled = False
+        Me.txtBuildOccFee.ReadOnly = true
+        Me.txtBuildOccFee.ShortcutsEnabled = false
         Me.txtBuildOccFee.Size = New System.Drawing.Size(133, 24)
         Me.txtBuildOccFee.TabIndex = 126
         Me.txtBuildOccFee.Text = "0.00"
@@ -5003,9 +5021,9 @@ Partial Class formMain
         '
         'Label54
         '
-        Me.Label54.AutoSize = True
+        Me.Label54.AutoSize = true
         Me.Label54.BackColor = System.Drawing.Color.White
-        Me.Label54.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label54.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label54.ForeColor = System.Drawing.Color.Black
         Me.Label54.Location = New System.Drawing.Point(45, 190)
         Me.Label54.Name = "Label54"
@@ -5025,7 +5043,7 @@ Partial Class formMain
         Me.PanelEx24.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx24.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx24.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx24.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx24.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx24.Style.BorderSide = DevComponents.DotNetBar.eBorderSide.Left
         Me.PanelEx24.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx24.Style.GradientAngle = 90
@@ -5033,8 +5051,8 @@ Partial Class formMain
         '
         'Label29
         '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.AutoSize = true
+        Me.Label29.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label29.ForeColor = System.Drawing.Color.Black
         Me.Label29.Location = New System.Drawing.Point(19, 14)
         Me.Label29.Name = "Label29"
@@ -5047,11 +5065,12 @@ Partial Class formMain
         '
         Me.PanelEx18.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx18.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelEx18.Controls.Add(Me.btnAssessmentEdit)
         Me.PanelEx18.Controls.Add(Me.btnAssessmentAdditional)
         Me.PanelEx18.Controls.Add(Me.btnAssessmentFind)
-        Me.PanelEx18.Controls.Add(Me.btnAssessmentMerge)
         Me.PanelEx18.Controls.Add(Me.btnAssessmentNew)
         Me.PanelEx18.Controls.Add(Me.btnAssessmentClose)
+        Me.PanelEx18.Controls.Add(Me.btnAssessmentMerge)
         Me.PanelEx18.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelEx18.Location = New System.Drawing.Point(0, 547)
         Me.PanelEx18.Name = "PanelEx18"
@@ -5064,11 +5083,25 @@ Partial Class formMain
         Me.PanelEx18.Style.GradientAngle = 90
         Me.PanelEx18.TabIndex = 108
         '
+        'btnAssessmentEdit
+        '
+        Me.btnAssessmentEdit.Enabled = false
+        Me.btnAssessmentEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAssessmentEdit.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnAssessmentEdit.ForeColor = System.Drawing.Color.Black
+        Me.btnAssessmentEdit.Location = New System.Drawing.Point(200, 7)
+        Me.btnAssessmentEdit.Name = "btnAssessmentEdit"
+        Me.btnAssessmentEdit.Size = New System.Drawing.Size(88, 33)
+        Me.btnAssessmentEdit.TabIndex = 205
+        Me.btnAssessmentEdit.Tag = "Navy Encode"
+        Me.btnAssessmentEdit.Text = "&Edit"
+        Me.btnAssessmentEdit.UseVisualStyleBackColor = true
+        '
         'btnAssessmentAdditional
         '
-        Me.btnAssessmentAdditional.Enabled = False
+        Me.btnAssessmentAdditional.Enabled = false
         Me.btnAssessmentAdditional.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAssessmentAdditional.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAssessmentAdditional.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnAssessmentAdditional.ForeColor = System.Drawing.Color.Black
         Me.btnAssessmentAdditional.Location = New System.Drawing.Point(200, 7)
         Me.btnAssessmentAdditional.Name = "btnAssessmentAdditional"
@@ -5076,12 +5109,13 @@ Partial Class formMain
         Me.btnAssessmentAdditional.TabIndex = 202
         Me.btnAssessmentAdditional.Tag = "Navy Encode"
         Me.btnAssessmentAdditional.Text = "&Add"
-        Me.btnAssessmentAdditional.UseVisualStyleBackColor = True
+        Me.btnAssessmentAdditional.UseVisualStyleBackColor = true
+        Me.btnAssessmentAdditional.Visible = false
         '
         'btnAssessmentFind
         '
         Me.btnAssessmentFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAssessmentFind.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAssessmentFind.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnAssessmentFind.ForeColor = System.Drawing.Color.Black
         Me.btnAssessmentFind.Location = New System.Drawing.Point(105, 7)
         Me.btnAssessmentFind.Name = "btnAssessmentFind"
@@ -5089,26 +5123,12 @@ Partial Class formMain
         Me.btnAssessmentFind.TabIndex = 201
         Me.btnAssessmentFind.Tag = "Navy"
         Me.btnAssessmentFind.Text = "&Find"
-        Me.btnAssessmentFind.UseVisualStyleBackColor = True
-        '
-        'btnAssessmentMerge
-        '
-        Me.btnAssessmentMerge.Enabled = False
-        Me.btnAssessmentMerge.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAssessmentMerge.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAssessmentMerge.ForeColor = System.Drawing.Color.Black
-        Me.btnAssessmentMerge.Location = New System.Drawing.Point(295, 7)
-        Me.btnAssessmentMerge.Name = "btnAssessmentMerge"
-        Me.btnAssessmentMerge.Size = New System.Drawing.Size(88, 33)
-        Me.btnAssessmentMerge.TabIndex = 203
-        Me.btnAssessmentMerge.Tag = "Navy Encode"
-        Me.btnAssessmentMerge.Text = "&Merge"
-        Me.btnAssessmentMerge.UseVisualStyleBackColor = True
+        Me.btnAssessmentFind.UseVisualStyleBackColor = true
         '
         'btnAssessmentNew
         '
         Me.btnAssessmentNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAssessmentNew.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAssessmentNew.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnAssessmentNew.ForeColor = System.Drawing.Color.Black
         Me.btnAssessmentNew.Location = New System.Drawing.Point(10, 7)
         Me.btnAssessmentNew.Name = "btnAssessmentNew"
@@ -5116,20 +5136,35 @@ Partial Class formMain
         Me.btnAssessmentNew.TabIndex = 200
         Me.btnAssessmentNew.Tag = "Navy Encode"
         Me.btnAssessmentNew.Text = "&New"
-        Me.btnAssessmentNew.UseVisualStyleBackColor = True
+        Me.btnAssessmentNew.UseVisualStyleBackColor = true
         '
         'btnAssessmentClose
         '
         Me.btnAssessmentClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAssessmentClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAssessmentClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnAssessmentClose.ForeColor = System.Drawing.Color.Black
-        Me.btnAssessmentClose.Location = New System.Drawing.Point(390, 7)
+        Me.btnAssessmentClose.Location = New System.Drawing.Point(295, 7)
         Me.btnAssessmentClose.Name = "btnAssessmentClose"
         Me.btnAssessmentClose.Size = New System.Drawing.Size(88, 33)
         Me.btnAssessmentClose.TabIndex = 204
         Me.btnAssessmentClose.Tag = "Navy"
         Me.btnAssessmentClose.Text = "Close"
-        Me.btnAssessmentClose.UseVisualStyleBackColor = True
+        Me.btnAssessmentClose.UseVisualStyleBackColor = true
+        '
+        'btnAssessmentMerge
+        '
+        Me.btnAssessmentMerge.Enabled = false
+        Me.btnAssessmentMerge.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAssessmentMerge.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnAssessmentMerge.ForeColor = System.Drawing.Color.Black
+        Me.btnAssessmentMerge.Location = New System.Drawing.Point(295, 7)
+        Me.btnAssessmentMerge.Name = "btnAssessmentMerge"
+        Me.btnAssessmentMerge.Size = New System.Drawing.Size(88, 33)
+        Me.btnAssessmentMerge.TabIndex = 203
+        Me.btnAssessmentMerge.Tag = "Navy Encode"
+        Me.btnAssessmentMerge.Text = "&Merge"
+        Me.btnAssessmentMerge.UseVisualStyleBackColor = true
+        Me.btnAssessmentMerge.Visible = false
         '
         'PanelEx25
         '
@@ -5141,7 +5176,7 @@ Partial Class formMain
         Me.PanelEx25.Name = "PanelEx25"
         Me.PanelEx25.Size = New System.Drawing.Size(869, 65)
         Me.PanelEx25.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.PanelEx25.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx25.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx25.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.PanelEx25.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelEx25.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
@@ -5150,8 +5185,8 @@ Partial Class formMain
         '
         'Label33
         '
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.AutoSize = true
+        Me.Label33.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label33.ForeColor = System.Drawing.Color.Black
         Me.Label33.Location = New System.Drawing.Point(12, 18)
         Me.Label33.Name = "Label33"
@@ -5162,7 +5197,7 @@ Partial Class formMain
         '
         'panelSearch
         '
-        Me.panelSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.panelSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.panelSearch.CanvasColor = System.Drawing.SystemColors.Control
         Me.panelSearch.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.panelSearch.Controls.Add(Me.panelInnerSearch)
@@ -5170,16 +5205,16 @@ Partial Class formMain
         Me.panelSearch.Name = "panelSearch"
         Me.panelSearch.Size = New System.Drawing.Size(869, 367)
         Me.panelSearch.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.panelSearch.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.panelSearch.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(213,Byte),Integer), CType(CType(222,Byte),Integer), CType(CType(231,Byte),Integer))
         Me.panelSearch.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.panelSearch.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.panelSearch.Style.GradientAngle = 90
         Me.panelSearch.TabIndex = 12
-        Me.panelSearch.Visible = False
+        Me.panelSearch.Visible = false
         '
         'panelInnerSearch
         '
-        Me.panelInnerSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.panelInnerSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom),System.Windows.Forms.AnchorStyles)
         Me.panelInnerSearch.CanvasColor = System.Drawing.SystemColors.Control
         Me.panelInnerSearch.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.panelInnerSearch.Controls.Add(Me.btnSearch)
@@ -5215,7 +5250,7 @@ Partial Class formMain
         Me.panelInnerSearch.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.panelInnerSearch.Style.BackColor1.Color = System.Drawing.Color.White
         Me.panelInnerSearch.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.panelInnerSearch.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.panelInnerSearch.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.panelInnerSearch.Style.BorderWidth = 2
         Me.panelInnerSearch.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.panelInnerSearch.Style.GradientAngle = 90
@@ -5224,7 +5259,7 @@ Partial Class formMain
         'btnSearch
         '
         Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSearch.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearch.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnSearch.ForeColor = System.Drawing.Color.Black
         Me.btnSearch.Location = New System.Drawing.Point(453, 22)
         Me.btnSearch.Name = "btnSearch"
@@ -5232,12 +5267,12 @@ Partial Class formMain
         Me.btnSearch.TabIndex = 6
         Me.btnSearch.Tag = "Navy"
         Me.btnSearch.Text = "Search"
-        Me.btnSearch.UseVisualStyleBackColor = True
+        Me.btnSearch.UseVisualStyleBackColor = true
         '
         'btnSearchClose
         '
         Me.btnSearchClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSearchClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearchClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnSearchClose.ForeColor = System.Drawing.Color.Black
         Me.btnSearchClose.Location = New System.Drawing.Point(453, 58)
         Me.btnSearchClose.Name = "btnSearchClose"
@@ -5245,22 +5280,22 @@ Partial Class formMain
         Me.btnSearchClose.TabIndex = 9
         Me.btnSearchClose.Tag = "Navy"
         Me.btnSearchClose.Text = "Close"
-        Me.btnSearchClose.UseVisualStyleBackColor = True
+        Me.btnSearchClose.UseVisualStyleBackColor = true
         '
         'listSearchList
         '
         Me.listSearchList.BackColor = System.Drawing.Color.White
         Me.listSearchList.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader17, Me.ColumnHeader18, Me.ColumnHeader19, Me.ColumnHeader20, Me.ColumnHeader21, Me.ColumnHeader22, Me.ColumnHeader23, Me.ColumnHeader24, Me.ColumnHeader25, Me.ColumnHeader26, Me.ColumnHeader27, Me.ColumnHeader28, Me.ColumnHeader29, Me.ColumnHeader30, Me.ColumnHeader31, Me.ColumnHeader32})
-        Me.listSearchList.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.listSearchList.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.listSearchList.ForeColor = System.Drawing.Color.Black
-        Me.listSearchList.FullRowSelect = True
-        Me.listSearchList.GridLines = True
+        Me.listSearchList.FullRowSelect = true
+        Me.listSearchList.GridLines = true
         Me.listSearchList.Location = New System.Drawing.Point(5, 180)
-        Me.listSearchList.MultiSelect = False
+        Me.listSearchList.MultiSelect = false
         Me.listSearchList.Name = "listSearchList"
         Me.listSearchList.Size = New System.Drawing.Size(544, 169)
         Me.listSearchList.TabIndex = 157
-        Me.listSearchList.UseCompatibleStateImageBehavior = False
+        Me.listSearchList.UseCompatibleStateImageBehavior = false
         Me.listSearchList.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader15
@@ -5352,9 +5387,9 @@ Partial Class formMain
         '
         'Label58
         '
-        Me.Label58.AutoSize = True
+        Me.Label58.AutoSize = true
         Me.Label58.BackColor = System.Drawing.Color.White
-        Me.Label58.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label58.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label58.ForeColor = System.Drawing.Color.Black
         Me.Label58.Location = New System.Drawing.Point(364, 132)
         Me.Label58.Name = "Label58"
@@ -5364,9 +5399,9 @@ Partial Class formMain
         '
         'Label66
         '
-        Me.Label66.AutoSize = True
+        Me.Label66.AutoSize = true
         Me.Label66.BackColor = System.Drawing.Color.White
-        Me.Label66.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label66.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label66.ForeColor = System.Drawing.Color.Black
         Me.Label66.Location = New System.Drawing.Point(296, 132)
         Me.Label66.Name = "Label66"
@@ -5384,7 +5419,7 @@ Partial Class formMain
         Me.txtSearchL.Border.Class = "TextBoxBorder"
         Me.txtSearchL.Border.CornerDiameter = 6
         Me.txtSearchL.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSearchL.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchL.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSearchL.ForeColor = System.Drawing.Color.Black
         Me.txtSearchL.Location = New System.Drawing.Point(86, 25)
         Me.txtSearchL.MaxLength = 100
@@ -5394,9 +5429,9 @@ Partial Class formMain
         '
         'Label67
         '
-        Me.Label67.AutoSize = True
+        Me.Label67.AutoSize = true
         Me.Label67.BackColor = System.Drawing.Color.White
-        Me.Label67.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label67.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label67.ForeColor = System.Drawing.Color.Black
         Me.Label67.Location = New System.Drawing.Point(92, 132)
         Me.Label67.Name = "Label67"
@@ -5406,9 +5441,9 @@ Partial Class formMain
         '
         'Label77
         '
-        Me.Label77.AutoSize = True
+        Me.Label77.AutoSize = true
         Me.Label77.BackColor = System.Drawing.Color.White
-        Me.Label77.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label77.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label77.ForeColor = System.Drawing.Color.Black
         Me.Label77.Location = New System.Drawing.Point(20, 31)
         Me.Label77.Name = "Label77"
@@ -5418,9 +5453,9 @@ Partial Class formMain
         '
         'Label68
         '
-        Me.Label68.AutoSize = True
+        Me.Label68.AutoSize = true
         Me.Label68.BackColor = System.Drawing.Color.White
-        Me.Label68.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label68.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label68.ForeColor = System.Drawing.Color.Black
         Me.Label68.Location = New System.Drawing.Point(301, 89)
         Me.Label68.Name = "Label68"
@@ -5430,9 +5465,9 @@ Partial Class formMain
         '
         'Label76
         '
-        Me.Label76.AutoSize = True
+        Me.Label76.AutoSize = true
         Me.Label76.BackColor = System.Drawing.Color.White
-        Me.Label76.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label76.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label76.ForeColor = System.Drawing.Color.Black
         Me.Label76.Location = New System.Drawing.Point(20, 65)
         Me.Label76.Name = "Label76"
@@ -5442,9 +5477,9 @@ Partial Class formMain
         '
         'Label69
         '
-        Me.Label69.AutoSize = True
+        Me.Label69.AutoSize = true
         Me.Label69.BackColor = System.Drawing.Color.White
-        Me.Label69.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label69.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label69.ForeColor = System.Drawing.Color.Black
         Me.Label69.Location = New System.Drawing.Point(225, 89)
         Me.Label69.Name = "Label69"
@@ -5454,9 +5489,9 @@ Partial Class formMain
         '
         'Label75
         '
-        Me.Label75.AutoSize = True
+        Me.Label75.AutoSize = true
         Me.Label75.BackColor = System.Drawing.Color.White
-        Me.Label75.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label75.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label75.ForeColor = System.Drawing.Color.Black
         Me.Label75.Location = New System.Drawing.Point(20, 115)
         Me.Label75.Name = "Label75"
@@ -5466,9 +5501,9 @@ Partial Class formMain
         '
         'Label70
         '
-        Me.Label70.AutoSize = True
+        Me.Label70.AutoSize = true
         Me.Label70.BackColor = System.Drawing.Color.White
-        Me.Label70.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label70.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label70.ForeColor = System.Drawing.Color.Black
         Me.Label70.Location = New System.Drawing.Point(159, 89)
         Me.Label70.Name = "Label70"
@@ -5486,7 +5521,7 @@ Partial Class formMain
         Me.txtSearchF.Border.Class = "TextBoxBorder"
         Me.txtSearchF.Border.CornerDiameter = 6
         Me.txtSearchF.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSearchF.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchF.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSearchF.ForeColor = System.Drawing.Color.Black
         Me.txtSearchF.Location = New System.Drawing.Point(207, 25)
         Me.txtSearchF.MaxLength = 100
@@ -5496,9 +5531,9 @@ Partial Class formMain
         '
         'Label71
         '
-        Me.Label71.AutoSize = True
+        Me.Label71.AutoSize = true
         Me.Label71.BackColor = System.Drawing.Color.White
-        Me.Label71.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label71.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label71.ForeColor = System.Drawing.Color.Black
         Me.Label71.Location = New System.Drawing.Point(92, 89)
         Me.Label71.Name = "Label71"
@@ -5516,7 +5551,7 @@ Partial Class formMain
         Me.txtSearchM.Border.Class = "TextBoxBorder"
         Me.txtSearchM.Border.CornerDiameter = 6
         Me.txtSearchM.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSearchM.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchM.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSearchM.ForeColor = System.Drawing.Color.Black
         Me.txtSearchM.Location = New System.Drawing.Point(329, 25)
         Me.txtSearchM.MaxLength = 100
@@ -5526,9 +5561,9 @@ Partial Class formMain
         '
         'Label72
         '
-        Me.Label72.AutoSize = True
+        Me.Label72.AutoSize = true
         Me.Label72.BackColor = System.Drawing.Color.White
-        Me.Label72.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label72.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label72.ForeColor = System.Drawing.Color.Black
         Me.Label72.Location = New System.Drawing.Point(339, 11)
         Me.Label72.Name = "Label72"
@@ -5546,7 +5581,7 @@ Partial Class formMain
         Me.txtSearchPro.Border.Class = "TextBoxBorder"
         Me.txtSearchPro.Border.CornerDiameter = 6
         Me.txtSearchPro.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSearchPro.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchPro.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSearchPro.ForeColor = System.Drawing.Color.Black
         Me.txtSearchPro.Location = New System.Drawing.Point(85, 58)
         Me.txtSearchPro.MaxLength = 100
@@ -5556,9 +5591,9 @@ Partial Class formMain
         '
         'Label73
         '
-        Me.Label73.AutoSize = True
+        Me.Label73.AutoSize = true
         Me.Label73.BackColor = System.Drawing.Color.White
-        Me.Label73.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label73.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label73.ForeColor = System.Drawing.Color.Black
         Me.Label73.Location = New System.Drawing.Point(214, 11)
         Me.Label73.Name = "Label73"
@@ -5576,7 +5611,7 @@ Partial Class formMain
         Me.txtSearchLot.Border.Class = "TextBoxBorder"
         Me.txtSearchLot.Border.CornerDiameter = 6
         Me.txtSearchLot.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSearchLot.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchLot.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSearchLot.ForeColor = System.Drawing.Color.Black
         Me.txtSearchLot.Location = New System.Drawing.Point(86, 102)
         Me.txtSearchLot.MaxLength = 100
@@ -5586,9 +5621,9 @@ Partial Class formMain
         '
         'Label74
         '
-        Me.Label74.AutoSize = True
+        Me.Label74.AutoSize = true
         Me.Label74.BackColor = System.Drawing.Color.White
-        Me.Label74.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label74.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label74.ForeColor = System.Drawing.Color.Black
         Me.Label74.Location = New System.Drawing.Point(93, 11)
         Me.Label74.Name = "Label74"
@@ -5606,7 +5641,7 @@ Partial Class formMain
         Me.txtSearchBlk.Border.Class = "TextBoxBorder"
         Me.txtSearchBlk.Border.CornerDiameter = 6
         Me.txtSearchBlk.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSearchBlk.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchBlk.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSearchBlk.ForeColor = System.Drawing.Color.Black
         Me.txtSearchBlk.Location = New System.Drawing.Point(154, 102)
         Me.txtSearchBlk.MaxLength = 100
@@ -5618,9 +5653,9 @@ Partial Class formMain
         '
         Me.cboSearchBRGY.BackColor = System.Drawing.Color.White
         Me.cboSearchBRGY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboSearchBRGY.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.cboSearchBRGY.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.cboSearchBRGY.ForeColor = System.Drawing.Color.Black
-        Me.cboSearchBRGY.FormattingEnabled = True
+        Me.cboSearchBRGY.FormattingEnabled = true
         Me.cboSearchBRGY.Location = New System.Drawing.Point(358, 147)
         Me.cboSearchBRGY.Name = "cboSearchBRGY"
         Me.cboSearchBRGY.Size = New System.Drawing.Size(183, 23)
@@ -5636,7 +5671,7 @@ Partial Class formMain
         Me.txtSearchPH.Border.Class = "TextBoxBorder"
         Me.txtSearchPH.Border.CornerDiameter = 6
         Me.txtSearchPH.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSearchPH.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchPH.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSearchPH.ForeColor = System.Drawing.Color.Black
         Me.txtSearchPH.Location = New System.Drawing.Point(223, 102)
         Me.txtSearchPH.MaxLength = 100
@@ -5654,7 +5689,7 @@ Partial Class formMain
         Me.txtSearchZone.Border.Class = "TextBoxBorder"
         Me.txtSearchZone.Border.CornerDiameter = 6
         Me.txtSearchZone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSearchZone.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchZone.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSearchZone.ForeColor = System.Drawing.Color.Black
         Me.txtSearchZone.Location = New System.Drawing.Point(290, 146)
         Me.txtSearchZone.MaxLength = 100
@@ -5666,9 +5701,9 @@ Partial Class formMain
         '
         Me.cboSearchSub.BackColor = System.Drawing.Color.White
         Me.cboSearchSub.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboSearchSub.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.cboSearchSub.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.cboSearchSub.ForeColor = System.Drawing.Color.Black
-        Me.cboSearchSub.FormattingEnabled = True
+        Me.cboSearchSub.FormattingEnabled = true
         Me.cboSearchSub.Location = New System.Drawing.Point(293, 102)
         Me.cboSearchSub.Name = "cboSearchSub"
         Me.cboSearchSub.Size = New System.Drawing.Size(247, 23)
@@ -5684,7 +5719,7 @@ Partial Class formMain
         Me.txtSearchOther.Border.Class = "TextBoxBorder"
         Me.txtSearchOther.Border.CornerDiameter = 6
         Me.txtSearchOther.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtSearchOther.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchOther.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtSearchOther.ForeColor = System.Drawing.Color.Black
         Me.txtSearchOther.Location = New System.Drawing.Point(86, 146)
         Me.txtSearchOther.MaxLength = 100
@@ -5694,9 +5729,9 @@ Partial Class formMain
         '
         'slideSummary
         '
-        Me.slideSummary.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.slideSummary.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.slideSummary.BackColor = System.Drawing.Color.White
         Me.slideSummary.Controls.Add(Me.PanelEx33)
         Me.slideSummary.Controls.Add(Me.PanelEx26)
@@ -5706,11 +5741,11 @@ Partial Class formMain
         Me.slideSummary.Location = New System.Drawing.Point(199, 78)
         Me.slideSummary.Name = "slideSummary"
         Me.slideSummary.Size = New System.Drawing.Size(869, 594)
-        Me.slideSummary.SlideOutButtonVisible = False
+        Me.slideSummary.SlideOutButtonVisible = false
         Me.slideSummary.SlideSide = DevComponents.DotNetBar.Controls.eSlideSide.Right
         Me.slideSummary.TabIndex = 13
         Me.slideSummary.Tag = "Forms"
-        Me.slideSummary.UsesBlockingAnimation = False
+        Me.slideSummary.UsesBlockingAnimation = false
         '
         'PanelEx33
         '
@@ -5726,7 +5761,7 @@ Partial Class formMain
         Me.PanelEx33.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx33.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelEx33.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx33.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx33.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx33.Style.BorderSide = DevComponents.DotNetBar.eBorderSide.Left
         Me.PanelEx33.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx33.Style.GradientAngle = 90
@@ -5734,7 +5769,7 @@ Partial Class formMain
         '
         'panelSummaryParent
         '
-        Me.panelSummaryParent.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.panelSummaryParent.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.panelSummaryParent.CanvasColor = System.Drawing.SystemColors.Control
         Me.panelSummaryParent.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.panelSummaryParent.Controls.Add(Me.panelPaymentSummary)
@@ -5750,7 +5785,7 @@ Partial Class formMain
         '
         'panelPaymentSummary
         '
-        Me.panelPaymentSummary.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.panelPaymentSummary.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom),System.Windows.Forms.AnchorStyles)
         Me.panelPaymentSummary.CanvasColor = System.Drawing.SystemColors.Control
         Me.panelPaymentSummary.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.panelPaymentSummary.Controls.Add(Me.txtA15)
@@ -5803,13 +5838,13 @@ Partial Class formMain
         Me.txtA15.Border.Class = "TextBoxBorder"
         Me.txtA15.Border.CornerDiameter = 3
         Me.txtA15.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA15.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA15.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA15.ForeColor = System.Drawing.Color.Black
         Me.txtA15.Location = New System.Drawing.Point(198, 396)
         Me.txtA15.MaxLength = 100
         Me.txtA15.Name = "txtA15"
-        Me.txtA15.ReadOnly = True
-        Me.txtA15.ShortcutsEnabled = False
+        Me.txtA15.ReadOnly = true
+        Me.txtA15.ShortcutsEnabled = false
         Me.txtA15.Size = New System.Drawing.Size(133, 24)
         Me.txtA15.TabIndex = 142
         Me.txtA15.Tag = "readonly"
@@ -5826,13 +5861,13 @@ Partial Class formMain
         Me.txtA1.Border.Class = "TextBoxBorder"
         Me.txtA1.Border.CornerDiameter = 3
         Me.txtA1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA1.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA1.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA1.ForeColor = System.Drawing.Color.Black
         Me.txtA1.Location = New System.Drawing.Point(198, 4)
         Me.txtA1.MaxLength = 100
         Me.txtA1.Name = "txtA1"
-        Me.txtA1.ReadOnly = True
-        Me.txtA1.ShortcutsEnabled = False
+        Me.txtA1.ReadOnly = true
+        Me.txtA1.ShortcutsEnabled = false
         Me.txtA1.Size = New System.Drawing.Size(133, 24)
         Me.txtA1.TabIndex = 112
         Me.txtA1.Text = "0.00"
@@ -5840,9 +5875,9 @@ Partial Class formMain
         '
         'Label99
         '
-        Me.Label99.AutoSize = True
+        Me.Label99.AutoSize = true
         Me.Label99.BackColor = System.Drawing.Color.White
-        Me.Label99.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label99.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label99.ForeColor = System.Drawing.Color.Black
         Me.Label99.Location = New System.Drawing.Point(80, 400)
         Me.Label99.Name = "Label99"
@@ -5852,9 +5887,9 @@ Partial Class formMain
         '
         'Label100
         '
-        Me.Label100.AutoSize = True
+        Me.Label100.AutoSize = true
         Me.Label100.BackColor = System.Drawing.Color.White
-        Me.Label100.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label100.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label100.ForeColor = System.Drawing.Color.Black
         Me.Label100.Location = New System.Drawing.Point(34, 8)
         Me.Label100.Name = "Label100"
@@ -5872,13 +5907,13 @@ Partial Class formMain
         Me.txtA14.Border.Class = "TextBoxBorder"
         Me.txtA14.Border.CornerDiameter = 3
         Me.txtA14.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA14.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA14.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA14.ForeColor = System.Drawing.Color.Black
         Me.txtA14.Location = New System.Drawing.Point(198, 370)
         Me.txtA14.MaxLength = 100
         Me.txtA14.Name = "txtA14"
-        Me.txtA14.ReadOnly = True
-        Me.txtA14.ShortcutsEnabled = False
+        Me.txtA14.ReadOnly = true
+        Me.txtA14.ShortcutsEnabled = false
         Me.txtA14.Size = New System.Drawing.Size(133, 24)
         Me.txtA14.TabIndex = 140
         Me.txtA14.Tag = "readonly"
@@ -5887,9 +5922,9 @@ Partial Class formMain
         '
         'Label101
         '
-        Me.Label101.AutoSize = True
+        Me.Label101.AutoSize = true
         Me.Label101.BackColor = System.Drawing.Color.White
-        Me.Label101.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label101.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label101.ForeColor = System.Drawing.Color.Black
         Me.Label101.Location = New System.Drawing.Point(39, 34)
         Me.Label101.Name = "Label101"
@@ -5899,9 +5934,9 @@ Partial Class formMain
         '
         'Label102
         '
-        Me.Label102.AutoSize = True
+        Me.Label102.AutoSize = true
         Me.Label102.BackColor = System.Drawing.Color.White
-        Me.Label102.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label102.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label102.ForeColor = System.Drawing.Color.Black
         Me.Label102.Location = New System.Drawing.Point(32, 374)
         Me.Label102.Name = "Label102"
@@ -5919,13 +5954,13 @@ Partial Class formMain
         Me.txtA2.Border.Class = "TextBoxBorder"
         Me.txtA2.Border.CornerDiameter = 3
         Me.txtA2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA2.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA2.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA2.ForeColor = System.Drawing.Color.Black
         Me.txtA2.Location = New System.Drawing.Point(198, 30)
         Me.txtA2.MaxLength = 100
         Me.txtA2.Name = "txtA2"
-        Me.txtA2.ReadOnly = True
-        Me.txtA2.ShortcutsEnabled = False
+        Me.txtA2.ReadOnly = true
+        Me.txtA2.ShortcutsEnabled = false
         Me.txtA2.Size = New System.Drawing.Size(133, 24)
         Me.txtA2.TabIndex = 114
         Me.txtA2.Text = "0.00"
@@ -5941,13 +5976,13 @@ Partial Class formMain
         Me.txtA13.Border.Class = "TextBoxBorder"
         Me.txtA13.Border.CornerDiameter = 3
         Me.txtA13.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA13.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA13.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA13.ForeColor = System.Drawing.Color.Black
         Me.txtA13.Location = New System.Drawing.Point(198, 344)
         Me.txtA13.MaxLength = 100
         Me.txtA13.Name = "txtA13"
-        Me.txtA13.ReadOnly = True
-        Me.txtA13.ShortcutsEnabled = False
+        Me.txtA13.ReadOnly = true
+        Me.txtA13.ShortcutsEnabled = false
         Me.txtA13.Size = New System.Drawing.Size(133, 24)
         Me.txtA13.TabIndex = 138
         Me.txtA13.Tag = "readonly"
@@ -5956,9 +5991,9 @@ Partial Class formMain
         '
         'Label103
         '
-        Me.Label103.AutoSize = True
+        Me.Label103.AutoSize = true
         Me.Label103.BackColor = System.Drawing.Color.White
-        Me.Label103.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label103.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label103.ForeColor = System.Drawing.Color.Black
         Me.Label103.Location = New System.Drawing.Point(27, 60)
         Me.Label103.Name = "Label103"
@@ -5968,9 +6003,9 @@ Partial Class formMain
         '
         'Label104
         '
-        Me.Label104.AutoSize = True
+        Me.Label104.AutoSize = true
         Me.Label104.BackColor = System.Drawing.Color.White
-        Me.Label104.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label104.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label104.ForeColor = System.Drawing.Color.Black
         Me.Label104.Location = New System.Drawing.Point(43, 348)
         Me.Label104.Name = "Label104"
@@ -5988,13 +6023,13 @@ Partial Class formMain
         Me.txtA3.Border.Class = "TextBoxBorder"
         Me.txtA3.Border.CornerDiameter = 3
         Me.txtA3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA3.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA3.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA3.ForeColor = System.Drawing.Color.Black
         Me.txtA3.Location = New System.Drawing.Point(198, 56)
         Me.txtA3.MaxLength = 100
         Me.txtA3.Name = "txtA3"
-        Me.txtA3.ReadOnly = True
-        Me.txtA3.ShortcutsEnabled = False
+        Me.txtA3.ReadOnly = true
+        Me.txtA3.ShortcutsEnabled = false
         Me.txtA3.Size = New System.Drawing.Size(133, 24)
         Me.txtA3.TabIndex = 116
         Me.txtA3.Text = "0.00"
@@ -6010,13 +6045,13 @@ Partial Class formMain
         Me.txtA12.Border.Class = "TextBoxBorder"
         Me.txtA12.Border.CornerDiameter = 3
         Me.txtA12.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA12.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA12.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA12.ForeColor = System.Drawing.Color.Black
         Me.txtA12.Location = New System.Drawing.Point(198, 318)
         Me.txtA12.MaxLength = 100
         Me.txtA12.Name = "txtA12"
-        Me.txtA12.ReadOnly = True
-        Me.txtA12.ShortcutsEnabled = False
+        Me.txtA12.ReadOnly = true
+        Me.txtA12.ShortcutsEnabled = false
         Me.txtA12.Size = New System.Drawing.Size(133, 24)
         Me.txtA12.TabIndex = 136
         Me.txtA12.Tag = "readonly"
@@ -6025,9 +6060,9 @@ Partial Class formMain
         '
         'Label105
         '
-        Me.Label105.AutoSize = True
+        Me.Label105.AutoSize = true
         Me.Label105.BackColor = System.Drawing.Color.White
-        Me.Label105.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label105.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label105.ForeColor = System.Drawing.Color.Black
         Me.Label105.Location = New System.Drawing.Point(37, 86)
         Me.Label105.Name = "Label105"
@@ -6037,9 +6072,9 @@ Partial Class formMain
         '
         'Label106
         '
-        Me.Label106.AutoSize = True
+        Me.Label106.AutoSize = true
         Me.Label106.BackColor = System.Drawing.Color.White
-        Me.Label106.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label106.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label106.ForeColor = System.Drawing.Color.Black
         Me.Label106.Location = New System.Drawing.Point(80, 322)
         Me.Label106.Name = "Label106"
@@ -6057,13 +6092,13 @@ Partial Class formMain
         Me.txtA4.Border.Class = "TextBoxBorder"
         Me.txtA4.Border.CornerDiameter = 3
         Me.txtA4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA4.ForeColor = System.Drawing.Color.Black
         Me.txtA4.Location = New System.Drawing.Point(198, 82)
         Me.txtA4.MaxLength = 100
         Me.txtA4.Name = "txtA4"
-        Me.txtA4.ReadOnly = True
-        Me.txtA4.ShortcutsEnabled = False
+        Me.txtA4.ReadOnly = true
+        Me.txtA4.ShortcutsEnabled = false
         Me.txtA4.Size = New System.Drawing.Size(133, 24)
         Me.txtA4.TabIndex = 118
         Me.txtA4.Text = "0.00"
@@ -6079,13 +6114,13 @@ Partial Class formMain
         Me.txtA11.Border.Class = "TextBoxBorder"
         Me.txtA11.Border.CornerDiameter = 3
         Me.txtA11.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA11.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA11.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA11.ForeColor = System.Drawing.Color.Black
         Me.txtA11.Location = New System.Drawing.Point(198, 265)
         Me.txtA11.MaxLength = 100
         Me.txtA11.Name = "txtA11"
-        Me.txtA11.ReadOnly = True
-        Me.txtA11.ShortcutsEnabled = False
+        Me.txtA11.ReadOnly = true
+        Me.txtA11.ShortcutsEnabled = false
         Me.txtA11.Size = New System.Drawing.Size(133, 24)
         Me.txtA11.TabIndex = 132
         Me.txtA11.Text = "0.00"
@@ -6093,9 +6128,9 @@ Partial Class formMain
         '
         'Label107
         '
-        Me.Label107.AutoSize = True
+        Me.Label107.AutoSize = true
         Me.Label107.BackColor = System.Drawing.Color.White
-        Me.Label107.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label107.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label107.ForeColor = System.Drawing.Color.Black
         Me.Label107.Location = New System.Drawing.Point(34, 112)
         Me.Label107.Name = "Label107"
@@ -6105,9 +6140,9 @@ Partial Class formMain
         '
         'Label108
         '
-        Me.Label108.AutoSize = True
+        Me.Label108.AutoSize = true
         Me.Label108.BackColor = System.Drawing.Color.White
-        Me.Label108.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label108.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label108.ForeColor = System.Drawing.Color.Black
         Me.Label108.Location = New System.Drawing.Point(26, 269)
         Me.Label108.Name = "Label108"
@@ -6125,13 +6160,13 @@ Partial Class formMain
         Me.txtA5.Border.Class = "TextBoxBorder"
         Me.txtA5.Border.CornerDiameter = 3
         Me.txtA5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA5.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA5.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA5.ForeColor = System.Drawing.Color.Black
         Me.txtA5.Location = New System.Drawing.Point(198, 108)
         Me.txtA5.MaxLength = 100
         Me.txtA5.Name = "txtA5"
-        Me.txtA5.ReadOnly = True
-        Me.txtA5.ShortcutsEnabled = False
+        Me.txtA5.ReadOnly = true
+        Me.txtA5.ShortcutsEnabled = false
         Me.txtA5.Size = New System.Drawing.Size(133, 24)
         Me.txtA5.TabIndex = 120
         Me.txtA5.Text = "0.00"
@@ -6147,13 +6182,13 @@ Partial Class formMain
         Me.txtA10.Border.Class = "TextBoxBorder"
         Me.txtA10.Border.CornerDiameter = 3
         Me.txtA10.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA10.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA10.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA10.ForeColor = System.Drawing.Color.Black
         Me.txtA10.Location = New System.Drawing.Point(198, 239)
         Me.txtA10.MaxLength = 100
         Me.txtA10.Name = "txtA10"
-        Me.txtA10.ReadOnly = True
-        Me.txtA10.ShortcutsEnabled = False
+        Me.txtA10.ReadOnly = true
+        Me.txtA10.ShortcutsEnabled = false
         Me.txtA10.Size = New System.Drawing.Size(133, 24)
         Me.txtA10.TabIndex = 130
         Me.txtA10.Text = "0.00"
@@ -6161,9 +6196,9 @@ Partial Class formMain
         '
         'Label109
         '
-        Me.Label109.AutoSize = True
+        Me.Label109.AutoSize = true
         Me.Label109.BackColor = System.Drawing.Color.White
-        Me.Label109.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label109.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label109.ForeColor = System.Drawing.Color.Black
         Me.Label109.Location = New System.Drawing.Point(41, 138)
         Me.Label109.Name = "Label109"
@@ -6173,9 +6208,9 @@ Partial Class formMain
         '
         'Label110
         '
-        Me.Label110.AutoSize = True
+        Me.Label110.AutoSize = true
         Me.Label110.BackColor = System.Drawing.Color.White
-        Me.Label110.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label110.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label110.ForeColor = System.Drawing.Color.Black
         Me.Label110.Location = New System.Drawing.Point(84, 243)
         Me.Label110.Name = "Label110"
@@ -6193,13 +6228,13 @@ Partial Class formMain
         Me.txtA6.Border.Class = "TextBoxBorder"
         Me.txtA6.Border.CornerDiameter = 3
         Me.txtA6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA6.ForeColor = System.Drawing.Color.Black
         Me.txtA6.Location = New System.Drawing.Point(198, 134)
         Me.txtA6.MaxLength = 100
         Me.txtA6.Name = "txtA6"
-        Me.txtA6.ReadOnly = True
-        Me.txtA6.ShortcutsEnabled = False
+        Me.txtA6.ReadOnly = true
+        Me.txtA6.ShortcutsEnabled = false
         Me.txtA6.Size = New System.Drawing.Size(133, 24)
         Me.txtA6.TabIndex = 122
         Me.txtA6.Text = "0.00"
@@ -6215,13 +6250,13 @@ Partial Class formMain
         Me.txtA9.Border.Class = "TextBoxBorder"
         Me.txtA9.Border.CornerDiameter = 3
         Me.txtA9.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA9.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA9.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA9.ForeColor = System.Drawing.Color.Black
         Me.txtA9.Location = New System.Drawing.Point(198, 213)
         Me.txtA9.MaxLength = 100
         Me.txtA9.Name = "txtA9"
-        Me.txtA9.ReadOnly = True
-        Me.txtA9.ShortcutsEnabled = False
+        Me.txtA9.ReadOnly = true
+        Me.txtA9.ShortcutsEnabled = false
         Me.txtA9.Size = New System.Drawing.Size(133, 24)
         Me.txtA9.TabIndex = 128
         Me.txtA9.Text = "0.00"
@@ -6229,9 +6264,9 @@ Partial Class formMain
         '
         'Label111
         '
-        Me.Label111.AutoSize = True
+        Me.Label111.AutoSize = true
         Me.Label111.BackColor = System.Drawing.Color.White
-        Me.Label111.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label111.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label111.ForeColor = System.Drawing.Color.Black
         Me.Label111.Location = New System.Drawing.Point(53, 164)
         Me.Label111.Name = "Label111"
@@ -6241,9 +6276,9 @@ Partial Class formMain
         '
         'Label112
         '
-        Me.Label112.AutoSize = True
+        Me.Label112.AutoSize = true
         Me.Label112.BackColor = System.Drawing.Color.White
-        Me.Label112.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label112.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label112.ForeColor = System.Drawing.Color.Black
         Me.Label112.Location = New System.Drawing.Point(47, 217)
         Me.Label112.Name = "Label112"
@@ -6261,13 +6296,13 @@ Partial Class formMain
         Me.txtA7.Border.Class = "TextBoxBorder"
         Me.txtA7.Border.CornerDiameter = 3
         Me.txtA7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA7.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA7.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA7.ForeColor = System.Drawing.Color.Black
         Me.txtA7.Location = New System.Drawing.Point(198, 160)
         Me.txtA7.MaxLength = 100
         Me.txtA7.Name = "txtA7"
-        Me.txtA7.ReadOnly = True
-        Me.txtA7.ShortcutsEnabled = False
+        Me.txtA7.ReadOnly = true
+        Me.txtA7.ShortcutsEnabled = false
         Me.txtA7.Size = New System.Drawing.Size(133, 24)
         Me.txtA7.TabIndex = 124
         Me.txtA7.Text = "0.00"
@@ -6283,13 +6318,13 @@ Partial Class formMain
         Me.txtA8.Border.Class = "TextBoxBorder"
         Me.txtA8.Border.CornerDiameter = 3
         Me.txtA8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtA8.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtA8.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtA8.ForeColor = System.Drawing.Color.Black
         Me.txtA8.Location = New System.Drawing.Point(198, 186)
         Me.txtA8.MaxLength = 100
         Me.txtA8.Name = "txtA8"
-        Me.txtA8.ReadOnly = True
-        Me.txtA8.ShortcutsEnabled = False
+        Me.txtA8.ReadOnly = true
+        Me.txtA8.ShortcutsEnabled = false
         Me.txtA8.Size = New System.Drawing.Size(133, 24)
         Me.txtA8.TabIndex = 126
         Me.txtA8.Text = "0.00"
@@ -6297,9 +6332,9 @@ Partial Class formMain
         '
         'Label113
         '
-        Me.Label113.AutoSize = True
+        Me.Label113.AutoSize = true
         Me.Label113.BackColor = System.Drawing.Color.White
-        Me.Label113.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label113.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label113.ForeColor = System.Drawing.Color.Black
         Me.Label113.Location = New System.Drawing.Point(45, 190)
         Me.Label113.Name = "Label113"
@@ -6319,7 +6354,7 @@ Partial Class formMain
         Me.PanelEx36.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx36.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx36.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx36.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx36.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx36.Style.BorderSide = DevComponents.DotNetBar.eBorderSide.Left
         Me.PanelEx36.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx36.Style.GradientAngle = 90
@@ -6327,8 +6362,8 @@ Partial Class formMain
         '
         'lblSummary
         '
-        Me.lblSummary.AutoSize = True
-        Me.lblSummary.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSummary.AutoSize = true
+        Me.lblSummary.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.lblSummary.ForeColor = System.Drawing.Color.Black
         Me.lblSummary.Location = New System.Drawing.Point(19, 14)
         Me.lblSummary.Name = "lblSummary"
@@ -6339,23 +6374,23 @@ Partial Class formMain
         '
         'listSummary
         '
-        Me.listSummary.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.listSummary.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.listSummary.BackColor = System.Drawing.Color.White
         Me.listSummary.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader33, Me.ColumnHeader34, Me.ColumnHeader35, Me.ColumnHeader36, Me.ColumnHeader37, Me.ColumnHeader38, Me.ColumnHeader39, Me.ColumnHeader40, Me.ColumnHeader41, Me.ColumnHeader42, Me.ColumnHeader43, Me.ColumnHeader44, Me.ColumnHeader45, Me.ColumnHeader46, Me.ColumnHeader47, Me.ColumnHeader48, Me.ColumnHeader49, Me.ColumnHeader50})
-        Me.listSummary.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.listSummary.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.listSummary.ForeColor = System.Drawing.Color.Black
-        Me.listSummary.FullRowSelect = True
-        Me.listSummary.GridLines = True
+        Me.listSummary.FullRowSelect = true
+        Me.listSummary.GridLines = true
         Me.listSummary.Location = New System.Drawing.Point(5, 51)
-        Me.listSummary.MultiSelect = False
+        Me.listSummary.MultiSelect = false
         Me.listSummary.Name = "listSummary"
         Me.listSummary.Size = New System.Drawing.Size(536, 428)
         Me.listSummary.TabIndex = 158
-        Me.listSummary.UseCompatibleStateImageBehavior = False
+        Me.listSummary.UseCompatibleStateImageBehavior = false
         Me.listSummary.View = System.Windows.Forms.View.Details
-        Me.listSummary.Visible = False
+        Me.listSummary.Visible = false
         '
         'ColumnHeader33
         '
@@ -6458,7 +6493,7 @@ Partial Class formMain
         Me.PanelEx26.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx26.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelEx26.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx26.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx26.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx26.Style.BorderSide = DevComponents.DotNetBar.eBorderSide.Right
         Me.PanelEx26.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx26.Style.GradientAngle = 90
@@ -6466,7 +6501,7 @@ Partial Class formMain
         '
         'PanelEx29
         '
-        Me.PanelEx29.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx29.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.PanelEx29.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx29.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx29.Controls.Add(Me.PanelEx30)
@@ -6482,7 +6517,7 @@ Partial Class formMain
         '
         'PanelEx30
         '
-        Me.PanelEx30.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx30.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom),System.Windows.Forms.AnchorStyles)
         Me.PanelEx30.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx30.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx30.Controls.Add(Me.Label79)
@@ -6501,9 +6536,9 @@ Partial Class formMain
         '
         'Label79
         '
-        Me.Label79.AutoSize = True
+        Me.Label79.AutoSize = true
         Me.Label79.BackColor = System.Drawing.Color.White
-        Me.Label79.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label79.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label79.ForeColor = System.Drawing.Color.Black
         Me.Label79.Location = New System.Drawing.Point(49, 203)
         Me.Label79.Name = "Label79"
@@ -6513,9 +6548,9 @@ Partial Class formMain
         '
         'Label78
         '
-        Me.Label78.AutoSize = True
+        Me.Label78.AutoSize = true
         Me.Label78.BackColor = System.Drawing.Color.White
-        Me.Label78.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label78.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label78.ForeColor = System.Drawing.Color.Black
         Me.Label78.Location = New System.Drawing.Point(34, 169)
         Me.Label78.Name = "Label78"
@@ -6527,7 +6562,7 @@ Partial Class formMain
         '
         Me.dtToSummary.BackColor = System.Drawing.Color.White
         Me.dtToSummary.CustomFormat = "MM/dd/yyyy"
-        Me.dtToSummary.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.dtToSummary.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.dtToSummary.ForeColor = System.Drawing.Color.Black
         Me.dtToSummary.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtToSummary.Location = New System.Drawing.Point(85, 201)
@@ -6539,7 +6574,7 @@ Partial Class formMain
         '
         Me.dtFromSummary.BackColor = System.Drawing.Color.White
         Me.dtFromSummary.CustomFormat = "MM/dd/yyyy"
-        Me.dtFromSummary.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.dtFromSummary.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.dtFromSummary.ForeColor = System.Drawing.Color.Black
         Me.dtFromSummary.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtFromSummary.Location = New System.Drawing.Point(85, 164)
@@ -6559,7 +6594,7 @@ Partial Class formMain
         Me.PanelEx32.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx32.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx32.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx32.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx32.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx32.Style.BorderSide = DevComponents.DotNetBar.eBorderSide.Right
         Me.PanelEx32.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx32.Style.GradientAngle = 90
@@ -6567,8 +6602,8 @@ Partial Class formMain
         '
         'Label98
         '
-        Me.Label98.AutoSize = True
-        Me.Label98.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label98.AutoSize = true
+        Me.Label98.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label98.ForeColor = System.Drawing.Color.Black
         Me.Label98.Location = New System.Drawing.Point(19, 14)
         Me.Label98.Name = "Label98"
@@ -6600,7 +6635,7 @@ Partial Class formMain
         'btnSummaryDetails
         '
         Me.btnSummaryDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSummaryDetails.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSummaryDetails.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnSummaryDetails.ForeColor = System.Drawing.Color.Black
         Me.btnSummaryDetails.Location = New System.Drawing.Point(106, 7)
         Me.btnSummaryDetails.Name = "btnSummaryDetails"
@@ -6608,12 +6643,12 @@ Partial Class formMain
         Me.btnSummaryDetails.TabIndex = 201
         Me.btnSummaryDetails.Tag = "Navy"
         Me.btnSummaryDetails.Text = "Details"
-        Me.btnSummaryDetails.UseVisualStyleBackColor = True
+        Me.btnSummaryDetails.UseVisualStyleBackColor = true
         '
         'btnSummary
         '
         Me.btnSummary.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSummary.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSummary.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnSummary.ForeColor = System.Drawing.Color.Black
         Me.btnSummary.Location = New System.Drawing.Point(10, 7)
         Me.btnSummary.Name = "btnSummary"
@@ -6621,12 +6656,12 @@ Partial Class formMain
         Me.btnSummary.TabIndex = 200
         Me.btnSummary.Tag = "Navy"
         Me.btnSummary.Text = "Summary"
-        Me.btnSummary.UseVisualStyleBackColor = True
+        Me.btnSummary.UseVisualStyleBackColor = true
         '
         'Button7
         '
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button7.ForeColor = System.Drawing.Color.Black
         Me.Button7.Location = New System.Drawing.Point(298, 7)
         Me.Button7.Name = "Button7"
@@ -6634,12 +6669,12 @@ Partial Class formMain
         Me.Button7.TabIndex = 204
         Me.Button7.Tag = "Navy"
         Me.Button7.Text = "Close"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.Button7.UseVisualStyleBackColor = true
         '
         'Button3
         '
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Button3.ForeColor = System.Drawing.Color.Black
         Me.Button3.Location = New System.Drawing.Point(202, 7)
         Me.Button3.Name = "Button3"
@@ -6647,7 +6682,7 @@ Partial Class formMain
         Me.Button3.TabIndex = 205
         Me.Button3.Tag = "Navy"
         Me.Button3.Text = "Print"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = true
         '
         'PanelEx39
         '
@@ -6659,7 +6694,7 @@ Partial Class formMain
         Me.PanelEx39.Name = "PanelEx39"
         Me.PanelEx39.Size = New System.Drawing.Size(869, 65)
         Me.PanelEx39.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.PanelEx39.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx39.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx39.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.PanelEx39.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelEx39.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
@@ -6668,8 +6703,8 @@ Partial Class formMain
         '
         'Label115
         '
-        Me.Label115.AutoSize = True
-        Me.Label115.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label115.AutoSize = true
+        Me.Label115.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label115.ForeColor = System.Drawing.Color.Black
         Me.Label115.Location = New System.Drawing.Point(12, 18)
         Me.Label115.Name = "Label115"
@@ -6680,9 +6715,9 @@ Partial Class formMain
         '
         'slideOccupancy
         '
-        Me.slideOccupancy.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.slideOccupancy.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.slideOccupancy.BackColor = System.Drawing.Color.White
         Me.slideOccupancy.Controls.Add(Me.PanelEx31)
         Me.slideOccupancy.Controls.Add(Me.PanelEx44)
@@ -6691,11 +6726,11 @@ Partial Class formMain
         Me.slideOccupancy.Location = New System.Drawing.Point(199, 78)
         Me.slideOccupancy.Name = "slideOccupancy"
         Me.slideOccupancy.Size = New System.Drawing.Size(869, 594)
-        Me.slideOccupancy.SlideOutButtonVisible = False
+        Me.slideOccupancy.SlideOutButtonVisible = false
         Me.slideOccupancy.SlideSide = DevComponents.DotNetBar.Controls.eSlideSide.Right
         Me.slideOccupancy.TabIndex = 14
         Me.slideOccupancy.Tag = "Forms"
-        Me.slideOccupancy.UsesBlockingAnimation = False
+        Me.slideOccupancy.UsesBlockingAnimation = false
         '
         'PanelEx31
         '
@@ -6709,7 +6744,7 @@ Partial Class formMain
         Me.PanelEx31.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx31.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelEx31.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx31.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx31.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx31.Style.BorderSide = DevComponents.DotNetBar.eBorderSide.Right
         Me.PanelEx31.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx31.Style.GradientAngle = 90
@@ -6717,7 +6752,7 @@ Partial Class formMain
         '
         'PanelEx34
         '
-        Me.PanelEx34.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx34.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.PanelEx34.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx34.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx34.Controls.Add(Me.PanelEx35)
@@ -6733,7 +6768,7 @@ Partial Class formMain
         '
         'PanelEx35
         '
-        Me.PanelEx35.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx35.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom),System.Windows.Forms.AnchorStyles)
         Me.PanelEx35.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx35.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx35.Controls.Add(Me.Label166)
@@ -6801,10 +6836,10 @@ Partial Class formMain
         '
         'Label166
         '
-        Me.Label166.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label166.AutoSize = True
+        Me.Label166.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.Label166.AutoSize = true
         Me.Label166.BackColor = System.Drawing.Color.Transparent
-        Me.Label166.Font = New System.Drawing.Font("Segoe UI", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label166.Font = New System.Drawing.Font("Segoe UI", 9!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label166.ForeColor = System.Drawing.Color.Black
         Me.Label166.Location = New System.Drawing.Point(10, 8)
         Me.Label166.Name = "Label166"
@@ -6814,9 +6849,9 @@ Partial Class formMain
         '
         'btnSearchApplicantData
         '
-        Me.btnSearchApplicantData.Enabled = False
+        Me.btnSearchApplicantData.Enabled = false
         Me.btnSearchApplicantData.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSearchApplicantData.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearchApplicantData.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnSearchApplicantData.ForeColor = System.Drawing.Color.Black
         Me.btnSearchApplicantData.Image = Global.Building_Permit_and_Licensing.My.Resources.Resources.Icon_Search_TIny
         Me.btnSearchApplicantData.Location = New System.Drawing.Point(613, 83)
@@ -6824,14 +6859,14 @@ Partial Class formMain
         Me.btnSearchApplicantData.Size = New System.Drawing.Size(45, 29)
         Me.btnSearchApplicantData.TabIndex = 205
         Me.btnSearchApplicantData.Tag = "Navy"
-        Me.btnSearchApplicantData.UseVisualStyleBackColor = True
+        Me.btnSearchApplicantData.UseVisualStyleBackColor = true
         '
         'dtOCNDate
         '
         Me.dtOCNDate.BackColor = System.Drawing.Color.White
         Me.dtOCNDate.CustomFormat = "MM/dd/yyyy"
-        Me.dtOCNDate.Enabled = False
-        Me.dtOCNDate.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.dtOCNDate.Enabled = false
+        Me.dtOCNDate.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.dtOCNDate.ForeColor = System.Drawing.Color.Black
         Me.dtOCNDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtOCNDate.Location = New System.Drawing.Point(482, 33)
@@ -6841,9 +6876,9 @@ Partial Class formMain
         '
         'Label128
         '
-        Me.Label128.AutoSize = True
+        Me.Label128.AutoSize = true
         Me.Label128.BackColor = System.Drawing.Color.White
-        Me.Label128.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label128.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label128.ForeColor = System.Drawing.Color.Black
         Me.Label128.Location = New System.Drawing.Point(433, 38)
         Me.Label128.Name = "Label128"
@@ -6861,27 +6896,27 @@ Partial Class formMain
         Me.txtOCN.Border.Class = "TextBoxBorder"
         Me.txtOCN.Border.CornerDiameter = 6
         Me.txtOCN.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOCN.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOCN.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOCN.ForeColor = System.Drawing.Color.Black
         Me.txtOCN.Location = New System.Drawing.Point(122, 33)
         Me.txtOCN.MaxLength = 100
         Me.txtOCN.Name = "txtOCN"
-        Me.txtOCN.ReadOnly = True
+        Me.txtOCN.ReadOnly = true
         Me.txtOCN.Size = New System.Drawing.Size(176, 29)
         Me.txtOCN.TabIndex = 164
         Me.txtOCN.Tag = "readonly"
         '
         'Label127
         '
-        Me.Label127.AutoSize = True
+        Me.Label127.AutoSize = true
         Me.Label127.BackColor = System.Drawing.Color.White
-        Me.Label127.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label127.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label127.ForeColor = System.Drawing.Color.Black
         Me.Label127.Location = New System.Drawing.Point(10, 33)
         Me.Label127.Name = "Label127"
         Me.Label127.Size = New System.Drawing.Size(114, 30)
         Me.Label127.TabIndex = 163
-        Me.Label127.Text = "Occupancy Control " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Number : "
+        Me.Label127.Text = "Occupancy Control "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Number : "
         '
         'txtOccCost
         '
@@ -6893,20 +6928,20 @@ Partial Class formMain
         Me.txtOccCost.Border.Class = "TextBoxBorder"
         Me.txtOccCost.Border.CornerDiameter = 6
         Me.txtOccCost.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccCost.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccCost.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccCost.ForeColor = System.Drawing.Color.Black
         Me.txtOccCost.Location = New System.Drawing.Point(453, 427)
         Me.txtOccCost.MaxLength = 100
         Me.txtOccCost.Name = "txtOccCost"
-        Me.txtOccCost.ReadOnly = True
+        Me.txtOccCost.ReadOnly = true
         Me.txtOccCost.Size = New System.Drawing.Size(202, 29)
         Me.txtOccCost.TabIndex = 162
         '
         'Label114
         '
-        Me.Label114.AutoSize = True
+        Me.Label114.AutoSize = true
         Me.Label114.BackColor = System.Drawing.Color.White
-        Me.Label114.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label114.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label114.ForeColor = System.Drawing.Color.Black
         Me.Label114.Location = New System.Drawing.Point(341, 434)
         Me.Label114.Name = "Label114"
@@ -6924,32 +6959,32 @@ Partial Class formMain
         Me.txtOccStorey.Border.Class = "TextBoxBorder"
         Me.txtOccStorey.Border.CornerDiameter = 6
         Me.txtOccStorey.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccStorey.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccStorey.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccStorey.ForeColor = System.Drawing.Color.Black
         Me.txtOccStorey.Location = New System.Drawing.Point(122, 427)
         Me.txtOccStorey.MaxLength = 2
         Me.txtOccStorey.Name = "txtOccStorey"
-        Me.txtOccStorey.ReadOnly = True
+        Me.txtOccStorey.ReadOnly = true
         Me.txtOccStorey.Size = New System.Drawing.Size(202, 29)
         Me.txtOccStorey.TabIndex = 160
         '
         'Label123
         '
-        Me.Label123.AutoSize = True
+        Me.Label123.AutoSize = true
         Me.Label123.BackColor = System.Drawing.Color.White
-        Me.Label123.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label123.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label123.ForeColor = System.Drawing.Color.Black
         Me.Label123.Location = New System.Drawing.Point(10, 427)
         Me.Label123.Name = "Label123"
         Me.Label123.Size = New System.Drawing.Size(105, 30)
         Me.Label123.TabIndex = 159
-        Me.Label123.Text = "No. of Storeys " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(Actual Height) : *"
+        Me.Label123.Text = "No. of Storeys "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"(Actual Height) : *"
         '
         'Label121
         '
-        Me.Label121.AutoSize = True
+        Me.Label121.AutoSize = true
         Me.Label121.BackColor = System.Drawing.Color.White
-        Me.Label121.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label121.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label121.ForeColor = System.Drawing.Color.Black
         Me.Label121.Location = New System.Drawing.Point(396, 374)
         Me.Label121.Name = "Label121"
@@ -6959,9 +6994,9 @@ Partial Class formMain
         '
         'Label122
         '
-        Me.Label122.AutoSize = True
+        Me.Label122.AutoSize = true
         Me.Label122.BackColor = System.Drawing.Color.White
-        Me.Label122.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label122.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label122.ForeColor = System.Drawing.Color.Black
         Me.Label122.Location = New System.Drawing.Point(125, 375)
         Me.Label122.Name = "Label122"
@@ -6979,12 +7014,12 @@ Partial Class formMain
         Me.txtOccAreaA.Border.Class = "TextBoxBorder"
         Me.txtOccAreaA.Border.CornerDiameter = 6
         Me.txtOccAreaA.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccAreaA.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccAreaA.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccAreaA.ForeColor = System.Drawing.Color.Black
         Me.txtOccAreaA.Location = New System.Drawing.Point(392, 387)
         Me.txtOccAreaA.MaxLength = 100
         Me.txtOccAreaA.Name = "txtOccAreaA"
-        Me.txtOccAreaA.ReadOnly = True
+        Me.txtOccAreaA.ReadOnly = true
         Me.txtOccAreaA.Size = New System.Drawing.Size(263, 29)
         Me.txtOccAreaA.TabIndex = 156
         '
@@ -6998,32 +7033,32 @@ Partial Class formMain
         Me.txtOccAreaP.Border.Class = "TextBoxBorder"
         Me.txtOccAreaP.Border.CornerDiameter = 6
         Me.txtOccAreaP.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccAreaP.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccAreaP.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccAreaP.ForeColor = System.Drawing.Color.Black
         Me.txtOccAreaP.Location = New System.Drawing.Point(122, 388)
         Me.txtOccAreaP.MaxLength = 100
         Me.txtOccAreaP.Name = "txtOccAreaP"
-        Me.txtOccAreaP.ReadOnly = True
+        Me.txtOccAreaP.ReadOnly = true
         Me.txtOccAreaP.Size = New System.Drawing.Size(263, 29)
         Me.txtOccAreaP.TabIndex = 155
         '
         'Label120
         '
-        Me.Label120.AutoSize = True
+        Me.Label120.AutoSize = true
         Me.Label120.BackColor = System.Drawing.Color.White
-        Me.Label120.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label120.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label120.ForeColor = System.Drawing.Color.Black
         Me.Label120.Location = New System.Drawing.Point(10, 387)
         Me.Label120.Name = "Label120"
         Me.Label120.Size = New System.Drawing.Size(116, 30)
         Me.Label120.TabIndex = 154
-        Me.Label120.Text = "Total Floor " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Area (sq. meters) : *"
+        Me.Label120.Text = "Total Floor "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Area (sq. meters) : *"
         '
         'Label83
         '
-        Me.Label83.AutoSize = True
+        Me.Label83.AutoSize = true
         Me.Label83.BackColor = System.Drawing.Color.White
-        Me.Label83.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label83.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label83.ForeColor = System.Drawing.Color.Black
         Me.Label83.Location = New System.Drawing.Point(394, 329)
         Me.Label83.Name = "Label83"
@@ -7033,9 +7068,9 @@ Partial Class formMain
         '
         'Label118
         '
-        Me.Label118.AutoSize = True
+        Me.Label118.AutoSize = true
         Me.Label118.BackColor = System.Drawing.Color.White
-        Me.Label118.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label118.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label118.ForeColor = System.Drawing.Color.Black
         Me.Label118.Location = New System.Drawing.Point(125, 329)
         Me.Label118.Name = "Label118"
@@ -7047,8 +7082,8 @@ Partial Class formMain
         '
         Me.dtOccComA.BackColor = System.Drawing.Color.White
         Me.dtOccComA.CustomFormat = "MM/dd/yyyy"
-        Me.dtOccComA.Enabled = False
-        Me.dtOccComA.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.dtOccComA.Enabled = false
+        Me.dtOccComA.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.dtOccComA.ForeColor = System.Drawing.Color.Black
         Me.dtOccComA.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtOccComA.Location = New System.Drawing.Point(392, 344)
@@ -7060,8 +7095,8 @@ Partial Class formMain
         '
         Me.dtOccComP.BackColor = System.Drawing.Color.White
         Me.dtOccComP.CustomFormat = "MM/dd/yyyy"
-        Me.dtOccComP.Enabled = False
-        Me.dtOccComP.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.dtOccComP.Enabled = false
+        Me.dtOccComP.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.dtOccComP.ForeColor = System.Drawing.Color.Black
         Me.dtOccComP.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtOccComP.Location = New System.Drawing.Point(122, 344)
@@ -7071,21 +7106,21 @@ Partial Class formMain
         '
         'Label119
         '
-        Me.Label119.AutoSize = True
+        Me.Label119.AutoSize = true
         Me.Label119.BackColor = System.Drawing.Color.White
-        Me.Label119.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label119.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label119.ForeColor = System.Drawing.Color.Black
         Me.Label119.Location = New System.Drawing.Point(10, 341)
         Me.Label119.Name = "Label119"
         Me.Label119.Size = New System.Drawing.Size(80, 30)
         Me.Label119.TabIndex = 149
-        Me.Label119.Text = "Date of " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Completion : "
+        Me.Label119.Text = "Date of "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Completion : "
         '
         'Label82
         '
-        Me.Label82.AutoSize = True
+        Me.Label82.AutoSize = true
         Me.Label82.BackColor = System.Drawing.Color.White
-        Me.Label82.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label82.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label82.ForeColor = System.Drawing.Color.Black
         Me.Label82.Location = New System.Drawing.Point(394, 279)
         Me.Label82.Name = "Label82"
@@ -7095,9 +7130,9 @@ Partial Class formMain
         '
         'Label81
         '
-        Me.Label81.AutoSize = True
+        Me.Label81.AutoSize = true
         Me.Label81.BackColor = System.Drawing.Color.White
-        Me.Label81.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label81.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label81.ForeColor = System.Drawing.Color.Black
         Me.Label81.Location = New System.Drawing.Point(125, 279)
         Me.Label81.Name = "Label81"
@@ -7109,8 +7144,8 @@ Partial Class formMain
         '
         Me.dtOccConstA.BackColor = System.Drawing.Color.White
         Me.dtOccConstA.CustomFormat = "MM/dd/yyyy"
-        Me.dtOccConstA.Enabled = False
-        Me.dtOccConstA.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.dtOccConstA.Enabled = false
+        Me.dtOccConstA.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.dtOccConstA.ForeColor = System.Drawing.Color.Black
         Me.dtOccConstA.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtOccConstA.Location = New System.Drawing.Point(392, 294)
@@ -7122,8 +7157,8 @@ Partial Class formMain
         '
         Me.dtOccConstP.BackColor = System.Drawing.Color.White
         Me.dtOccConstP.CustomFormat = "MM/dd/yyyy"
-        Me.dtOccConstP.Enabled = False
-        Me.dtOccConstP.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.dtOccConstP.Enabled = false
+        Me.dtOccConstP.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.dtOccConstP.ForeColor = System.Drawing.Color.Black
         Me.dtOccConstP.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtOccConstP.Location = New System.Drawing.Point(122, 294)
@@ -7133,24 +7168,24 @@ Partial Class formMain
         '
         'Label80
         '
-        Me.Label80.AutoSize = True
+        Me.Label80.AutoSize = true
         Me.Label80.BackColor = System.Drawing.Color.White
-        Me.Label80.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label80.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label80.ForeColor = System.Drawing.Color.Black
         Me.Label80.Location = New System.Drawing.Point(10, 291)
         Me.Label80.Name = "Label80"
         Me.Label80.Size = New System.Drawing.Size(87, 30)
         Me.Label80.TabIndex = 144
-        Me.Label80.Text = "Start Date of " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Construction : "
+        Me.Label80.Text = "Start Date of "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Construction : "
         '
         'cboOccBuild
         '
         Me.cboOccBuild.BackColor = System.Drawing.Color.White
         Me.cboOccBuild.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboOccBuild.Enabled = False
-        Me.cboOccBuild.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.cboOccBuild.Enabled = false
+        Me.cboOccBuild.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.cboOccBuild.ForeColor = System.Drawing.Color.Black
-        Me.cboOccBuild.FormattingEnabled = True
+        Me.cboOccBuild.FormattingEnabled = true
         Me.cboOccBuild.Location = New System.Drawing.Point(122, 247)
         Me.cboOccBuild.Name = "cboOccBuild"
         Me.cboOccBuild.Size = New System.Drawing.Size(536, 23)
@@ -7158,9 +7193,9 @@ Partial Class formMain
         '
         'Label117
         '
-        Me.Label117.AutoSize = True
+        Me.Label117.AutoSize = true
         Me.Label117.BackColor = System.Drawing.Color.White
-        Me.Label117.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label117.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label117.ForeColor = System.Drawing.Color.Black
         Me.Label117.Location = New System.Drawing.Point(370, 194)
         Me.Label117.Name = "Label117"
@@ -7178,12 +7213,12 @@ Partial Class formMain
         Me.txtOccCity.Border.Class = "TextBoxBorder"
         Me.txtOccCity.Border.CornerDiameter = 6
         Me.txtOccCity.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccCity.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccCity.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccCity.ForeColor = System.Drawing.Color.Black
         Me.txtOccCity.Location = New System.Drawing.Point(364, 208)
         Me.txtOccCity.MaxLength = 100
         Me.txtOccCity.Name = "txtOccCity"
-        Me.txtOccCity.ReadOnly = True
+        Me.txtOccCity.ReadOnly = true
         Me.txtOccCity.Size = New System.Drawing.Size(294, 29)
         Me.txtOccCity.TabIndex = 141
         Me.txtOccCity.Tag = "readonly"
@@ -7191,9 +7226,9 @@ Partial Class formMain
         '
         'Label84
         '
-        Me.Label84.AutoSize = True
+        Me.Label84.AutoSize = true
         Me.Label84.BackColor = System.Drawing.Color.White
-        Me.Label84.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label84.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label84.ForeColor = System.Drawing.Color.Black
         Me.Label84.Location = New System.Drawing.Point(188, 194)
         Me.Label84.Name = "Label84"
@@ -7203,9 +7238,9 @@ Partial Class formMain
         '
         'Label85
         '
-        Me.Label85.AutoSize = True
+        Me.Label85.AutoSize = true
         Me.Label85.BackColor = System.Drawing.Color.White
-        Me.Label85.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label85.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label85.ForeColor = System.Drawing.Color.Black
         Me.Label85.Location = New System.Drawing.Point(128, 194)
         Me.Label85.Name = "Label85"
@@ -7215,9 +7250,9 @@ Partial Class formMain
         '
         'Label86
         '
-        Me.Label86.AutoSize = True
+        Me.Label86.AutoSize = true
         Me.Label86.BackColor = System.Drawing.Color.White
-        Me.Label86.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label86.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label86.ForeColor = System.Drawing.Color.Black
         Me.Label86.Location = New System.Drawing.Point(474, 148)
         Me.Label86.Name = "Label86"
@@ -7227,9 +7262,9 @@ Partial Class formMain
         '
         'Label87
         '
-        Me.Label87.AutoSize = True
+        Me.Label87.AutoSize = true
         Me.Label87.BackColor = System.Drawing.Color.White
-        Me.Label87.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label87.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label87.ForeColor = System.Drawing.Color.Black
         Me.Label87.Location = New System.Drawing.Point(321, 149)
         Me.Label87.Name = "Label87"
@@ -7239,9 +7274,9 @@ Partial Class formMain
         '
         'Label88
         '
-        Me.Label88.AutoSize = True
+        Me.Label88.AutoSize = true
         Me.Label88.BackColor = System.Drawing.Color.White
-        Me.Label88.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label88.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label88.ForeColor = System.Drawing.Color.Black
         Me.Label88.Location = New System.Drawing.Point(252, 149)
         Me.Label88.Name = "Label88"
@@ -7251,9 +7286,9 @@ Partial Class formMain
         '
         'Label89
         '
-        Me.Label89.AutoSize = True
+        Me.Label89.AutoSize = true
         Me.Label89.BackColor = System.Drawing.Color.White
-        Me.Label89.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label89.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label89.ForeColor = System.Drawing.Color.Black
         Me.Label89.Location = New System.Drawing.Point(187, 149)
         Me.Label89.Name = "Label89"
@@ -7263,9 +7298,9 @@ Partial Class formMain
         '
         'Label90
         '
-        Me.Label90.AutoSize = True
+        Me.Label90.AutoSize = true
         Me.Label90.BackColor = System.Drawing.Color.White
-        Me.Label90.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label90.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label90.ForeColor = System.Drawing.Color.Black
         Me.Label90.Location = New System.Drawing.Point(128, 149)
         Me.Label90.Name = "Label90"
@@ -7275,9 +7310,9 @@ Partial Class formMain
         '
         'Label91
         '
-        Me.Label91.AutoSize = True
+        Me.Label91.AutoSize = true
         Me.Label91.BackColor = System.Drawing.Color.White
-        Me.Label91.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label91.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label91.ForeColor = System.Drawing.Color.Black
         Me.Label91.Location = New System.Drawing.Point(486, 70)
         Me.Label91.Name = "Label91"
@@ -7287,9 +7322,9 @@ Partial Class formMain
         '
         'Label92
         '
-        Me.Label92.AutoSize = True
+        Me.Label92.AutoSize = true
         Me.Label92.BackColor = System.Drawing.Color.White
-        Me.Label92.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label92.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label92.ForeColor = System.Drawing.Color.Black
         Me.Label92.Location = New System.Drawing.Point(306, 70)
         Me.Label92.Name = "Label92"
@@ -7299,9 +7334,9 @@ Partial Class formMain
         '
         'Label93
         '
-        Me.Label93.AutoSize = True
+        Me.Label93.AutoSize = true
         Me.Label93.BackColor = System.Drawing.Color.White
-        Me.Label93.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label93.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label93.ForeColor = System.Drawing.Color.Black
         Me.Label93.Location = New System.Drawing.Point(125, 70)
         Me.Label93.Name = "Label93"
@@ -7311,24 +7346,24 @@ Partial Class formMain
         '
         'Label94
         '
-        Me.Label94.AutoSize = True
+        Me.Label94.AutoSize = true
         Me.Label94.BackColor = System.Drawing.Color.White
-        Me.Label94.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label94.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label94.ForeColor = System.Drawing.Color.Black
         Me.Label94.Location = New System.Drawing.Point(10, 247)
         Me.Label94.Name = "Label94"
         Me.Label94.Size = New System.Drawing.Size(88, 30)
         Me.Label94.TabIndex = 121
-        Me.Label94.Text = "Use or Type of" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Occupancy : *"
+        Me.Label94.Text = "Use or Type of"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Occupancy : *"
         '
         'cboOccBrgy
         '
         Me.cboOccBrgy.BackColor = System.Drawing.Color.White
         Me.cboOccBrgy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboOccBrgy.Enabled = False
-        Me.cboOccBrgy.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.cboOccBrgy.Enabled = false
+        Me.cboOccBrgy.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.cboOccBrgy.ForeColor = System.Drawing.Color.Black
-        Me.cboOccBrgy.FormattingEnabled = True
+        Me.cboOccBrgy.FormattingEnabled = true
         Me.cboOccBrgy.Location = New System.Drawing.Point(185, 209)
         Me.cboOccBrgy.Name = "cboOccBrgy"
         Me.cboOccBrgy.Size = New System.Drawing.Size(175, 23)
@@ -7345,12 +7380,12 @@ Partial Class formMain
         Me.txtOccZone.Border.Class = "TextBoxBorder"
         Me.txtOccZone.Border.CornerDiameter = 6
         Me.txtOccZone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccZone.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccZone.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccZone.ForeColor = System.Drawing.Color.Black
         Me.txtOccZone.Location = New System.Drawing.Point(122, 208)
         Me.txtOccZone.MaxLength = 100
         Me.txtOccZone.Name = "txtOccZone"
-        Me.txtOccZone.ReadOnly = True
+        Me.txtOccZone.ReadOnly = true
         Me.txtOccZone.Size = New System.Drawing.Size(59, 29)
         Me.txtOccZone.TabIndex = 119
         Me.txtOccZone.Tag = "readonly2"
@@ -7365,12 +7400,12 @@ Partial Class formMain
         Me.txtOccSt.Border.Class = "TextBoxBorder"
         Me.txtOccSt.Border.CornerDiameter = 6
         Me.txtOccSt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccSt.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccSt.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccSt.ForeColor = System.Drawing.Color.Black
         Me.txtOccSt.Location = New System.Drawing.Point(468, 162)
         Me.txtOccSt.MaxLength = 100
         Me.txtOccSt.Name = "txtOccSt"
-        Me.txtOccSt.ReadOnly = True
+        Me.txtOccSt.ReadOnly = true
         Me.txtOccSt.Size = New System.Drawing.Size(190, 29)
         Me.txtOccSt.TabIndex = 118
         Me.txtOccSt.Tag = "readonly2"
@@ -7379,10 +7414,10 @@ Partial Class formMain
         '
         Me.cboOccSubd.BackColor = System.Drawing.Color.White
         Me.cboOccSubd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboOccSubd.Enabled = False
-        Me.cboOccSubd.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.cboOccSubd.Enabled = false
+        Me.cboOccSubd.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.cboOccSubd.ForeColor = System.Drawing.Color.Black
-        Me.cboOccSubd.FormattingEnabled = True
+        Me.cboOccSubd.FormattingEnabled = true
         Me.cboOccSubd.Location = New System.Drawing.Point(313, 163)
         Me.cboOccSubd.Name = "cboOccSubd"
         Me.cboOccSubd.Size = New System.Drawing.Size(151, 23)
@@ -7399,12 +7434,12 @@ Partial Class formMain
         Me.txtOccPh.Border.Class = "TextBoxBorder"
         Me.txtOccPh.Border.CornerDiameter = 6
         Me.txtOccPh.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccPh.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccPh.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccPh.ForeColor = System.Drawing.Color.Black
         Me.txtOccPh.Location = New System.Drawing.Point(249, 162)
         Me.txtOccPh.MaxLength = 100
         Me.txtOccPh.Name = "txtOccPh"
-        Me.txtOccPh.ReadOnly = True
+        Me.txtOccPh.ReadOnly = true
         Me.txtOccPh.Size = New System.Drawing.Size(59, 29)
         Me.txtOccPh.TabIndex = 116
         Me.txtOccPh.Tag = "readonly2"
@@ -7419,12 +7454,12 @@ Partial Class formMain
         Me.txtOccBlock.Border.Class = "TextBoxBorder"
         Me.txtOccBlock.Border.CornerDiameter = 6
         Me.txtOccBlock.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccBlock.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccBlock.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccBlock.ForeColor = System.Drawing.Color.Black
         Me.txtOccBlock.Location = New System.Drawing.Point(185, 162)
         Me.txtOccBlock.MaxLength = 100
         Me.txtOccBlock.Name = "txtOccBlock"
-        Me.txtOccBlock.ReadOnly = True
+        Me.txtOccBlock.ReadOnly = true
         Me.txtOccBlock.Size = New System.Drawing.Size(59, 29)
         Me.txtOccBlock.TabIndex = 115
         Me.txtOccBlock.Tag = "readonly2"
@@ -7439,12 +7474,12 @@ Partial Class formMain
         Me.txtOccLot.Border.Class = "TextBoxBorder"
         Me.txtOccLot.Border.CornerDiameter = 6
         Me.txtOccLot.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccLot.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccLot.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccLot.ForeColor = System.Drawing.Color.Black
         Me.txtOccLot.Location = New System.Drawing.Point(122, 162)
         Me.txtOccLot.MaxLength = 100
         Me.txtOccLot.Name = "txtOccLot"
-        Me.txtOccLot.ReadOnly = True
+        Me.txtOccLot.ReadOnly = true
         Me.txtOccLot.Size = New System.Drawing.Size(59, 29)
         Me.txtOccLot.TabIndex = 114
         Me.txtOccLot.Tag = "readonly2"
@@ -7459,12 +7494,12 @@ Partial Class formMain
         Me.txtOccOwnAdd.Border.Class = "TextBoxBorder"
         Me.txtOccOwnAdd.Border.CornerDiameter = 6
         Me.txtOccOwnAdd.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccOwnAdd.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccOwnAdd.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccOwnAdd.ForeColor = System.Drawing.Color.Black
         Me.txtOccOwnAdd.Location = New System.Drawing.Point(122, 118)
         Me.txtOccOwnAdd.MaxLength = 100
         Me.txtOccOwnAdd.Name = "txtOccOwnAdd"
-        Me.txtOccOwnAdd.ReadOnly = True
+        Me.txtOccOwnAdd.ReadOnly = true
         Me.txtOccOwnAdd.Size = New System.Drawing.Size(536, 29)
         Me.txtOccOwnAdd.TabIndex = 113
         Me.txtOccOwnAdd.Tag = ""
@@ -7479,12 +7514,12 @@ Partial Class formMain
         Me.txtOccM.Border.Class = "TextBoxBorder"
         Me.txtOccM.Border.CornerDiameter = 6
         Me.txtOccM.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccM.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccM.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccM.ForeColor = System.Drawing.Color.Black
         Me.txtOccM.Location = New System.Drawing.Point(448, 83)
         Me.txtOccM.MaxLength = 100
         Me.txtOccM.Name = "txtOccM"
-        Me.txtOccM.ReadOnly = True
+        Me.txtOccM.ReadOnly = true
         Me.txtOccM.Size = New System.Drawing.Size(159, 29)
         Me.txtOccM.TabIndex = 112
         Me.txtOccM.Tag = "readonly2"
@@ -7499,12 +7534,12 @@ Partial Class formMain
         Me.txtOccF.Border.Class = "TextBoxBorder"
         Me.txtOccF.Border.CornerDiameter = 6
         Me.txtOccF.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccF.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccF.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccF.ForeColor = System.Drawing.Color.Black
         Me.txtOccF.Location = New System.Drawing.Point(285, 83)
         Me.txtOccF.MaxLength = 100
         Me.txtOccF.Name = "txtOccF"
-        Me.txtOccF.ReadOnly = True
+        Me.txtOccF.ReadOnly = true
         Me.txtOccF.Size = New System.Drawing.Size(159, 29)
         Me.txtOccF.TabIndex = 111
         Me.txtOccF.Tag = "readonly2"
@@ -7519,45 +7554,45 @@ Partial Class formMain
         Me.txtOccL.Border.Class = "TextBoxBorder"
         Me.txtOccL.Border.CornerDiameter = 6
         Me.txtOccL.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccL.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccL.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccL.ForeColor = System.Drawing.Color.Black
         Me.txtOccL.Location = New System.Drawing.Point(122, 83)
         Me.txtOccL.MaxLength = 100
         Me.txtOccL.Name = "txtOccL"
-        Me.txtOccL.ReadOnly = True
+        Me.txtOccL.ReadOnly = true
         Me.txtOccL.Size = New System.Drawing.Size(159, 29)
         Me.txtOccL.TabIndex = 110
         Me.txtOccL.Tag = "readonly2"
         '
         'Label95
         '
-        Me.Label95.AutoSize = True
+        Me.Label95.AutoSize = true
         Me.Label95.BackColor = System.Drawing.Color.White
-        Me.Label95.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label95.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label95.ForeColor = System.Drawing.Color.Black
         Me.Label95.Location = New System.Drawing.Point(10, 164)
         Me.Label95.Name = "Label95"
         Me.Label95.Size = New System.Drawing.Size(84, 30)
         Me.Label95.TabIndex = 109
-        Me.Label95.Text = "Location of " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Construction :"
+        Me.Label95.Text = "Location of "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Construction :"
         '
         'Label96
         '
-        Me.Label96.AutoSize = True
+        Me.Label96.AutoSize = true
         Me.Label96.BackColor = System.Drawing.Color.White
-        Me.Label96.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label96.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label96.ForeColor = System.Drawing.Color.Black
         Me.Label96.Location = New System.Drawing.Point(10, 118)
         Me.Label96.Name = "Label96"
         Me.Label96.Size = New System.Drawing.Size(74, 30)
         Me.Label96.TabIndex = 108
-        Me.Label96.Text = "Address " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "of Owner : *"
+        Me.Label96.Text = "Address "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"of Owner : *"
         '
         'Label97
         '
-        Me.Label97.AutoSize = True
+        Me.Label97.AutoSize = true
         Me.Label97.BackColor = System.Drawing.Color.White
-        Me.Label97.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label97.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label97.ForeColor = System.Drawing.Color.Black
         Me.Label97.Location = New System.Drawing.Point(10, 89)
         Me.Label97.Name = "Label97"
@@ -7587,7 +7622,7 @@ Partial Class formMain
         'btnOccFind
         '
         Me.btnOccFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOccFind.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOccFind.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnOccFind.ForeColor = System.Drawing.Color.Black
         Me.btnOccFind.Location = New System.Drawing.Point(106, 7)
         Me.btnOccFind.Name = "btnOccFind"
@@ -7595,12 +7630,12 @@ Partial Class formMain
         Me.btnOccFind.TabIndex = 201
         Me.btnOccFind.Tag = "Navy"
         Me.btnOccFind.Text = "&Find"
-        Me.btnOccFind.UseVisualStyleBackColor = True
+        Me.btnOccFind.UseVisualStyleBackColor = true
         '
         'btnOccuAdd
         '
         Me.btnOccuAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOccuAdd.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOccuAdd.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnOccuAdd.ForeColor = System.Drawing.Color.Black
         Me.btnOccuAdd.Location = New System.Drawing.Point(10, 7)
         Me.btnOccuAdd.Name = "btnOccuAdd"
@@ -7608,12 +7643,12 @@ Partial Class formMain
         Me.btnOccuAdd.TabIndex = 200
         Me.btnOccuAdd.Tag = "Navy Encode"
         Me.btnOccuAdd.Text = "&New"
-        Me.btnOccuAdd.UseVisualStyleBackColor = True
+        Me.btnOccuAdd.UseVisualStyleBackColor = true
         '
         'btnOccClose
         '
         Me.btnOccClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOccClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOccClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnOccClose.ForeColor = System.Drawing.Color.Black
         Me.btnOccClose.Location = New System.Drawing.Point(202, 7)
         Me.btnOccClose.Name = "btnOccClose"
@@ -7621,7 +7656,7 @@ Partial Class formMain
         Me.btnOccClose.TabIndex = 204
         Me.btnOccClose.Tag = "Navy"
         Me.btnOccClose.Text = "&Close"
-        Me.btnOccClose.UseVisualStyleBackColor = True
+        Me.btnOccClose.UseVisualStyleBackColor = true
         '
         'PanelEx45
         '
@@ -7633,7 +7668,7 @@ Partial Class formMain
         Me.PanelEx45.Name = "PanelEx45"
         Me.PanelEx45.Size = New System.Drawing.Size(869, 65)
         Me.PanelEx45.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.PanelEx45.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx45.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx45.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.PanelEx45.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelEx45.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
@@ -7642,8 +7677,8 @@ Partial Class formMain
         '
         'Label134
         '
-        Me.Label134.AutoSize = True
-        Me.Label134.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label134.AutoSize = true
+        Me.Label134.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label134.ForeColor = System.Drawing.Color.Black
         Me.Label134.Location = New System.Drawing.Point(12, 18)
         Me.Label134.Name = "Label134"
@@ -7654,7 +7689,7 @@ Partial Class formMain
         '
         'panelOccSearch
         '
-        Me.panelOccSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.panelOccSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.panelOccSearch.CanvasColor = System.Drawing.SystemColors.Control
         Me.panelOccSearch.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.panelOccSearch.Controls.Add(Me.PanelEx42)
@@ -7662,16 +7697,16 @@ Partial Class formMain
         Me.panelOccSearch.Name = "panelOccSearch"
         Me.panelOccSearch.Size = New System.Drawing.Size(869, 410)
         Me.panelOccSearch.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.panelOccSearch.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(222, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.panelOccSearch.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(213,Byte),Integer), CType(CType(222,Byte),Integer), CType(CType(231,Byte),Integer))
         Me.panelOccSearch.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.panelOccSearch.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.panelOccSearch.Style.GradientAngle = 90
         Me.panelOccSearch.TabIndex = 15
-        Me.panelOccSearch.Visible = False
+        Me.panelOccSearch.Visible = false
         '
         'PanelEx42
         '
-        Me.PanelEx42.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.PanelEx42.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom),System.Windows.Forms.AnchorStyles)
         Me.PanelEx42.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx42.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx42.Controls.Add(Me.cboOccSBuild)
@@ -7709,7 +7744,7 @@ Partial Class formMain
         Me.PanelEx42.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx42.Style.BackColor1.Color = System.Drawing.Color.White
         Me.PanelEx42.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx42.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx42.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx42.Style.BorderWidth = 2
         Me.PanelEx42.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx42.Style.GradientAngle = 90
@@ -7719,9 +7754,9 @@ Partial Class formMain
         '
         Me.cboOccSBuild.BackColor = System.Drawing.Color.White
         Me.cboOccSBuild.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboOccSBuild.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.cboOccSBuild.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.cboOccSBuild.ForeColor = System.Drawing.Color.Black
-        Me.cboOccSBuild.FormattingEnabled = True
+        Me.cboOccSBuild.FormattingEnabled = true
         Me.cboOccSBuild.Location = New System.Drawing.Point(131, 182)
         Me.cboOccSBuild.Name = "cboOccSBuild"
         Me.cboOccSBuild.Size = New System.Drawing.Size(454, 23)
@@ -7729,9 +7764,9 @@ Partial Class formMain
         '
         'Label143
         '
-        Me.Label143.AutoSize = True
+        Me.Label143.AutoSize = true
         Me.Label143.BackColor = System.Drawing.Color.White
-        Me.Label143.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label143.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label143.ForeColor = System.Drawing.Color.Black
         Me.Label143.Location = New System.Drawing.Point(21, 186)
         Me.Label143.Name = "Label143"
@@ -7742,7 +7777,7 @@ Partial Class formMain
         'btnOccSearch
         '
         Me.btnOccSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOccSearch.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOccSearch.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnOccSearch.ForeColor = System.Drawing.Color.Black
         Me.btnOccSearch.Location = New System.Drawing.Point(497, 22)
         Me.btnOccSearch.Name = "btnOccSearch"
@@ -7750,12 +7785,12 @@ Partial Class formMain
         Me.btnOccSearch.TabIndex = 6
         Me.btnOccSearch.Tag = "Navy"
         Me.btnOccSearch.Text = "Search"
-        Me.btnOccSearch.UseVisualStyleBackColor = True
+        Me.btnOccSearch.UseVisualStyleBackColor = true
         '
         'btnOccSearchCancel
         '
         Me.btnOccSearchCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOccSearchCancel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOccSearchCancel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnOccSearchCancel.ForeColor = System.Drawing.Color.Black
         Me.btnOccSearchCancel.Location = New System.Drawing.Point(497, 58)
         Me.btnOccSearchCancel.Name = "btnOccSearchCancel"
@@ -7763,22 +7798,22 @@ Partial Class formMain
         Me.btnOccSearchCancel.TabIndex = 9
         Me.btnOccSearchCancel.Tag = "Navy"
         Me.btnOccSearchCancel.Text = "Close"
-        Me.btnOccSearchCancel.UseVisualStyleBackColor = True
+        Me.btnOccSearchCancel.UseVisualStyleBackColor = true
         '
         'listOccSearch
         '
         Me.listOccSearch.BackColor = System.Drawing.Color.White
         Me.listOccSearch.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader51, Me.ColumnHeader52, Me.ColumnHeader53, Me.ColumnHeader54, Me.ColumnHeader55, Me.ColumnHeader56, Me.ColumnHeader57, Me.ColumnHeader58, Me.ColumnHeader59, Me.ColumnHeader60, Me.ColumnHeader61, Me.ColumnHeader62, Me.ColumnHeader63, Me.ColumnHeader64, Me.ColumnHeader68})
-        Me.listOccSearch.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.listOccSearch.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.listOccSearch.ForeColor = System.Drawing.Color.Black
-        Me.listOccSearch.FullRowSelect = True
-        Me.listOccSearch.GridLines = True
+        Me.listOccSearch.FullRowSelect = true
+        Me.listOccSearch.GridLines = true
         Me.listOccSearch.Location = New System.Drawing.Point(5, 215)
-        Me.listOccSearch.MultiSelect = False
+        Me.listOccSearch.MultiSelect = false
         Me.listOccSearch.Name = "listOccSearch"
         Me.listOccSearch.Size = New System.Drawing.Size(605, 179)
         Me.listOccSearch.TabIndex = 157
-        Me.listOccSearch.UseCompatibleStateImageBehavior = False
+        Me.listOccSearch.UseCompatibleStateImageBehavior = false
         Me.listOccSearch.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader51
@@ -7856,9 +7891,9 @@ Partial Class formMain
         '
         'Label129
         '
-        Me.Label129.AutoSize = True
+        Me.Label129.AutoSize = true
         Me.Label129.BackColor = System.Drawing.Color.White
-        Me.Label129.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label129.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label129.ForeColor = System.Drawing.Color.Black
         Me.Label129.Location = New System.Drawing.Point(408, 132)
         Me.Label129.Name = "Label129"
@@ -7868,9 +7903,9 @@ Partial Class formMain
         '
         'Label130
         '
-        Me.Label130.AutoSize = True
+        Me.Label130.AutoSize = true
         Me.Label130.BackColor = System.Drawing.Color.White
-        Me.Label130.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label130.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label130.ForeColor = System.Drawing.Color.Black
         Me.Label130.Location = New System.Drawing.Point(340, 132)
         Me.Label130.Name = "Label130"
@@ -7888,7 +7923,7 @@ Partial Class formMain
         Me.txtOccSL.Border.Class = "TextBoxBorder"
         Me.txtOccSL.Border.CornerDiameter = 6
         Me.txtOccSL.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccSL.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccSL.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccSL.ForeColor = System.Drawing.Color.Black
         Me.txtOccSL.Location = New System.Drawing.Point(130, 25)
         Me.txtOccSL.MaxLength = 100
@@ -7898,9 +7933,9 @@ Partial Class formMain
         '
         'Label131
         '
-        Me.Label131.AutoSize = True
+        Me.Label131.AutoSize = true
         Me.Label131.BackColor = System.Drawing.Color.White
-        Me.Label131.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label131.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label131.ForeColor = System.Drawing.Color.Black
         Me.Label131.Location = New System.Drawing.Point(136, 132)
         Me.Label131.Name = "Label131"
@@ -7910,9 +7945,9 @@ Partial Class formMain
         '
         'Label132
         '
-        Me.Label132.AutoSize = True
+        Me.Label132.AutoSize = true
         Me.Label132.BackColor = System.Drawing.Color.White
-        Me.Label132.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label132.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label132.ForeColor = System.Drawing.Color.Black
         Me.Label132.Location = New System.Drawing.Point(21, 29)
         Me.Label132.Name = "Label132"
@@ -7922,9 +7957,9 @@ Partial Class formMain
         '
         'Label133
         '
-        Me.Label133.AutoSize = True
+        Me.Label133.AutoSize = true
         Me.Label133.BackColor = System.Drawing.Color.White
-        Me.Label133.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label133.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label133.ForeColor = System.Drawing.Color.Black
         Me.Label133.Location = New System.Drawing.Point(345, 89)
         Me.Label133.Name = "Label133"
@@ -7934,9 +7969,9 @@ Partial Class formMain
         '
         'Label135
         '
-        Me.Label135.AutoSize = True
+        Me.Label135.AutoSize = true
         Me.Label135.BackColor = System.Drawing.Color.White
-        Me.Label135.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label135.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label135.ForeColor = System.Drawing.Color.Black
         Me.Label135.Location = New System.Drawing.Point(21, 66)
         Me.Label135.Name = "Label135"
@@ -7946,9 +7981,9 @@ Partial Class formMain
         '
         'Label136
         '
-        Me.Label136.AutoSize = True
+        Me.Label136.AutoSize = true
         Me.Label136.BackColor = System.Drawing.Color.White
-        Me.Label136.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label136.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label136.ForeColor = System.Drawing.Color.Black
         Me.Label136.Location = New System.Drawing.Point(269, 89)
         Me.Label136.Name = "Label136"
@@ -7958,9 +7993,9 @@ Partial Class formMain
         '
         'Label137
         '
-        Me.Label137.AutoSize = True
+        Me.Label137.AutoSize = true
         Me.Label137.BackColor = System.Drawing.Color.White
-        Me.Label137.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label137.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label137.ForeColor = System.Drawing.Color.Black
         Me.Label137.Location = New System.Drawing.Point(21, 109)
         Me.Label137.Name = "Label137"
@@ -7970,9 +8005,9 @@ Partial Class formMain
         '
         'Label138
         '
-        Me.Label138.AutoSize = True
+        Me.Label138.AutoSize = true
         Me.Label138.BackColor = System.Drawing.Color.White
-        Me.Label138.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label138.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label138.ForeColor = System.Drawing.Color.Black
         Me.Label138.Location = New System.Drawing.Point(203, 89)
         Me.Label138.Name = "Label138"
@@ -7990,7 +8025,7 @@ Partial Class formMain
         Me.txtOccSF.Border.Class = "TextBoxBorder"
         Me.txtOccSF.Border.CornerDiameter = 6
         Me.txtOccSF.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccSF.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccSF.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccSF.ForeColor = System.Drawing.Color.Black
         Me.txtOccSF.Location = New System.Drawing.Point(251, 25)
         Me.txtOccSF.MaxLength = 100
@@ -8000,9 +8035,9 @@ Partial Class formMain
         '
         'Label139
         '
-        Me.Label139.AutoSize = True
+        Me.Label139.AutoSize = true
         Me.Label139.BackColor = System.Drawing.Color.White
-        Me.Label139.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label139.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label139.ForeColor = System.Drawing.Color.Black
         Me.Label139.Location = New System.Drawing.Point(136, 89)
         Me.Label139.Name = "Label139"
@@ -8020,7 +8055,7 @@ Partial Class formMain
         Me.txtOccSM.Border.Class = "TextBoxBorder"
         Me.txtOccSM.Border.CornerDiameter = 6
         Me.txtOccSM.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccSM.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccSM.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccSM.ForeColor = System.Drawing.Color.Black
         Me.txtOccSM.Location = New System.Drawing.Point(373, 25)
         Me.txtOccSM.MaxLength = 100
@@ -8030,9 +8065,9 @@ Partial Class formMain
         '
         'Label140
         '
-        Me.Label140.AutoSize = True
+        Me.Label140.AutoSize = true
         Me.Label140.BackColor = System.Drawing.Color.White
-        Me.Label140.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label140.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label140.ForeColor = System.Drawing.Color.Black
         Me.Label140.Location = New System.Drawing.Point(383, 11)
         Me.Label140.Name = "Label140"
@@ -8050,7 +8085,7 @@ Partial Class formMain
         Me.txtOccSAddress.Border.Class = "TextBoxBorder"
         Me.txtOccSAddress.Border.CornerDiameter = 6
         Me.txtOccSAddress.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccSAddress.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccSAddress.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccSAddress.ForeColor = System.Drawing.Color.Black
         Me.txtOccSAddress.Location = New System.Drawing.Point(129, 58)
         Me.txtOccSAddress.MaxLength = 100
@@ -8060,9 +8095,9 @@ Partial Class formMain
         '
         'Label141
         '
-        Me.Label141.AutoSize = True
+        Me.Label141.AutoSize = true
         Me.Label141.BackColor = System.Drawing.Color.White
-        Me.Label141.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label141.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label141.ForeColor = System.Drawing.Color.Black
         Me.Label141.Location = New System.Drawing.Point(258, 11)
         Me.Label141.Name = "Label141"
@@ -8080,7 +8115,7 @@ Partial Class formMain
         Me.txtOccSLot.Border.Class = "TextBoxBorder"
         Me.txtOccSLot.Border.CornerDiameter = 6
         Me.txtOccSLot.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccSLot.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccSLot.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccSLot.ForeColor = System.Drawing.Color.Black
         Me.txtOccSLot.Location = New System.Drawing.Point(130, 102)
         Me.txtOccSLot.MaxLength = 100
@@ -8090,9 +8125,9 @@ Partial Class formMain
         '
         'Label142
         '
-        Me.Label142.AutoSize = True
+        Me.Label142.AutoSize = true
         Me.Label142.BackColor = System.Drawing.Color.White
-        Me.Label142.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label142.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label142.ForeColor = System.Drawing.Color.Black
         Me.Label142.Location = New System.Drawing.Point(137, 11)
         Me.Label142.Name = "Label142"
@@ -8110,7 +8145,7 @@ Partial Class formMain
         Me.txtOccSBlock.Border.Class = "TextBoxBorder"
         Me.txtOccSBlock.Border.CornerDiameter = 6
         Me.txtOccSBlock.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccSBlock.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccSBlock.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccSBlock.ForeColor = System.Drawing.Color.Black
         Me.txtOccSBlock.Location = New System.Drawing.Point(198, 102)
         Me.txtOccSBlock.MaxLength = 100
@@ -8122,9 +8157,9 @@ Partial Class formMain
         '
         Me.cboOccSBrgy.BackColor = System.Drawing.Color.White
         Me.cboOccSBrgy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboOccSBrgy.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.cboOccSBrgy.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.cboOccSBrgy.ForeColor = System.Drawing.Color.Black
-        Me.cboOccSBrgy.FormattingEnabled = True
+        Me.cboOccSBrgy.FormattingEnabled = true
         Me.cboOccSBrgy.Location = New System.Drawing.Point(402, 149)
         Me.cboOccSBrgy.Name = "cboOccSBrgy"
         Me.cboOccSBrgy.Size = New System.Drawing.Size(183, 23)
@@ -8140,7 +8175,7 @@ Partial Class formMain
         Me.txtOccSPh.Border.Class = "TextBoxBorder"
         Me.txtOccSPh.Border.CornerDiameter = 6
         Me.txtOccSPh.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccSPh.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccSPh.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccSPh.ForeColor = System.Drawing.Color.Black
         Me.txtOccSPh.Location = New System.Drawing.Point(267, 102)
         Me.txtOccSPh.MaxLength = 100
@@ -8158,7 +8193,7 @@ Partial Class formMain
         Me.txtOccSZone.Border.Class = "TextBoxBorder"
         Me.txtOccSZone.Border.CornerDiameter = 6
         Me.txtOccSZone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccSZone.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccSZone.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccSZone.ForeColor = System.Drawing.Color.Black
         Me.txtOccSZone.Location = New System.Drawing.Point(334, 146)
         Me.txtOccSZone.MaxLength = 100
@@ -8170,9 +8205,9 @@ Partial Class formMain
         '
         Me.cboOccSSub.BackColor = System.Drawing.Color.White
         Me.cboOccSSub.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboOccSSub.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.cboOccSSub.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.cboOccSSub.ForeColor = System.Drawing.Color.Black
-        Me.cboOccSSub.FormattingEnabled = True
+        Me.cboOccSSub.FormattingEnabled = true
         Me.cboOccSSub.Location = New System.Drawing.Point(337, 104)
         Me.cboOccSSub.Name = "cboOccSSub"
         Me.cboOccSSub.Size = New System.Drawing.Size(247, 23)
@@ -8188,7 +8223,7 @@ Partial Class formMain
         Me.txtOccSStreet.Border.Class = "TextBoxBorder"
         Me.txtOccSStreet.Border.CornerDiameter = 6
         Me.txtOccSStreet.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtOccSStreet.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOccSStreet.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtOccSStreet.ForeColor = System.Drawing.Color.Black
         Me.txtOccSStreet.Location = New System.Drawing.Point(130, 146)
         Me.txtOccSStreet.MaxLength = 100
@@ -8199,7 +8234,7 @@ Partial Class formMain
         'btnPayments
         '
         Me.btnPayments.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPayments.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPayments.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnPayments.ForeColor = System.Drawing.Color.Black
         Me.btnPayments.Location = New System.Drawing.Point(11, 7)
         Me.btnPayments.Name = "btnPayments"
@@ -8207,26 +8242,26 @@ Partial Class formMain
         Me.btnPayments.TabIndex = 200
         Me.btnPayments.Tag = "Navy"
         Me.btnPayments.Text = "Payment List"
-        Me.btnPayments.UseVisualStyleBackColor = True
+        Me.btnPayments.UseVisualStyleBackColor = true
         '
         'btnPaymentClose
         '
         Me.btnPaymentClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPaymentClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPaymentClose.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnPaymentClose.ForeColor = System.Drawing.Color.Black
-        Me.btnPaymentClose.Location = New System.Drawing.Point(238, 7)
+        Me.btnPaymentClose.Location = New System.Drawing.Point(377, 7)
         Me.btnPaymentClose.Name = "btnPaymentClose"
         Me.btnPaymentClose.Size = New System.Drawing.Size(88, 33)
         Me.btnPaymentClose.TabIndex = 205
         Me.btnPaymentClose.Tag = "Navy"
         Me.btnPaymentClose.Text = "Close"
-        Me.btnPaymentClose.UseVisualStyleBackColor = True
+        Me.btnPaymentClose.UseVisualStyleBackColor = true
         '
         'slidePayment
         '
-        Me.slidePayment.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.slidePayment.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.slidePayment.BackColor = System.Drawing.Color.White
         Me.slidePayment.Controls.Add(Me.PanelEx49)
         Me.slidePayment.Controls.Add(Me.PanelEx52)
@@ -8235,11 +8270,11 @@ Partial Class formMain
         Me.slidePayment.Location = New System.Drawing.Point(199, 78)
         Me.slidePayment.Name = "slidePayment"
         Me.slidePayment.Size = New System.Drawing.Size(869, 594)
-        Me.slidePayment.SlideOutButtonVisible = False
+        Me.slidePayment.SlideOutButtonVisible = false
         Me.slidePayment.SlideSide = DevComponents.DotNetBar.Controls.eSlideSide.Right
         Me.slidePayment.TabIndex = 20
         Me.slidePayment.Tag = "Forms"
-        Me.slidePayment.UsesBlockingAnimation = False
+        Me.slidePayment.UsesBlockingAnimation = false
         '
         'PanelEx49
         '
@@ -8258,7 +8293,7 @@ Partial Class formMain
         Me.PanelEx49.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx49.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelEx49.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx49.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.PanelEx49.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.PanelEx49.Style.BorderSide = DevComponents.DotNetBar.eBorderSide.Right
         Me.PanelEx49.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx49.Style.GradientAngle = 90
@@ -8266,7 +8301,7 @@ Partial Class formMain
         '
         'btnPrint1
         '
-        Me.btnPrint1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnPrint1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.btnPrint1.BackColor = System.Drawing.Color.White
         Me.btnPrint1.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.btnPrint1.ForeColor = System.Drawing.Color.Black
@@ -8276,12 +8311,12 @@ Partial Class formMain
         Me.btnPrint1.TabIndex = 121
         Me.btnPrint1.Tag = "Proceed to Questions"
         Me.btnPrint1.Text = "Print"
-        Me.btnPrint1.UseVisualStyleBackColor = False
-        Me.btnPrint1.Visible = False
+        Me.btnPrint1.UseVisualStyleBackColor = false
+        Me.btnPrint1.Visible = false
         '
         'panelAddPayment
         '
-        Me.panelAddPayment.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.panelAddPayment.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.panelAddPayment.CanvasColor = System.Drawing.SystemColors.Control
         Me.panelAddPayment.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.panelAddPayment.Controls.Add(Me.panelNewPayments)
@@ -8297,9 +8332,10 @@ Partial Class formMain
         '
         'panelNewPayments
         '
-        Me.panelNewPayments.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.panelNewPayments.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom),System.Windows.Forms.AnchorStyles)
         Me.panelNewPayments.CanvasColor = System.Drawing.SystemColors.Control
         Me.panelNewPayments.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.panelNewPayments.Controls.Add(Me.panelPending)
         Me.panelNewPayments.Controls.Add(Me.panelPaid)
         Me.panelNewPayments.Controls.Add(Me.lblIndicate)
         Me.panelNewPayments.Controls.Add(Me.PanelEx48)
@@ -8365,18 +8401,18 @@ Partial Class formMain
         Me.panelPaid.Name = "panelPaid"
         Me.panelPaid.Size = New System.Drawing.Size(181, 62)
         Me.panelPaid.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.panelPaid.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.panelPaid.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52,Byte),Integer), CType(CType(69,Byte),Integer), CType(CType(99,Byte),Integer))
         Me.panelPaid.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
         Me.panelPaid.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.panelPaid.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.panelPaid.Style.GradientAngle = 90
         Me.panelPaid.TabIndex = 217
-        Me.panelPaid.Visible = False
+        Me.panelPaid.Visible = false
         '
         'Label167
         '
-        Me.Label167.AutoSize = True
-        Me.Label167.Font = New System.Drawing.Font("Segoe UI", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label167.AutoSize = true
+        Me.Label167.Font = New System.Drawing.Font("Segoe UI", 36!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label167.ForeColor = System.Drawing.Color.Black
         Me.Label167.Location = New System.Drawing.Point(24, -2)
         Me.Label167.Name = "Label167"
@@ -8387,10 +8423,10 @@ Partial Class formMain
         '
         'lblIndicate
         '
-        Me.lblIndicate.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblIndicate.AutoSize = True
+        Me.lblIndicate.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.lblIndicate.AutoSize = true
         Me.lblIndicate.BackColor = System.Drawing.Color.Transparent
-        Me.lblIndicate.Font = New System.Drawing.Font("Segoe UI", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIndicate.Font = New System.Drawing.Font("Segoe UI", 9!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.lblIndicate.ForeColor = System.Drawing.Color.Black
         Me.lblIndicate.Location = New System.Drawing.Point(16, 6)
         Me.lblIndicate.Name = "lblIndicate"
@@ -8458,14 +8494,14 @@ Partial Class formMain
         Me.PanelEx47.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx47.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx47.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelEx47.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PanelEx47.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.PanelEx47.Location = New System.Drawing.Point(0, 0)
         Me.PanelEx47.Name = "PanelEx47"
         Me.PanelEx47.Size = New System.Drawing.Size(277, 30)
         Me.PanelEx47.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx47.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelEx47.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
-        Me.PanelEx47.Style.Font = New System.Drawing.Font("Segoe UI", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PanelEx47.Style.Font = New System.Drawing.Font("Segoe UI", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.PanelEx47.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx47.Style.GradientAngle = 90
         Me.PanelEx47.TabIndex = 155
@@ -8481,13 +8517,13 @@ Partial Class formMain
         Me.txtFee1.Border.Class = "TextBoxBorder"
         Me.txtFee1.Border.CornerDiameter = 3
         Me.txtFee1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtFee1.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFee1.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtFee1.ForeColor = System.Drawing.Color.Black
         Me.txtFee1.Location = New System.Drawing.Point(178, 58)
         Me.txtFee1.MaxLength = 100
         Me.txtFee1.Name = "txtFee1"
-        Me.txtFee1.ReadOnly = True
-        Me.txtFee1.ShortcutsEnabled = False
+        Me.txtFee1.ReadOnly = true
+        Me.txtFee1.ShortcutsEnabled = false
         Me.txtFee1.Size = New System.Drawing.Size(91, 24)
         Me.txtFee1.TabIndex = 134
         Me.txtFee1.Tag = "readonly"
@@ -8496,9 +8532,9 @@ Partial Class formMain
         '
         'Label170
         '
-        Me.Label170.AutoSize = True
+        Me.Label170.AutoSize = true
         Me.Label170.BackColor = System.Drawing.Color.Transparent
-        Me.Label170.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label170.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label170.ForeColor = System.Drawing.Color.Black
         Me.Label170.Location = New System.Drawing.Point(14, 62)
         Me.Label170.Name = "Label170"
@@ -8508,9 +8544,9 @@ Partial Class formMain
         '
         'Label171
         '
-        Me.Label171.AutoSize = True
+        Me.Label171.AutoSize = true
         Me.Label171.BackColor = System.Drawing.Color.Transparent
-        Me.Label171.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label171.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label171.ForeColor = System.Drawing.Color.Black
         Me.Label171.Location = New System.Drawing.Point(19, 90)
         Me.Label171.Name = "Label171"
@@ -8528,13 +8564,13 @@ Partial Class formMain
         Me.txtFee2.Border.Class = "TextBoxBorder"
         Me.txtFee2.Border.CornerDiameter = 3
         Me.txtFee2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtFee2.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFee2.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtFee2.ForeColor = System.Drawing.Color.Black
         Me.txtFee2.Location = New System.Drawing.Point(178, 86)
         Me.txtFee2.MaxLength = 100
         Me.txtFee2.Name = "txtFee2"
-        Me.txtFee2.ReadOnly = True
-        Me.txtFee2.ShortcutsEnabled = False
+        Me.txtFee2.ReadOnly = true
+        Me.txtFee2.ShortcutsEnabled = false
         Me.txtFee2.Size = New System.Drawing.Size(91, 24)
         Me.txtFee2.TabIndex = 136
         Me.txtFee2.Tag = "readonly"
@@ -8543,9 +8579,9 @@ Partial Class formMain
         '
         'Label172
         '
-        Me.Label172.AutoSize = True
+        Me.Label172.AutoSize = true
         Me.Label172.BackColor = System.Drawing.Color.Transparent
-        Me.Label172.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label172.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label172.ForeColor = System.Drawing.Color.Black
         Me.Label172.Location = New System.Drawing.Point(7, 118)
         Me.Label172.Name = "Label172"
@@ -8563,13 +8599,13 @@ Partial Class formMain
         Me.txtFee3.Border.Class = "TextBoxBorder"
         Me.txtFee3.Border.CornerDiameter = 3
         Me.txtFee3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtFee3.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFee3.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtFee3.ForeColor = System.Drawing.Color.Black
         Me.txtFee3.Location = New System.Drawing.Point(178, 114)
         Me.txtFee3.MaxLength = 100
         Me.txtFee3.Name = "txtFee3"
-        Me.txtFee3.ReadOnly = True
-        Me.txtFee3.ShortcutsEnabled = False
+        Me.txtFee3.ReadOnly = true
+        Me.txtFee3.ShortcutsEnabled = false
         Me.txtFee3.Size = New System.Drawing.Size(91, 24)
         Me.txtFee3.TabIndex = 138
         Me.txtFee3.Tag = "readonly"
@@ -8578,9 +8614,9 @@ Partial Class formMain
         '
         'Label173
         '
-        Me.Label173.AutoSize = True
+        Me.Label173.AutoSize = true
         Me.Label173.BackColor = System.Drawing.Color.Transparent
-        Me.Label173.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label173.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label173.ForeColor = System.Drawing.Color.Black
         Me.Label173.Location = New System.Drawing.Point(17, 146)
         Me.Label173.Name = "Label173"
@@ -8598,13 +8634,13 @@ Partial Class formMain
         Me.txtFee4.Border.Class = "TextBoxBorder"
         Me.txtFee4.Border.CornerDiameter = 3
         Me.txtFee4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtFee4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFee4.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtFee4.ForeColor = System.Drawing.Color.Black
         Me.txtFee4.Location = New System.Drawing.Point(178, 142)
         Me.txtFee4.MaxLength = 100
         Me.txtFee4.Name = "txtFee4"
-        Me.txtFee4.ReadOnly = True
-        Me.txtFee4.ShortcutsEnabled = False
+        Me.txtFee4.ReadOnly = true
+        Me.txtFee4.ShortcutsEnabled = false
         Me.txtFee4.Size = New System.Drawing.Size(91, 24)
         Me.txtFee4.TabIndex = 140
         Me.txtFee4.Tag = "readonly"
@@ -8621,13 +8657,13 @@ Partial Class formMain
         Me.txtFee11.Border.Class = "TextBoxBorder"
         Me.txtFee11.Border.CornerDiameter = 3
         Me.txtFee11.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtFee11.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFee11.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtFee11.ForeColor = System.Drawing.Color.Black
         Me.txtFee11.Location = New System.Drawing.Point(178, 338)
         Me.txtFee11.MaxLength = 100
         Me.txtFee11.Name = "txtFee11"
-        Me.txtFee11.ReadOnly = True
-        Me.txtFee11.ShortcutsEnabled = False
+        Me.txtFee11.ReadOnly = true
+        Me.txtFee11.ShortcutsEnabled = false
         Me.txtFee11.Size = New System.Drawing.Size(91, 24)
         Me.txtFee11.TabIndex = 154
         Me.txtFee11.Tag = "readonly"
@@ -8636,9 +8672,9 @@ Partial Class formMain
         '
         'Label174
         '
-        Me.Label174.AutoSize = True
+        Me.Label174.AutoSize = true
         Me.Label174.BackColor = System.Drawing.Color.Transparent
-        Me.Label174.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label174.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label174.ForeColor = System.Drawing.Color.Black
         Me.Label174.Location = New System.Drawing.Point(14, 174)
         Me.Label174.Name = "Label174"
@@ -8648,9 +8684,9 @@ Partial Class formMain
         '
         'Label175
         '
-        Me.Label175.AutoSize = True
+        Me.Label175.AutoSize = true
         Me.Label175.BackColor = System.Drawing.Color.Transparent
-        Me.Label175.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label175.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label175.ForeColor = System.Drawing.Color.Black
         Me.Label175.Location = New System.Drawing.Point(6, 342)
         Me.Label175.Name = "Label175"
@@ -8668,13 +8704,13 @@ Partial Class formMain
         Me.txtFee5.Border.Class = "TextBoxBorder"
         Me.txtFee5.Border.CornerDiameter = 3
         Me.txtFee5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtFee5.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFee5.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtFee5.ForeColor = System.Drawing.Color.Black
         Me.txtFee5.Location = New System.Drawing.Point(178, 170)
         Me.txtFee5.MaxLength = 100
         Me.txtFee5.Name = "txtFee5"
-        Me.txtFee5.ReadOnly = True
-        Me.txtFee5.ShortcutsEnabled = False
+        Me.txtFee5.ReadOnly = true
+        Me.txtFee5.ShortcutsEnabled = false
         Me.txtFee5.Size = New System.Drawing.Size(91, 24)
         Me.txtFee5.TabIndex = 142
         Me.txtFee5.Tag = "readonly"
@@ -8691,13 +8727,13 @@ Partial Class formMain
         Me.txtFee10.Border.Class = "TextBoxBorder"
         Me.txtFee10.Border.CornerDiameter = 3
         Me.txtFee10.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtFee10.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFee10.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtFee10.ForeColor = System.Drawing.Color.Black
         Me.txtFee10.Location = New System.Drawing.Point(178, 310)
         Me.txtFee10.MaxLength = 100
         Me.txtFee10.Name = "txtFee10"
-        Me.txtFee10.ReadOnly = True
-        Me.txtFee10.ShortcutsEnabled = False
+        Me.txtFee10.ReadOnly = true
+        Me.txtFee10.ShortcutsEnabled = false
         Me.txtFee10.Size = New System.Drawing.Size(91, 24)
         Me.txtFee10.TabIndex = 152
         Me.txtFee10.Tag = "readonly"
@@ -8706,9 +8742,9 @@ Partial Class formMain
         '
         'Label176
         '
-        Me.Label176.AutoSize = True
+        Me.Label176.AutoSize = true
         Me.Label176.BackColor = System.Drawing.Color.Transparent
-        Me.Label176.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label176.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label176.ForeColor = System.Drawing.Color.Black
         Me.Label176.Location = New System.Drawing.Point(21, 202)
         Me.Label176.Name = "Label176"
@@ -8718,9 +8754,9 @@ Partial Class formMain
         '
         'Label177
         '
-        Me.Label177.AutoSize = True
+        Me.Label177.AutoSize = true
         Me.Label177.BackColor = System.Drawing.Color.Transparent
-        Me.Label177.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label177.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label177.ForeColor = System.Drawing.Color.Black
         Me.Label177.Location = New System.Drawing.Point(64, 314)
         Me.Label177.Name = "Label177"
@@ -8738,13 +8774,13 @@ Partial Class formMain
         Me.txtFee6.Border.Class = "TextBoxBorder"
         Me.txtFee6.Border.CornerDiameter = 3
         Me.txtFee6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtFee6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFee6.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtFee6.ForeColor = System.Drawing.Color.Black
         Me.txtFee6.Location = New System.Drawing.Point(178, 198)
         Me.txtFee6.MaxLength = 100
         Me.txtFee6.Name = "txtFee6"
-        Me.txtFee6.ReadOnly = True
-        Me.txtFee6.ShortcutsEnabled = False
+        Me.txtFee6.ReadOnly = true
+        Me.txtFee6.ShortcutsEnabled = false
         Me.txtFee6.Size = New System.Drawing.Size(91, 24)
         Me.txtFee6.TabIndex = 144
         Me.txtFee6.Tag = "readonly"
@@ -8761,13 +8797,13 @@ Partial Class formMain
         Me.txtFee9.Border.Class = "TextBoxBorder"
         Me.txtFee9.Border.CornerDiameter = 3
         Me.txtFee9.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtFee9.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFee9.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtFee9.ForeColor = System.Drawing.Color.Black
         Me.txtFee9.Location = New System.Drawing.Point(178, 282)
         Me.txtFee9.MaxLength = 100
         Me.txtFee9.Name = "txtFee9"
-        Me.txtFee9.ReadOnly = True
-        Me.txtFee9.ShortcutsEnabled = False
+        Me.txtFee9.ReadOnly = true
+        Me.txtFee9.ShortcutsEnabled = false
         Me.txtFee9.Size = New System.Drawing.Size(91, 24)
         Me.txtFee9.TabIndex = 150
         Me.txtFee9.Tag = "readonly"
@@ -8776,9 +8812,9 @@ Partial Class formMain
         '
         'Label178
         '
-        Me.Label178.AutoSize = True
+        Me.Label178.AutoSize = true
         Me.Label178.BackColor = System.Drawing.Color.Transparent
-        Me.Label178.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label178.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label178.ForeColor = System.Drawing.Color.Black
         Me.Label178.Location = New System.Drawing.Point(33, 230)
         Me.Label178.Name = "Label178"
@@ -8788,9 +8824,9 @@ Partial Class formMain
         '
         'Label179
         '
-        Me.Label179.AutoSize = True
+        Me.Label179.AutoSize = true
         Me.Label179.BackColor = System.Drawing.Color.Transparent
-        Me.Label179.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label179.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label179.ForeColor = System.Drawing.Color.Black
         Me.Label179.Location = New System.Drawing.Point(27, 286)
         Me.Label179.Name = "Label179"
@@ -8808,13 +8844,13 @@ Partial Class formMain
         Me.txtFee7.Border.Class = "TextBoxBorder"
         Me.txtFee7.Border.CornerDiameter = 3
         Me.txtFee7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtFee7.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFee7.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtFee7.ForeColor = System.Drawing.Color.Black
         Me.txtFee7.Location = New System.Drawing.Point(178, 226)
         Me.txtFee7.MaxLength = 100
         Me.txtFee7.Name = "txtFee7"
-        Me.txtFee7.ReadOnly = True
-        Me.txtFee7.ShortcutsEnabled = False
+        Me.txtFee7.ReadOnly = true
+        Me.txtFee7.ShortcutsEnabled = false
         Me.txtFee7.Size = New System.Drawing.Size(91, 24)
         Me.txtFee7.TabIndex = 146
         Me.txtFee7.Tag = "readonly"
@@ -8831,13 +8867,13 @@ Partial Class formMain
         Me.txtFee8.Border.Class = "TextBoxBorder"
         Me.txtFee8.Border.CornerDiameter = 3
         Me.txtFee8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtFee8.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFee8.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtFee8.ForeColor = System.Drawing.Color.Black
         Me.txtFee8.Location = New System.Drawing.Point(178, 254)
         Me.txtFee8.MaxLength = 100
         Me.txtFee8.Name = "txtFee8"
-        Me.txtFee8.ReadOnly = True
-        Me.txtFee8.ShortcutsEnabled = False
+        Me.txtFee8.ReadOnly = true
+        Me.txtFee8.ShortcutsEnabled = false
         Me.txtFee8.Size = New System.Drawing.Size(91, 24)
         Me.txtFee8.TabIndex = 148
         Me.txtFee8.Tag = "readonly"
@@ -8846,9 +8882,9 @@ Partial Class formMain
         '
         'Label180
         '
-        Me.Label180.AutoSize = True
+        Me.Label180.AutoSize = true
         Me.Label180.BackColor = System.Drawing.Color.Transparent
-        Me.Label180.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label180.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label180.ForeColor = System.Drawing.Color.Black
         Me.Label180.Location = New System.Drawing.Point(25, 258)
         Me.Label180.Name = "Label180"
@@ -8858,9 +8894,9 @@ Partial Class formMain
         '
         'Label145
         '
-        Me.Label145.AutoSize = True
+        Me.Label145.AutoSize = true
         Me.Label145.BackColor = System.Drawing.Color.White
-        Me.Label145.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label145.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label145.ForeColor = System.Drawing.Color.Black
         Me.Label145.Location = New System.Drawing.Point(301, 292)
         Me.Label145.Name = "Label145"
@@ -8878,13 +8914,13 @@ Partial Class formMain
         Me.txtPaymentAssess.Border.Class = "TextBoxBorder"
         Me.txtPaymentAssess.Border.CornerDiameter = 3
         Me.txtPaymentAssess.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentAssess.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentAssess.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentAssess.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentAssess.Location = New System.Drawing.Point(420, 288)
         Me.txtPaymentAssess.MaxLength = 100
         Me.txtPaymentAssess.Name = "txtPaymentAssess"
-        Me.txtPaymentAssess.ReadOnly = True
-        Me.txtPaymentAssess.ShortcutsEnabled = False
+        Me.txtPaymentAssess.ReadOnly = true
+        Me.txtPaymentAssess.ShortcutsEnabled = false
         Me.txtPaymentAssess.Size = New System.Drawing.Size(133, 24)
         Me.txtPaymentAssess.TabIndex = 207
         Me.txtPaymentAssess.Tag = "readonly"
@@ -8909,9 +8945,9 @@ Partial Class formMain
         '
         'Label165
         '
-        Me.Label165.AutoSize = True
+        Me.Label165.AutoSize = true
         Me.Label165.BackColor = System.Drawing.Color.White
-        Me.Label165.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label165.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label165.ForeColor = System.Drawing.Color.Black
         Me.Label165.Location = New System.Drawing.Point(356, 353)
         Me.Label165.Name = "Label165"
@@ -8929,13 +8965,13 @@ Partial Class formMain
         Me.txtPaymentChange.Border.Class = "TextBoxBorder"
         Me.txtPaymentChange.Border.CornerDiameter = 3
         Me.txtPaymentChange.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentChange.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentChange.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentChange.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentChange.Location = New System.Drawing.Point(420, 349)
         Me.txtPaymentChange.MaxLength = 100
         Me.txtPaymentChange.Name = "txtPaymentChange"
-        Me.txtPaymentChange.ReadOnly = True
-        Me.txtPaymentChange.ShortcutsEnabled = False
+        Me.txtPaymentChange.ReadOnly = true
+        Me.txtPaymentChange.ShortcutsEnabled = false
         Me.txtPaymentChange.Size = New System.Drawing.Size(133, 24)
         Me.txtPaymentChange.TabIndex = 211
         Me.txtPaymentChange.Tag = "readonly"
@@ -8944,9 +8980,9 @@ Partial Class formMain
         '
         'Label158
         '
-        Me.Label158.AutoSize = True
+        Me.Label158.AutoSize = true
         Me.Label158.BackColor = System.Drawing.Color.White
-        Me.Label158.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label158.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label158.ForeColor = System.Drawing.Color.Black
         Me.Label158.Location = New System.Drawing.Point(326, 323)
         Me.Label158.Name = "Label158"
@@ -8964,13 +9000,13 @@ Partial Class formMain
         Me.txtPaymentPaid.Border.Class = "TextBoxBorder"
         Me.txtPaymentPaid.Border.CornerDiameter = 3
         Me.txtPaymentPaid.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentPaid.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentPaid.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentPaid.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentPaid.Location = New System.Drawing.Point(420, 319)
         Me.txtPaymentPaid.MaxLength = 100
         Me.txtPaymentPaid.Name = "txtPaymentPaid"
-        Me.txtPaymentPaid.ReadOnly = True
-        Me.txtPaymentPaid.ShortcutsEnabled = False
+        Me.txtPaymentPaid.ReadOnly = true
+        Me.txtPaymentPaid.ShortcutsEnabled = false
         Me.txtPaymentPaid.Size = New System.Drawing.Size(133, 24)
         Me.txtPaymentPaid.TabIndex = 209
         Me.txtPaymentPaid.Tag = ""
@@ -8980,7 +9016,7 @@ Partial Class formMain
         'btnSearchApplicant
         '
         Me.btnSearchApplicant.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSearchApplicant.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearchApplicant.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.btnSearchApplicant.ForeColor = System.Drawing.Color.Black
         Me.btnSearchApplicant.Image = Global.Building_Permit_and_Licensing.My.Resources.Resources.Icon_Search_TIny
         Me.btnSearchApplicant.Location = New System.Drawing.Point(509, 115)
@@ -8988,13 +9024,13 @@ Partial Class formMain
         Me.btnSearchApplicant.Size = New System.Drawing.Size(45, 29)
         Me.btnSearchApplicant.TabIndex = 206
         Me.btnSearchApplicant.Tag = "Navy"
-        Me.btnSearchApplicant.UseVisualStyleBackColor = True
+        Me.btnSearchApplicant.UseVisualStyleBackColor = true
         '
         'Label147
         '
-        Me.Label147.AutoSize = True
+        Me.Label147.AutoSize = true
         Me.Label147.BackColor = System.Drawing.Color.White
-        Me.Label147.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label147.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label147.ForeColor = System.Drawing.Color.Black
         Me.Label147.Location = New System.Drawing.Point(242, 254)
         Me.Label147.Name = "Label147"
@@ -9006,8 +9042,8 @@ Partial Class formMain
         '
         Me.dtPaymentOR.BackColor = System.Drawing.Color.White
         Me.dtPaymentOR.CustomFormat = "MM/dd/yyyy"
-        Me.dtPaymentOR.Enabled = False
-        Me.dtPaymentOR.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.dtPaymentOR.Enabled = false
+        Me.dtPaymentOR.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.dtPaymentOR.ForeColor = System.Drawing.Color.Black
         Me.dtPaymentOR.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtPaymentOR.Location = New System.Drawing.Point(325, 250)
@@ -9025,21 +9061,21 @@ Partial Class formMain
         Me.txtPID.Border.Class = "TextBoxBorder"
         Me.txtPID.Border.CornerDiameter = 6
         Me.txtPID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPID.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPID.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPID.ForeColor = System.Drawing.Color.Black
         Me.txtPID.Location = New System.Drawing.Point(96, 27)
         Me.txtPID.MaxLength = 100
         Me.txtPID.Name = "txtPID"
-        Me.txtPID.ReadOnly = True
+        Me.txtPID.ReadOnly = true
         Me.txtPID.Size = New System.Drawing.Size(102, 29)
         Me.txtPID.TabIndex = 140
         Me.txtPID.Tag = "readonly"
         '
         'Label144
         '
-        Me.Label144.AutoSize = True
+        Me.Label144.AutoSize = true
         Me.Label144.BackColor = System.Drawing.Color.White
-        Me.Label144.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label144.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label144.ForeColor = System.Drawing.Color.Black
         Me.Label144.Location = New System.Drawing.Point(11, 35)
         Me.Label144.Name = "Label144"
@@ -9058,20 +9094,21 @@ Partial Class formMain
         Me.txtPaymentOR.Border.Class = "TextBoxBorder"
         Me.txtPaymentOR.Border.CornerDiameter = 6
         Me.txtPaymentOR.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentOR.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentOR.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentOR.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentOR.Location = New System.Drawing.Point(96, 247)
         Me.txtPaymentOR.MaxLength = 100
         Me.txtPaymentOR.Name = "txtPaymentOR"
-        Me.txtPaymentOR.ReadOnly = True
+        Me.txtPaymentOR.ReadOnly = true
         Me.txtPaymentOR.Size = New System.Drawing.Size(131, 29)
         Me.txtPaymentOR.TabIndex = 137
+        Me.txtPaymentOR.Tag = "readonly"
         '
         'Label146
         '
-        Me.Label146.AutoSize = True
+        Me.Label146.AutoSize = true
         Me.Label146.BackColor = System.Drawing.Color.White
-        Me.Label146.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label146.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label146.ForeColor = System.Drawing.Color.Black
         Me.Label146.Location = New System.Drawing.Point(29, 254)
         Me.Label146.Name = "Label146"
@@ -9081,9 +9118,9 @@ Partial Class formMain
         '
         'Label148
         '
-        Me.Label148.AutoSize = True
+        Me.Label148.AutoSize = true
         Me.Label148.BackColor = System.Drawing.Color.White
-        Me.Label148.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label148.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label148.ForeColor = System.Drawing.Color.Black
         Me.Label148.Location = New System.Drawing.Point(374, 197)
         Me.Label148.Name = "Label148"
@@ -9093,9 +9130,9 @@ Partial Class formMain
         '
         'Label149
         '
-        Me.Label149.AutoSize = True
+        Me.Label149.AutoSize = true
         Me.Label149.BackColor = System.Drawing.Color.White
-        Me.Label149.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label149.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label149.ForeColor = System.Drawing.Color.Black
         Me.Label149.Location = New System.Drawing.Point(306, 197)
         Me.Label149.Name = "Label149"
@@ -9105,9 +9142,9 @@ Partial Class formMain
         '
         'Label150
         '
-        Me.Label150.AutoSize = True
+        Me.Label150.AutoSize = true
         Me.Label150.BackColor = System.Drawing.Color.White
-        Me.Label150.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label150.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label150.ForeColor = System.Drawing.Color.Black
         Me.Label150.Location = New System.Drawing.Point(102, 197)
         Me.Label150.Name = "Label150"
@@ -9117,9 +9154,9 @@ Partial Class formMain
         '
         'Label151
         '
-        Me.Label151.AutoSize = True
+        Me.Label151.AutoSize = true
         Me.Label151.BackColor = System.Drawing.Color.White
-        Me.Label151.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label151.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label151.ForeColor = System.Drawing.Color.Black
         Me.Label151.Location = New System.Drawing.Point(311, 149)
         Me.Label151.Name = "Label151"
@@ -9129,9 +9166,9 @@ Partial Class formMain
         '
         'Label152
         '
-        Me.Label152.AutoSize = True
+        Me.Label152.AutoSize = true
         Me.Label152.BackColor = System.Drawing.Color.White
-        Me.Label152.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label152.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label152.ForeColor = System.Drawing.Color.Black
         Me.Label152.Location = New System.Drawing.Point(235, 149)
         Me.Label152.Name = "Label152"
@@ -9141,9 +9178,9 @@ Partial Class formMain
         '
         'Label153
         '
-        Me.Label153.AutoSize = True
+        Me.Label153.AutoSize = true
         Me.Label153.BackColor = System.Drawing.Color.White
-        Me.Label153.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label153.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label153.ForeColor = System.Drawing.Color.Black
         Me.Label153.Location = New System.Drawing.Point(169, 149)
         Me.Label153.Name = "Label153"
@@ -9153,9 +9190,9 @@ Partial Class formMain
         '
         'Label154
         '
-        Me.Label154.AutoSize = True
+        Me.Label154.AutoSize = true
         Me.Label154.BackColor = System.Drawing.Color.White
-        Me.Label154.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label154.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label154.ForeColor = System.Drawing.Color.Black
         Me.Label154.Location = New System.Drawing.Point(102, 149)
         Me.Label154.Name = "Label154"
@@ -9165,9 +9202,9 @@ Partial Class formMain
         '
         'Label155
         '
-        Me.Label155.AutoSize = True
+        Me.Label155.AutoSize = true
         Me.Label155.BackColor = System.Drawing.Color.White
-        Me.Label155.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label155.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label155.ForeColor = System.Drawing.Color.Black
         Me.Label155.Location = New System.Drawing.Point(384, 101)
         Me.Label155.Name = "Label155"
@@ -9177,9 +9214,9 @@ Partial Class formMain
         '
         'Label156
         '
-        Me.Label156.AutoSize = True
+        Me.Label156.AutoSize = true
         Me.Label156.BackColor = System.Drawing.Color.White
-        Me.Label156.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label156.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label156.ForeColor = System.Drawing.Color.Black
         Me.Label156.Location = New System.Drawing.Point(243, 101)
         Me.Label156.Name = "Label156"
@@ -9189,9 +9226,9 @@ Partial Class formMain
         '
         'Label157
         '
-        Me.Label157.AutoSize = True
+        Me.Label157.AutoSize = true
         Me.Label157.BackColor = System.Drawing.Color.White
-        Me.Label157.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label157.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label157.ForeColor = System.Drawing.Color.Black
         Me.Label157.Location = New System.Drawing.Point(103, 101)
         Me.Label157.Name = "Label157"
@@ -9203,10 +9240,10 @@ Partial Class formMain
         '
         Me.cboPaymentBgy.BackColor = System.Drawing.Color.White
         Me.cboPaymentBgy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboPaymentBgy.Enabled = False
-        Me.cboPaymentBgy.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.cboPaymentBgy.Enabled = false
+        Me.cboPaymentBgy.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.cboPaymentBgy.ForeColor = System.Drawing.Color.Black
-        Me.cboPaymentBgy.FormattingEnabled = True
+        Me.cboPaymentBgy.FormattingEnabled = true
         Me.cboPaymentBgy.Location = New System.Drawing.Point(368, 212)
         Me.cboPaymentBgy.Name = "cboPaymentBgy"
         Me.cboPaymentBgy.Size = New System.Drawing.Size(185, 23)
@@ -9222,12 +9259,12 @@ Partial Class formMain
         Me.txtPaymentZone.Border.Class = "TextBoxBorder"
         Me.txtPaymentZone.Border.CornerDiameter = 6
         Me.txtPaymentZone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentZone.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentZone.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentZone.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentZone.Location = New System.Drawing.Point(300, 211)
         Me.txtPaymentZone.MaxLength = 100
         Me.txtPaymentZone.Name = "txtPaymentZone"
-        Me.txtPaymentZone.ReadOnly = True
+        Me.txtPaymentZone.ReadOnly = true
         Me.txtPaymentZone.Size = New System.Drawing.Size(64, 29)
         Me.txtPaymentZone.TabIndex = 119
         Me.txtPaymentZone.Tag = "readonly"
@@ -9242,12 +9279,12 @@ Partial Class formMain
         Me.txtPaymentStreet.Border.Class = "TextBoxBorder"
         Me.txtPaymentStreet.Border.CornerDiameter = 6
         Me.txtPaymentStreet.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentStreet.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentStreet.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentStreet.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentStreet.Location = New System.Drawing.Point(96, 211)
         Me.txtPaymentStreet.MaxLength = 100
         Me.txtPaymentStreet.Name = "txtPaymentStreet"
-        Me.txtPaymentStreet.ReadOnly = True
+        Me.txtPaymentStreet.ReadOnly = true
         Me.txtPaymentStreet.Size = New System.Drawing.Size(201, 29)
         Me.txtPaymentStreet.TabIndex = 118
         Me.txtPaymentStreet.Tag = "readonly"
@@ -9256,10 +9293,10 @@ Partial Class formMain
         '
         Me.cboPaymentSub.BackColor = System.Drawing.Color.White
         Me.cboPaymentSub.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboPaymentSub.Enabled = False
-        Me.cboPaymentSub.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.cboPaymentSub.Enabled = false
+        Me.cboPaymentSub.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.cboPaymentSub.ForeColor = System.Drawing.Color.Black
-        Me.cboPaymentSub.FormattingEnabled = True
+        Me.cboPaymentSub.FormattingEnabled = true
         Me.cboPaymentSub.Location = New System.Drawing.Point(303, 164)
         Me.cboPaymentSub.Name = "cboPaymentSub"
         Me.cboPaymentSub.Size = New System.Drawing.Size(249, 23)
@@ -9275,12 +9312,12 @@ Partial Class formMain
         Me.txtPaymentPhase.Border.Class = "TextBoxBorder"
         Me.txtPaymentPhase.Border.CornerDiameter = 6
         Me.txtPaymentPhase.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentPhase.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentPhase.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentPhase.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentPhase.Location = New System.Drawing.Point(233, 162)
         Me.txtPaymentPhase.MaxLength = 100
         Me.txtPaymentPhase.Name = "txtPaymentPhase"
-        Me.txtPaymentPhase.ReadOnly = True
+        Me.txtPaymentPhase.ReadOnly = true
         Me.txtPaymentPhase.Size = New System.Drawing.Size(64, 29)
         Me.txtPaymentPhase.TabIndex = 116
         Me.txtPaymentPhase.Tag = "readonly"
@@ -9295,12 +9332,12 @@ Partial Class formMain
         Me.txtPaymentBlock.Border.Class = "TextBoxBorder"
         Me.txtPaymentBlock.Border.CornerDiameter = 6
         Me.txtPaymentBlock.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentBlock.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentBlock.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentBlock.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentBlock.Location = New System.Drawing.Point(164, 162)
         Me.txtPaymentBlock.MaxLength = 100
         Me.txtPaymentBlock.Name = "txtPaymentBlock"
-        Me.txtPaymentBlock.ReadOnly = True
+        Me.txtPaymentBlock.ReadOnly = true
         Me.txtPaymentBlock.Size = New System.Drawing.Size(64, 29)
         Me.txtPaymentBlock.TabIndex = 115
         Me.txtPaymentBlock.Tag = "readonly"
@@ -9315,12 +9352,12 @@ Partial Class formMain
         Me.txtPaymentLot.Border.Class = "TextBoxBorder"
         Me.txtPaymentLot.Border.CornerDiameter = 6
         Me.txtPaymentLot.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentLot.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentLot.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentLot.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentLot.Location = New System.Drawing.Point(96, 162)
         Me.txtPaymentLot.MaxLength = 100
         Me.txtPaymentLot.Name = "txtPaymentLot"
-        Me.txtPaymentLot.ReadOnly = True
+        Me.txtPaymentLot.ReadOnly = true
         Me.txtPaymentLot.Size = New System.Drawing.Size(64, 29)
         Me.txtPaymentLot.TabIndex = 114
         Me.txtPaymentLot.Tag = "readonly"
@@ -9335,12 +9372,12 @@ Partial Class formMain
         Me.txtPaymentProject.Border.Class = "TextBoxBorder"
         Me.txtPaymentProject.Border.CornerDiameter = 6
         Me.txtPaymentProject.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentProject.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentProject.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentProject.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentProject.Location = New System.Drawing.Point(273, 64)
         Me.txtPaymentProject.MaxLength = 100
         Me.txtPaymentProject.Name = "txtPaymentProject"
-        Me.txtPaymentProject.ReadOnly = True
+        Me.txtPaymentProject.ReadOnly = true
         Me.txtPaymentProject.Size = New System.Drawing.Size(279, 29)
         Me.txtPaymentProject.TabIndex = 113
         Me.txtPaymentProject.Tag = "readonly"
@@ -9355,12 +9392,12 @@ Partial Class formMain
         Me.txtPaymentM.Border.Class = "TextBoxBorder"
         Me.txtPaymentM.Border.CornerDiameter = 6
         Me.txtPaymentM.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentM.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentM.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentM.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentM.Location = New System.Drawing.Point(372, 115)
         Me.txtPaymentM.MaxLength = 100
         Me.txtPaymentM.Name = "txtPaymentM"
-        Me.txtPaymentM.ReadOnly = True
+        Me.txtPaymentM.ReadOnly = true
         Me.txtPaymentM.Size = New System.Drawing.Size(133, 29)
         Me.txtPaymentM.TabIndex = 112
         Me.txtPaymentM.Tag = "readonly"
@@ -9375,12 +9412,12 @@ Partial Class formMain
         Me.txtPaymentF.Border.Class = "TextBoxBorder"
         Me.txtPaymentF.Border.CornerDiameter = 6
         Me.txtPaymentF.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentF.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentF.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentF.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentF.Location = New System.Drawing.Point(234, 115)
         Me.txtPaymentF.MaxLength = 100
         Me.txtPaymentF.Name = "txtPaymentF"
-        Me.txtPaymentF.ReadOnly = True
+        Me.txtPaymentF.ReadOnly = true
         Me.txtPaymentF.Size = New System.Drawing.Size(133, 29)
         Me.txtPaymentF.TabIndex = 111
         Me.txtPaymentF.Tag = "readonly"
@@ -9395,21 +9432,21 @@ Partial Class formMain
         Me.txtPaymentL.Border.Class = "TextBoxBorder"
         Me.txtPaymentL.Border.CornerDiameter = 6
         Me.txtPaymentL.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentL.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentL.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentL.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentL.Location = New System.Drawing.Point(96, 115)
         Me.txtPaymentL.MaxLength = 100
         Me.txtPaymentL.Name = "txtPaymentL"
-        Me.txtPaymentL.ReadOnly = True
+        Me.txtPaymentL.ReadOnly = true
         Me.txtPaymentL.Size = New System.Drawing.Size(133, 29)
         Me.txtPaymentL.TabIndex = 110
         Me.txtPaymentL.Tag = "readonly"
         '
         'Label159
         '
-        Me.Label159.AutoSize = True
+        Me.Label159.AutoSize = true
         Me.Label159.BackColor = System.Drawing.Color.White
-        Me.Label159.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label159.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label159.ForeColor = System.Drawing.Color.Black
         Me.Label159.Location = New System.Drawing.Point(21, 172)
         Me.Label159.Name = "Label159"
@@ -9419,9 +9456,9 @@ Partial Class formMain
         '
         'Label160
         '
-        Me.Label160.AutoSize = True
+        Me.Label160.AutoSize = true
         Me.Label160.BackColor = System.Drawing.Color.White
-        Me.Label160.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label160.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label160.ForeColor = System.Drawing.Color.Black
         Me.Label160.Location = New System.Drawing.Point(214, 71)
         Me.Label160.Name = "Label160"
@@ -9431,9 +9468,9 @@ Partial Class formMain
         '
         'Label161
         '
-        Me.Label161.AutoSize = True
+        Me.Label161.AutoSize = true
         Me.Label161.BackColor = System.Drawing.Color.White
-        Me.Label161.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label161.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label161.ForeColor = System.Drawing.Color.Black
         Me.Label161.Location = New System.Drawing.Point(35, 121)
         Me.Label161.Name = "Label161"
@@ -9443,9 +9480,9 @@ Partial Class formMain
         '
         'Label162
         '
-        Me.Label162.AutoSize = True
+        Me.Label162.AutoSize = true
         Me.Label162.BackColor = System.Drawing.Color.White
-        Me.Label162.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label162.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label162.ForeColor = System.Drawing.Color.Black
         Me.Label162.Location = New System.Drawing.Point(283, 35)
         Me.Label162.Name = "Label162"
@@ -9457,8 +9494,8 @@ Partial Class formMain
         '
         Me.dtPaymentDate.BackColor = System.Drawing.Color.White
         Me.dtPaymentDate.CustomFormat = "MM/dd/yyyy"
-        Me.dtPaymentDate.Enabled = False
-        Me.dtPaymentDate.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!)
+        Me.dtPaymentDate.Enabled = false
+        Me.dtPaymentDate.Font = New System.Drawing.Font("Segoe UI Semilight", 9!)
         Me.dtPaymentDate.ForeColor = System.Drawing.Color.Black
         Me.dtPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtPaymentDate.Location = New System.Drawing.Point(399, 31)
@@ -9476,21 +9513,21 @@ Partial Class formMain
         Me.txtPaymentACN.Border.Class = "TextBoxBorder"
         Me.txtPaymentACN.Border.CornerDiameter = 6
         Me.txtPaymentACN.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.txtPaymentACN.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPaymentACN.Font = New System.Drawing.Font("Segoe UI Semilight", 9!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.txtPaymentACN.ForeColor = System.Drawing.Color.Black
         Me.txtPaymentACN.Location = New System.Drawing.Point(95, 64)
         Me.txtPaymentACN.MaxLength = 100
         Me.txtPaymentACN.Name = "txtPaymentACN"
-        Me.txtPaymentACN.ReadOnly = True
+        Me.txtPaymentACN.ReadOnly = true
         Me.txtPaymentACN.Size = New System.Drawing.Size(102, 29)
         Me.txtPaymentACN.TabIndex = 104
         Me.txtPaymentACN.Tag = "readonly"
         '
         'Label163
         '
-        Me.Label163.AutoSize = True
+        Me.Label163.AutoSize = true
         Me.Label163.BackColor = System.Drawing.Color.White
-        Me.Label163.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label163.Font = New System.Drawing.Font("Segoe UI", 9!, System.Drawing.FontStyle.Bold)
         Me.Label163.ForeColor = System.Drawing.Color.Black
         Me.Label163.Location = New System.Drawing.Point(44, 71)
         Me.Label163.Name = "Label163"
@@ -9500,22 +9537,22 @@ Partial Class formMain
         '
         'listPayments
         '
-        Me.listPayments.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.listPayments.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.listPayments.BackColor = System.Drawing.Color.White
         Me.listPayments.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader65, Me.ColumnHeader66, Me.ColumnHeader67, Me.ColumnHeader69, Me.ColumnHeader70, Me.ColumnHeader71, Me.ColumnHeader72, Me.ColumnHeader73, Me.ColumnHeader74, Me.ColumnHeader75, Me.ColumnHeader76, Me.ColumnHeader77, Me.ColumnHeader78, Me.ColumnHeader79, Me.ColumnHeader80, Me.ColumnHeader81, Me.ColumnHeader82, Me.ColumnHeader83, Me.ColumnHeader84})
-        Me.listPayments.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.listPayments.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.listPayments.ForeColor = System.Drawing.Color.Black
-        Me.listPayments.FullRowSelect = True
-        Me.listPayments.GridLines = True
+        Me.listPayments.FullRowSelect = true
+        Me.listPayments.GridLines = true
         Me.listPayments.Location = New System.Drawing.Point(3, 46)
         Me.listPayments.Name = "listPayments"
         Me.listPayments.Size = New System.Drawing.Size(862, 433)
         Me.listPayments.TabIndex = 3
-        Me.listPayments.UseCompatibleStateImageBehavior = False
+        Me.listPayments.UseCompatibleStateImageBehavior = false
         Me.listPayments.View = System.Windows.Forms.View.Details
-        Me.listPayments.Visible = False
+        Me.listPayments.Visible = false
         '
         'ColumnHeader65
         '
@@ -9524,7 +9561,7 @@ Partial Class formMain
         '
         'ColumnHeader66
         '
-        Me.ColumnHeader66.Text = "Payment Date"
+        Me.ColumnHeader66.Text = "Date"
         Me.ColumnHeader66.Width = 100
         '
         'ColumnHeader67
@@ -9617,7 +9654,7 @@ Partial Class formMain
         '
         'btnFilter1
         '
-        Me.btnFilter1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnFilter1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.btnFilter1.BackColor = System.Drawing.Color.White
         Me.btnFilter1.Font = New System.Drawing.Font("Segoe UI", 11.25!)
         Me.btnFilter1.ForeColor = System.Drawing.Color.Black
@@ -9627,8 +9664,8 @@ Partial Class formMain
         Me.btnFilter1.TabIndex = 120
         Me.btnFilter1.Tag = "Proceed to Questions"
         Me.btnFilter1.Text = "Filter"
-        Me.btnFilter1.UseVisualStyleBackColor = False
-        Me.btnFilter1.Visible = False
+        Me.btnFilter1.UseVisualStyleBackColor = false
+        Me.btnFilter1.Visible = false
         '
         'PanelEx50
         '
@@ -9638,7 +9675,7 @@ Partial Class formMain
         Me.PanelEx50.Controls.Add(Me.dtPayList1)
         Me.PanelEx50.Controls.Add(Me.Label183)
         Me.PanelEx50.Controls.Add(Me.dtPayList2)
-        Me.PanelEx50.Enabled = False
+        Me.PanelEx50.Enabled = false
         Me.PanelEx50.Location = New System.Drawing.Point(45, 6)
         Me.PanelEx50.Name = "PanelEx50"
         Me.PanelEx50.Size = New System.Drawing.Size(538, 37)
@@ -9648,13 +9685,13 @@ Partial Class formMain
         Me.PanelEx50.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx50.Style.GradientAngle = 90
         Me.PanelEx50.TabIndex = 119
-        Me.PanelEx50.Visible = False
+        Me.PanelEx50.Visible = false
         '
         'Label184
         '
-        Me.Label184.AutoSize = True
+        Me.Label184.AutoSize = true
         Me.Label184.BackColor = System.Drawing.Color.White
-        Me.Label184.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label184.Font = New System.Drawing.Font("Segoe UI", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label184.ForeColor = System.Drawing.Color.Black
         Me.Label184.Location = New System.Drawing.Point(3, 8)
         Me.Label184.Name = "Label184"
@@ -9666,7 +9703,7 @@ Partial Class formMain
         '
         Me.dtPayList1.BackColor = System.Drawing.Color.White
         Me.dtPayList1.CustomFormat = "MM/dd/yyyy"
-        Me.dtPayList1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtPayList1.Font = New System.Drawing.Font("Segoe UI", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.dtPayList1.ForeColor = System.Drawing.Color.Black
         Me.dtPayList1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtPayList1.Location = New System.Drawing.Point(172, 4)
@@ -9676,9 +9713,9 @@ Partial Class formMain
         '
         'Label183
         '
-        Me.Label183.AutoSize = True
+        Me.Label183.AutoSize = true
         Me.Label183.BackColor = System.Drawing.Color.White
-        Me.Label183.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label183.Font = New System.Drawing.Font("Segoe UI", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label183.ForeColor = System.Drawing.Color.Black
         Me.Label183.Location = New System.Drawing.Point(336, 8)
         Me.Label183.Name = "Label183"
@@ -9690,7 +9727,7 @@ Partial Class formMain
         '
         Me.dtPayList2.BackColor = System.Drawing.Color.White
         Me.dtPayList2.CustomFormat = "MM/dd/yyyy"
-        Me.dtPayList2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtPayList2.Font = New System.Drawing.Font("Segoe UI", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.dtPayList2.ForeColor = System.Drawing.Color.Black
         Me.dtPayList2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtPayList2.Location = New System.Drawing.Point(377, 4)
@@ -9700,24 +9737,26 @@ Partial Class formMain
         '
         'CheckBox1
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.AutoSize = true
+        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.CheckBox1.ForeColor = System.Drawing.Color.Black
         Me.CheckBox1.Location = New System.Drawing.Point(24, 18)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox1.TabIndex = 118
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        Me.CheckBox1.Visible = False
+        Me.CheckBox1.UseVisualStyleBackColor = true
+        Me.CheckBox1.Visible = false
         '
         'PanelEx52
         '
         Me.PanelEx52.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx52.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.PanelEx52.Controls.Add(Me.Button6)
-        Me.PanelEx52.Controls.Add(Me.btnSavePayment)
         Me.PanelEx52.Controls.Add(Me.btnPayments)
+        Me.PanelEx52.Controls.Add(Me.Button6)
+        Me.PanelEx52.Controls.Add(Me.btnPending)
+        Me.PanelEx52.Controls.Add(Me.btnSavePayment)
         Me.PanelEx52.Controls.Add(Me.btnPaymentClose)
+        Me.PanelEx52.Controls.Add(Me.Button8)
         Me.PanelEx52.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelEx52.Location = New System.Drawing.Point(0, 547)
         Me.PanelEx52.Name = "PanelEx52"
@@ -9749,7 +9788,7 @@ Partial Class formMain
         Me.btnSavePayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSavePayment.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSavePayment.ForeColor = System.Drawing.Color.Black
-        Me.btnSavePayment.Location = New System.Drawing.Point(144, 7)
+        Me.btnSavePayment.Location = New System.Drawing.Point(281, 7)
         Me.btnSavePayment.Name = "btnSavePayment"
         Me.btnSavePayment.Size = New System.Drawing.Size(88, 33)
         Me.btnSavePayment.TabIndex = 204
@@ -10003,15 +10042,61 @@ Partial Class formMain
         Me.Label193.Tag = "White"
         Me.Label193.Text = "System User"
         '
-        'cboProfileQuestions
+        'btnPending
         '
-        Me.cboProfileQuestions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboProfileQuestions.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboProfileQuestions.FormattingEnabled = True
-        Me.cboProfileQuestions.Location = New System.Drawing.Point(123, 136)
-        Me.cboProfileQuestions.Name = "cboProfileQuestions"
-        Me.cboProfileQuestions.Size = New System.Drawing.Size(269, 25)
-        Me.cboProfileQuestions.TabIndex = 207
+        Me.btnPending.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPending.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPending.ForeColor = System.Drawing.Color.Black
+        Me.btnPending.Location = New System.Drawing.Point(146, 7)
+        Me.btnPending.Name = "btnPending"
+        Me.btnPending.Size = New System.Drawing.Size(127, 33)
+        Me.btnPending.TabIndex = 207
+        Me.btnPending.Tag = "Navy"
+        Me.btnPending.Text = "Pending List"
+        Me.btnPending.UseVisualStyleBackColor = True
+        '
+        'panelPending
+        '
+        Me.panelPending.CanvasColor = System.Drawing.SystemColors.Control
+        Me.panelPending.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.panelPending.Controls.Add(Me.Label189)
+        Me.panelPending.Location = New System.Drawing.Point(26, 297)
+        Me.panelPending.Name = "panelPending"
+        Me.panelPending.Size = New System.Drawing.Size(208, 62)
+        Me.panelPending.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.panelPending.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.panelPending.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.panelPending.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.panelPending.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.panelPending.Style.GradientAngle = 90
+        Me.panelPending.TabIndex = 218
+        Me.panelPending.Visible = False
+        '
+        'Label189
+        '
+        Me.Label189.AutoSize = True
+        Me.Label189.Font = New System.Drawing.Font("Segoe UI", 32.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label189.ForeColor = System.Drawing.Color.Black
+        Me.Label189.Location = New System.Drawing.Point(4, -2)
+        Me.Label189.Name = "Label189"
+        Me.Label189.Size = New System.Drawing.Size(206, 59)
+        Me.Label189.TabIndex = 0
+        Me.Label189.Tag = "White"
+        Me.Label189.Text = "PENDING"
+        '
+        'Button8
+        '
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.Black
+        Me.Button8.Location = New System.Drawing.Point(11, 7)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(127, 33)
+        Me.Button8.TabIndex = 208
+        Me.Button8.Tag = "Navy"
+        Me.Button8.Text = "Close List"
+        Me.Button8.UseVisualStyleBackColor = True
+        Me.Button8.Visible = False
         '
         'formMain
         '
@@ -10032,10 +10117,10 @@ Partial Class formMain
         Me.Controls.Add(Me.slideBarangays)
         Me.Controls.Add(Me.slideSummary)
         Me.Controls.Add(Me.slideSubdivision)
-        Me.Controls.Add(Me.slidePayment)
         Me.Controls.Add(Me.slideOccupancy)
         Me.Controls.Add(Me.slideProfile)
         Me.Controls.Add(Me.slideAssessment)
+        Me.Controls.Add(Me.slidePayment)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
@@ -10186,6 +10271,8 @@ Partial Class formMain
         Me.PanelEx51.ResumeLayout(false)
         Me.PanelEx58.ResumeLayout(false)
         Me.PanelEx58.PerformLayout
+        Me.panelPending.ResumeLayout(false)
+        Me.panelPending.PerformLayout
         Me.ResumeLayout(false)
 
 End Sub
@@ -10816,5 +10903,10 @@ End Sub
     Friend WithEvents Label166 As System.Windows.Forms.Label
     Friend WithEvents btnPrint1 As System.Windows.Forms.Button
     Friend WithEvents cboProfileQuestions As System.Windows.Forms.ComboBox
+    Friend WithEvents btnAssessmentEdit As System.Windows.Forms.Button
+    Friend WithEvents btnPending As System.Windows.Forms.Button
+    Friend WithEvents panelPending As DevComponents.DotNetBar.PanelEx
+    Friend WithEvents Label189 As System.Windows.Forms.Label
+    Friend WithEvents Button8 As System.Windows.Forms.Button
 
 End Class

@@ -23,6 +23,7 @@ Module mdlGlobal
     Public frmLogin1 As New formLogin
     Public displayname As String, designation As String, userImage As String, usertype As String
     Public normalHeight As Integer, normalWidth As Integer, maxHeight As Integer, maxWidth As Integer
+    Public itemType As String
 
     Public Sub establishSQLConnection(ByVal connectionString As String)
         sqlCon = New Odbc.OdbcConnection(connectionString)

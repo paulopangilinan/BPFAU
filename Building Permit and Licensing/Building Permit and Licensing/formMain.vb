@@ -742,6 +742,28 @@ Public Class formMain
         Dim dtAssessmentSave As DataTable = executeQuery(q, "tblAssessmentSave")
     End Sub
 
+    Sub updateAssessmentApplicant()
+        Dim q As String
+        Dim subdivision As String
+        If cboSubdivision_Assess.SelectedIndex = -1 Then
+            subdivision = ""
+        Else
+            subdivision = subdAssessment(cboSubdivision_Assess.SelectedIndex)
+        End If
+        q = "UPDATE tblassessmentapplicant SET Date = '" & initializeQueryEntry(dtAssessDate.Value.ToShortDateString, False) & "', LastName = '" & initializeQueryEntry(txtAssessLast.Text.Trim, False) & "'," & _
+            "FirstName = '" & initializeQueryEntry(txtAssessFirst.Text.Trim, False) & "', MiddleName = '" & initializeQueryEntry(txtAssessMiddle.Text.Trim, False) & "', " & _
+            "Project = '" & initializeQueryEntry(txtAssessProject.Text.Trim, False) & "', Lot = '" & initializeQueryEntry(txtAssessLot.Text.Trim, False) & "'," & _
+            "Block = '" & initializeQueryEntry(txtAssessBlock.Text.Trim, False) & "', Phase = '" & initializeQueryEntry(txtAssessPhase.Text.Trim, False) & "'," & _
+            "SubdivisionCode = '" & initializeQueryEntry(subdivision, False) & "', OtherInfo = '" & initializeQueryEntry(txtAssessOther.Text.Trim, False) & "'," & _
+            "Zone = '" & initializeQueryEntry(txtAssessZone.Text.Trim, False) & "', BarangayCode = '" & initializeQueryEntry(brgyAssessment(cbo_Barangay_Assess.SelectedIndex), False) & "'," & _
+            "Remarks = '" & initializeQueryEntry(txtAssessRemarks.Text, False) & "', PermitPre = '" & initializeQueryEntry(txtAssessPermitPre.Text.Trim, False) & "'," & _
+            "PermitSub = '" & initializeQueryEntry(txtAssessPermitSub.Text.Trim, False) & "', PermitDate = '" & initializeQueryEntry(dtPermitIssue.Value.ToShortDateString, False) & "'," & _
+            "encoder = '" & initializeQueryEntry(txtAssesCode.Text.Trim, False) & "' " & _
+            " WHERE ACN = '" & initializeQueryEntry(txtACN.Text, False) & "'"
+
+        Dim dtAssessmentUpdate As DataTable = executeQuery(q, "tblAssessmentUpdate")
+    End Sub
+
     Sub saveAssessmentSummary()
         Dim q As String = "INSERT INTO tblassessmentsummary(ACN, BuildConst, ElecInst, MechIns, PlumbIns, ElectroIns, BuildAcc," & _
                         "OtherAcc, BuildOcc, BuildInsp, CertFee, Fines, TOTALAssess, Local, Natl, OBO) " & _
@@ -751,6 +773,31 @@ Public Class formMain
             "'" & CDbl(txtLocalGov.Text) & "','" & CDbl(txtNatlGov.Text) & "','" & CDbl(txtOBO.Text) & "')"
         Dim dtAssessmentSumSave As DataTable = executeQuery(q, "tblAssessmentSumSave")
     End Sub
+
+    Sub updateAssessmentSummary()
+        Dim q As String = "UPDATE tblassessmentsummary SET BuildConst='" & CDbl(txtBuildConstFee.Text) & "',ElecInst='" & CDbl(txtElecInsFee.Text) & "'," & _
+                        "MechIns='" & CDbl(txtMechInsFee.Text) & "',PlumbIns='" & CDbl(txtPlumbInsFee.Text) & "',ElectroIns='" & CDbl(txtElectroInsFee.Text) & "'," & _
+                        "BuildAcc='" & CDbl(txtBuildAccFee.Text) & "',OtherAcc='" & CDbl(txtOthrAccFee.Text) & "',BuildOcc='" & CDbl(txtBuildOccFee.Text) & "'," & _
+                        "BuildInsp='" & CDbl(txtBuildInspFee.Text) & "',CertFee='" & CDbl(txtCertFee.Text) & "',Fines='" & CDbl(txtFinesFee.Text) & "'," & _
+                        "TOTALAssess='" & CDbl(txtTotalAssessFee.Text) & "',Local='" & CDbl(txtLocalGov.Text) & "',Natl='" & CDbl(txtNatlGov.Text) & "'," & _
+                        "OBO='" & CDbl(txtOBO.Text) & "' WHERE ACN = '" & initializeQueryEntry(txtACN.Text, False) & "'"
+        Dim dtAssessmentSumSave As DataTable = executeQuery(q, "tblAssessmentSumUpdate")
+    End Sub
+
+    Function checkExistProject(ByVal projectName As String, Optional ByVal acn As String = "") As Boolean
+        Dim exist As Boolean = False
+        Dim q As String = "SELECT * FROM tblassessmentapplicant WHERE " & _
+            "Project = '" & initializeQueryEntry(txtAssessProject.Text.Trim, True) & "' "
+        If acn.Trim <> "" Then
+            q &= "AND ACN <> '" & initializeQueryEntry(acn, True) & "'"
+        End If
+        Dim dtACDN As DataTable = executeQuery(q, "checkACN")
+        If dtACDN.Rows.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 
 #End Region
 
@@ -1264,6 +1311,21 @@ Public Class formMain
             Else
                 IDCounter = CInt(dtpay.Rows(dtpay.Rows.Count - 1)(0).ToString) + 1
                 txtPID.Text = IDCounter.ToString.PadLeft(7, "0")
+            End If
+        End If
+    End Sub
+
+    Sub generateORNumber()
+        Dim query As String = "SELECT COUNT(*) FROM tblpayments"
+        Dim dtOR As DataTable = executeQuery(query, "tblOR")
+        Dim IDCounter As Integer = 0
+        If dtOR.Rows.Count > 0 Then
+            If dtOR.Rows(dtOR.Rows.Count - 1)(0).ToString = String.Empty Then
+                IDCounter += 1
+                txtPaymentOR.Text = Format(Date.Today, "MMyy-") & IDCounter.ToString.PadLeft(7, "0")
+            Else
+                IDCounter = CInt(dtOR.Rows(dtOR.Rows.Count - 1)(0).ToString) + 1
+                txtPaymentOR.Text = Format(Date.Today, "MMyy-") & IDCounter.ToString.PadLeft(7, "0")
             End If
         End If
     End Sub
@@ -2303,6 +2365,9 @@ Public Class formMain
             txtAssessAdditional.Visible = False
             Call loadBarangaysAssessment()
             Call loadSubdivisionsAssessment()
+            btnAssessmentEdit.Enabled = False
+            btnAssessmentNew.Enabled = True
+            btnAssessmentEdit.Text = "&Edit"
         Else
             slideAssessment.IsOpen = False
             panelSideBar.Enabled = True
@@ -2334,6 +2399,7 @@ Public Class formMain
         If btnAssessmentNew.Text = "&New" Then
             btnAssessmentNew.Text = "&Save"
             btnAssessmentClose.Text = "&Cancel"
+            btnAssessmentEdit.Enabled = False
             Call clearAllText(panelAssessment)
             Call resetZeroAllText(panelAssessSum)
             Call writeAllText(panelAssessment)
@@ -2351,6 +2417,7 @@ Public Class formMain
             lblAdd.Visible = False
             txtAssessAdditional.Visible = False
             txtAssessStatus.Text = "Pending"
+            btnAssessmentEdit.Enabled = False
         Else
             If txtAssessLast.Text = "" Then
                 MessageBoxEx.Show("Family name is required.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -2370,6 +2437,19 @@ Public Class formMain
             If cbo_Barangay_Assess.SelectedIndex = -1 Then
                 MessageBoxEx.Show("Barangay is required.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 cbo_Barangay_Assess.Focus()
+                Exit Sub
+            End If
+            If checkExistProject(txtAssessProject.Text.Trim) Then
+                MessageBoxEx.Show("Project name already exists.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                txtAssessProject.Focus()
+                Exit Sub
+            End If
+            If CDbl(txtTotalAssessFee.Text.Trim) < 0 Then
+                MessageBoxEx.Show("Total assessment amount is less than 0.00. Please input valid fees.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Exit Sub
+            End If
+            If CDbl(txtTotalAssessFee.Text.Trim) = 0 Then
+                MessageBoxEx.Show("Total assessment amount is 0.00. Please input valid fees.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Exit Sub
             End If
             Call saveAssessmentApplicant(additionalAssessment)
@@ -2522,6 +2602,7 @@ Public Class formMain
             slideAssessment.Enabled = True
             panelSearch.Visible = False
             btnAssessmentClose.Text = "&Cancel"
+            btnAssessmentEdit.Enabled = True
         ElseIf searchmode = "Occupancy" Then
             loadSearchItem(listSearchList.FocusedItem.SubItems(0).Text)
             panelSearch.Visible = False
@@ -3468,6 +3549,7 @@ Public Class formMain
             Call sideBarSelection(expPayment, picPanelPayment)
             Call writeAllText(panelNewPayments)
             Call generatePaymentID()
+            Call generateORNumber()
             slidePayment.IsOpen = True
             loadBarangaysAssessment()
             loadSubdivisionsAssessment()
@@ -3516,6 +3598,58 @@ Public Class formMain
             txtPaymentPaid.Text = FormatNumber(CDbl(txtPaymentPaid.Text), 2)
         End If
 
+    End Sub
+
+    Sub loadPendingList(Optional ByVal otherfilter As String = "")
+        listPayments.Items.Clear()
+        Dim sql As String = "SELECT " & _
+            "'-----' PaymentID, " & _
+            "tblApp.Date PaymentDate, " & _
+            "Lastname, " & _
+            "FirstName, " & _
+            "MiddleName, " & _
+            "tblApp.ACN, " & _
+            "Project, " & _
+            "Lot, " & _
+            "Block, " & _
+            "Phase, " & _
+            "CONCAT(SubdID,' - ',SubdName) SubdivisionCode, " & _
+            "OtherInfo, " & _
+            "Zone, " & _
+            "CONCAT(BrgyID,' - ',BrgyName) Barangay, " & _
+            "'-----' PaymentOR, " & _
+            "'-----' ORDate, " & _
+            "TotalAssess AS PaymentAssessment, " & _
+            "'0.00' PaymentAmount, " & _
+            "'0.00' PaymentChange " & _
+            "FROM tblassessmentapplicant tblApp " & _
+            "INNER JOIN tblassessmentsummary ON tblassessmentsummary.ACN = tblApp.ACN " & _
+            "LEFT JOIN tblsubdivisions tblBrgy ON SubDivisionCode = SubdID " & _
+            "LEFT JOIN tblbarangays tblSubd ON BarangayCode = brgyID WHERE tblApp.Status = 'PENDING' " & otherfilter & " ORDER BY CAST(tblApp.ACN AS UNSIGNED)"
+        Dim dtPending As DataTable = executeQuery(sql, "tblPending")
+        If dtPending.Rows.Count > 0 Then
+            For reccount As Integer = 0 To dtPending.Rows.Count - 1
+                Dim listItem As ListViewItem = listPayments.Items.Add(dtPending.Rows(reccount)(0).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(1).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(2).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(3).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(4).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(5).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(6).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(7).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(8).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(9).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(10).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(11).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(12).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(13).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(14).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(15).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(16).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(17).ToString)
+                listItem.SubItems.Add(dtPending.Rows(reccount)(18).ToString)
+            Next
+        End If
     End Sub
 
     Sub loadPaymentList(Optional ByVal otherfilter As String = "")
@@ -3572,8 +3706,8 @@ Public Class formMain
 
     Private Sub btnPayments_Click(sender As System.Object, e As System.EventArgs) Handles btnPayments.Click
         If btnPayments.Text = "Payment List" Then
+            itemType = "Paid"
             Call logtrail(userID, "Payment List", "Assessment", "***")
-            btnPayments.Text = "Close List"
             listPayments.Visible = True
             panelAddPayment.Visible = False
             Call clearAllText(panelNewPayments)
@@ -3582,18 +3716,12 @@ Public Class formMain
             PanelEx50.Visible = True
             btnFilter1.Visible = True
             btnPrint1.Visible = True
-        Else
-            btnPayments.Text = "Payment List"
-            listPayments.Visible = False
-            panelAddPayment.Visible = True
-            Call clearAllText(panelNewPayments)
-            Call generatePaymentID()
-            loadBarangaysAssessment()
-            loadSubdivisionsAssessment()
-            CheckBox1.Visible = False
-            PanelEx50.Visible = False
-            btnFilter1.Visible = False
-            btnPrint1.Visible = False
+            btnSavePayment.Visible = False
+            btnPaymentClose.Visible = False
+            Label184.Text = "Payment made from : "
+            btnPending.Visible = False
+            btnPayments.Visible = False
+            Button8.Visible = True
         End If
     End Sub
 
@@ -3629,6 +3757,7 @@ Public Class formMain
         Call logtrail(userID, "Add", "Payment", txtPID.Text.Trim)
         Call clearAllText(panelNewPayments)
         Call generatePaymentID()
+        Call generateORNumber()
         loadBarangaysAssessment()
         loadSubdivisionsAssessment()
     End Sub
@@ -3726,8 +3855,15 @@ Public Class formMain
         If CheckBox1.Checked Then
             PanelEx50.Enabled = True
         Else
+            dtPayList1.Value = Date.Today
+            dtPayList2.Value = Date.Today.AddDays(1)
             PanelEx50.Enabled = False
-            Call loadPaymentList()
+            If itemType = "Paid" Then
+                Call loadPaymentList()
+            Else
+                Call loadPendingList()
+            End If
+
         End If
     End Sub
 
@@ -3789,9 +3925,18 @@ Public Class formMain
                 MessageBoxEx.Show("Date from is greater than date to.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Exit Sub
             End If
-            Call loadPaymentList(" WHERE STR_TO_DATE(PaymentDate,'%m/%d/%Y') BETWEEN STR_TO_DATE('" & initializeQueryEntry(dtPayList1.Value.ToShortDateString, True) & "','%m/%d/%Y') AND STR_TO_DATE('" & initializeQueryEntry(dtPayList2.Value.ToShortDateString, True) & "','%m/%d/%Y') ")
+            If itemType = "Paid" Then
+                Call loadPaymentList(" WHERE STR_TO_DATE(PaymentDate,'%m/%d/%Y') BETWEEN STR_TO_DATE('" & initializeQueryEntry(dtPayList1.Value.ToShortDateString, True) & "','%m/%d/%Y') AND STR_TO_DATE('" & initializeQueryEntry(dtPayList2.Value.ToShortDateString, True) & "','%m/%d/%Y') ")
+            Else
+                Call loadPendingList(" AND (STR_TO_DATE(tblApp.Date,'%m/%d/%Y') BETWEEN STR_TO_DATE('" & initializeQueryEntry(dtPayList1.Value.ToShortDateString, True) & "','%m/%d/%Y') AND STR_TO_DATE('" & initializeQueryEntry(dtPayList2.Value.ToShortDateString, True) & "','%m/%d/%Y')) ")
+            End If
+
         Else
-            Call loadPaymentList()
+            If itemType = "Paid" Then
+                Call loadPaymentList()
+            Else
+                Call loadPendingList()
+            End If
         End If
     End Sub
 
@@ -3865,11 +4010,25 @@ Public Class formMain
             txtFee11.Text = FormatNumber(dtSearchItem.Rows(0)(29).ToString, 2)
 
 
-            txtPID.Text = listPayments.FocusedItem.SubItems(5).Text
-            txtPaymentOR.Text = listPayments.FocusedItem.SubItems(14).Text
             txtPaymentPaid.Text = FormatNumber(CDbl(listPayments.FocusedItem.SubItems(17).Text), 2)
             txtPaymentChange.Text = FormatNumber(CDbl(listPayments.FocusedItem.SubItems(18).Text), 2)
-            panelPaid.Visible = True
+            If itemType = "Paid" Then
+                txtPID.Text = listPayments.FocusedItem.SubItems(5).Text
+                txtPaymentOR.Text = listPayments.FocusedItem.SubItems(14).Text
+                panelPaid.Visible = True
+                panelPending.Visible = False
+                Label162.Visible = True
+                dtPaymentDate.Visible = True
+                PanelEx47.Text = "Payment Breakdown"
+            Else
+                Label162.Visible = False
+                dtPaymentDate.Visible = False
+                txtPID.Text = ""
+                txtPaymentOR.Text = ""
+                panelPaid.Visible = False
+                panelPending.Visible = True
+                PanelEx47.Text = "Assessment Breakdown"
+            End If
             Button6.Visible = True
             listPayments.Visible = False
 
@@ -3886,6 +4045,7 @@ Public Class formMain
             btnPayments.Visible = False
             btnSavePayment.Visible = False
             btnPaymentClose.Visible = False
+            btnPending.Visible = False
         End If
     End Sub
 
@@ -3899,6 +4059,7 @@ Public Class formMain
         txtPID.Text = ""
         txtPaymentOR.Text = ""
         panelPaid.Visible = False
+        panelPending.Visible = False
         Button6.Visible = False
         listPayments.Visible = True
 
@@ -3912,10 +4073,14 @@ Public Class formMain
         btnPrint1.Visible = True
         panelAddPayment.Visible = False
         Call writeAllText(panelNewPayments)
+        Button8.Visible = True
 
-        btnPayments.Visible = True
-        btnSavePayment.Visible = True
-        btnPaymentClose.Visible = True
+        Label162.Visible = True
+        dtPaymentDate.Visible = True
+        PanelEx47.Text = "Payment Breakdown"
+        'btnPayments.Visible = True
+        'btnSavePayment.Visible = True
+        'btnPaymentClose.Visible = True
     End Sub
 
     Private Sub btnPrint1_Click(sender As System.Object, e As System.EventArgs) Handles btnPrint1.Click
@@ -3924,14 +4089,78 @@ Public Class formMain
                 MessageBoxEx.Show("Date from is greater than date to.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Exit Sub
             End If
-            Call printPayments(" WHERE STR_TO_DATE(PaymentDate,'%m/%d/%Y') BETWEEN STR_TO_DATE('" & initializeQueryEntry(dtPayList1.Value.ToShortDateString, True) & "','%m/%d/%Y') AND STR_TO_DATE('" & initializeQueryEntry(dtPayList2.Value.ToShortDateString, True) & "','%m/%d/%Y') ")
+            If itemType = "Paid" Then
+                Call printPayments(" WHERE STR_TO_DATE(PaymentDate,'%m/%d/%Y') BETWEEN STR_TO_DATE('" & initializeQueryEntry(dtPayList1.Value.ToShortDateString, True) & "','%m/%d/%Y') AND STR_TO_DATE('" & initializeQueryEntry(dtPayList2.Value.ToShortDateString, True) & "','%m/%d/%Y') ")
+            Else
+                Call printPending(" AND (STR_TO_DATE(tblApp.Date,'%m/%d/%Y') BETWEEN STR_TO_DATE('" & initializeQueryEntry(dtPayList1.Value.ToShortDateString, True) & "','%m/%d/%Y') AND STR_TO_DATE('" & initializeQueryEntry(dtPayList2.Value.ToShortDateString, True) & "','%m/%d/%Y')) ")
+            End If
+
         Else
-            Call printPayments()
+            If itemType = "Paid" Then
+                Call printPayments()
+            Else
+                Call printPending()
+            End If
+
         End If
     End Sub
 
+    Sub printPending(Optional ByVal otherfilter As String = "")
+
+        Dim frmRep As New formReport
+        Dim rpt As New rptPayments
+        Dim dsRPen As New dsPaymentReport
+
+        Dim daRPen As New Odbc.OdbcDataAdapter("SELECT " & _
+            "'-----' PaymentID, " & _
+            "tblApp.Date PaymentDate, " & _
+            "Lastname, " & _
+            "FirstName, " & _
+            "MiddleName, " & _
+            "tblApp.ACN, " & _
+            "Project, " & _
+            "Lot, " & _
+            "Block, " & _
+            "Phase, " & _
+            "CONCAT(SubdID,' - ',SubdName) SubdivisionCode, " & _
+            "OtherInfo, " & _
+            "Zone, " & _
+            "CONCAT(BrgyID,' - ',BrgyName) Barangay, " & _
+            "'-----' PaymentOR, " & _
+            "'-----' ORDate, " & _
+            "TotalAssess AS PaymentAssessment, " & _
+            "'0.00' PaymentAmount, " & _
+            "'0.00' PaymentChange " & _
+            "FROM tblassessmentapplicant tblApp " & _
+            "INNER JOIN tblassessmentsummary ON tblassessmentsummary.ACN = tblApp.ACN " & _
+            "LEFT JOIN tblsubdivisions tblBrgy ON SubDivisionCode = SubdID " & _
+            "LEFT JOIN tblbarangays tblSubd ON BarangayCode = brgyID WHERE tblApp.Status = 'PENDING' " & otherfilter & " ORDER BY CAST(tblApp.ACN AS UNSIGNED)", sqlCon)
+        daRPen.Fill(dsRPen, "dtPayment")
+        rpt.SetDataSource(dsRPen.Tables(0))
+
+        remark_A = New CrystalDecisions.Shared.ParameterDiscreteValue
+        remark_B = New CrystalDecisions.Shared.ParameterValues
+
+        remark_A.Value = itemType
+        remark_B.Add(remark_A)
+        rpt.DataDefinition.ParameterFields("ReportType").ApplyCurrentValues(remark_B)
+
+        remark_A.Value = Format(dtPayList1.Value, "MMM dd, yyyy")
+        remark_B.Add(remark_A)
+        rpt.DataDefinition.ParameterFields("dateFrom").ApplyCurrentValues(remark_B)
+
+
+        remark_A.Value = Format(dtPayList2.Value, "MMM dd, yyyy")
+        remark_B.Add(remark_A)
+        rpt.DataDefinition.ParameterFields("dateTo").ApplyCurrentValues(remark_B)
+
+        frmRep.CrystalReportViewer1.ReportSource = rpt
+        Call logtrail(userID, "Print Pending List", "Pending List", "***")
+        frmRep.ShowDialog()
+    End Sub
+
     Sub printPayments(Optional ByVal otherfilter As String = "")
-        
+
         Dim frmRep As New formReport
         Dim rpt As New rptPayments
         Dim dsR As New dsPaymentReport
@@ -3955,7 +4184,8 @@ Public Class formMain
             "ORDate, " & _
             "PaymentAssessment, " & _
             "PaymentAmount, " & _
-            "(PaymentAmount - PaymentAssessment) PaymentChange " & _
+            "(PaymentAmount - PaymentAssessment) PaymentChange, " & _
+            "CONCAT(PermitPre,'-',PermitSub) PermitNo " & _
             "FROM tblassessmentapplicant tblApp " & _
             "INNER JOIN tblPayments ON tblPayments.ACN = tblApp.ACN " & _
             "LEFT JOIN tblsubdivisions tblBrgy ON SubDivisionCode = SubdID " & _
@@ -3965,6 +4195,10 @@ Public Class formMain
 
         remark_A = New CrystalDecisions.Shared.ParameterDiscreteValue
         remark_B = New CrystalDecisions.Shared.ParameterValues
+
+        remark_A.Value = "Payment"
+        remark_B.Add(remark_A)
+        rpt.DataDefinition.ParameterFields("ReportType").ApplyCurrentValues(remark_B)
 
         remark_A.Value = Format(dtPayList1.Value, "MMM dd, yyyy")
         remark_B.Add(remark_A)
@@ -4065,6 +4299,108 @@ Public Class formMain
     Private Sub LinkLabel2_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
         imageUpload = ""
         picSystemProfile.Image = My.Resources.DefaultUser
+    End Sub
+
+    Private Sub btnAssessmentEdit_Click(sender As System.Object, e As System.EventArgs) Handles btnAssessmentEdit.Click
+        If txtAssessStatus.Text = "Paid" Then
+            MessageBoxEx.Show("You cannot modify a paid assessment.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Exit Sub
+        End If
+        If txtAssessStatus.Text = "Void" Then
+            MessageBoxEx.Show("You cannot modify an already voided assessment.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Exit Sub
+        End If
+        If btnAssessmentEdit.Text = "&Edit" Then
+            Call writeAllText(panelAssessment)
+            Call writeAllText(panelAssessSum)
+            txtAssessRemarks.ReadOnly = True
+            btnAssessmentEdit.Text = "&Update"
+            btnAssessmentClose.Text = "&Cancel"
+            btnAssessmentFind.Enabled = False
+            btnAssessmentNew.Enabled = False
+        Else
+            If txtAssessLast.Text.Trim = "" Then
+                MessageBoxEx.Show("Family name is required.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                txtAssessLast.Focus()
+                Exit Sub
+            End If
+            If txtAssessFirst.Text.Trim = "" Then
+                MessageBoxEx.Show("First name is required.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                txtAssessFirst.Focus()
+                Exit Sub
+            End If
+            If txtAssessProject.Text.Trim = "" Then
+                MessageBoxEx.Show("Project is required.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                txtAssessProject.Focus()
+                Exit Sub
+            End If
+            If cbo_Barangay_Assess.SelectedIndex = -1 Then
+                MessageBoxEx.Show("Barangay is required.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                cbo_Barangay_Assess.Focus()
+                Exit Sub
+            End If
+            If checkExistProject(txtAssessProject.Text.Trim, txtACN.Text) Then
+                MessageBoxEx.Show("Project name already exists.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                txtAssessProject.Focus()
+                Exit Sub
+            End If
+            Call updateAssessmentApplicant()
+            Call updateAssessmentSummary()
+            MessageBoxEx.Show("Record successfully saved.", My.Resources.PopupTitle, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call logtrail(userID, "Edit", "Assessment", txtACN.Text.Trim)
+            Call readAllText(panelAssessment)
+            Call readAllText(panelAssessSum)
+            Call resetZeroAllText(panelAssessSum)
+            Call clearAllText(panelAssessment)
+            Call loadBarangaysAssessment()
+            Call loadSubdivisionsAssessment()
+            btnAssessmentFind.Enabled = True
+            btnAssessmentNew.Enabled = True
+            btnAssessmentEdit.Text = "&Edit"
+            btnAssessmentClose.Text = "&Close"
+            btnAssessmentEdit.Enabled = False
+        End If
+    End Sub
+
+    Private Sub btnPending_Click(sender As System.Object, e As System.EventArgs) Handles btnPending.Click
+        If btnPending.Text = "Pending List" Then
+            itemType = "Pending"
+            Call logtrail(userID, "Pending List", "Assessment", "***")
+            listPayments.Visible = True
+            panelAddPayment.Visible = False
+            Call clearAllText(panelNewPayments)
+            Call loadPendingList()
+            CheckBox1.Visible = True
+            PanelEx50.Visible = True
+            btnFilter1.Visible = True
+            btnPrint1.Visible = True
+            btnSavePayment.Visible = False
+            btnPaymentClose.Visible = False
+            Label184.Text = "Pending Items from : "
+            btnPayments.Visible = False
+            btnPending.Visible = False
+            Button8.Visible = True
+        End If
+    End Sub
+
+    Private Sub Button8_Click(sender As System.Object, e As System.EventArgs) Handles Button8.Click
+        itemType = ""
+        listPayments.Visible = False
+        panelAddPayment.Visible = True
+        Call clearAllText(panelNewPayments)
+        Call generatePaymentID()
+        Call generateORNumber()
+        loadBarangaysAssessment()
+        loadSubdivisionsAssessment()
+        CheckBox1.Visible = False
+        PanelEx50.Visible = False
+        btnFilter1.Visible = False
+        btnPrint1.Visible = False
+        btnSavePayment.Visible = True
+        btnPaymentClose.Visible = True
+        Button8.Visible = False
+        btnPending.Visible = True
+        btnPayments.Visible = True
     End Sub
 End Class
 

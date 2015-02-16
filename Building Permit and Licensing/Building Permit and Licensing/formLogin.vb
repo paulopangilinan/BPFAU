@@ -309,4 +309,8 @@ Public Class formLogin
         panelNewPassword.Visible = False
         slideForgot.IsOpen = False
     End Sub
+
+    Private Sub PanelEx5_Click(sender As System.Object, e As System.EventArgs) Handles PanelEx5.Click
+
+    End Sub
 End Class

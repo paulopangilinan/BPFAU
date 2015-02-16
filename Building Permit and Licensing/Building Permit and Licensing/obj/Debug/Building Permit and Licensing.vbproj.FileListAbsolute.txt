@@ -86,9 +86,21 @@ D:\Paulo\Projects\BPFAU\Building Permit and Licensing\Building Permit and Licens
 D:\Paulo\Projects\BPFAU\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.exe
 D:\Paulo\Projects\BPFAU\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.pdb
 D:\Paulo\Projects\BPFAU\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.xml
-D:\Paulo\Projects\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building Permit and Licensing.vbprojResolveAssemblyReference.cache
 D:\Paulo\Projects\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building_Permit_and_Licensing.formLogin.resources
 D:\Paulo\Projects\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building_Permit_and_Licensing.formMain.resources
 D:\Paulo\Projects\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building_Permit_and_Licensing.formReport.resources
 D:\Paulo\Projects\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building_Permit_and_Licensing.Resources.resources
 D:\Paulo\Projects\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building Permit and Licensing.vbproj.GenerateResource.Cache
+C:\Users\ppangilinan.DEV\Documents\BPFAU\BPFAU\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.exe.config
+C:\Users\ppangilinan.DEV\Documents\BPFAU\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building Permit and Licensing.exe
+C:\Users\ppangilinan.DEV\Documents\BPFAU\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building Permit and Licensing.xml
+C:\Users\ppangilinan.DEV\Documents\BPFAU\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building Permit and Licensing.pdb
+C:\Users\ppangilinan.DEV\Documents\BPFAU\BPFAU\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.exe
+C:\Users\ppangilinan.DEV\Documents\BPFAU\BPFAU\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.pdb
+C:\Users\ppangilinan.DEV\Documents\BPFAU\BPFAU\Building Permit and Licensing\Building Permit and Licensing\bin\Debug\Building Permit and Licensing.xml
+C:\Users\ppangilinan.DEV\Documents\BPFAU\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building Permit and Licensing.vbprojResolveAssemblyReference.cache
+C:\Users\ppangilinan.DEV\Documents\BPFAU\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building_Permit_and_Licensing.formLogin.resources
+C:\Users\ppangilinan.DEV\Documents\BPFAU\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building_Permit_and_Licensing.formMain.resources
+C:\Users\ppangilinan.DEV\Documents\BPFAU\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building_Permit_and_Licensing.formReport.resources
+C:\Users\ppangilinan.DEV\Documents\BPFAU\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building_Permit_and_Licensing.Resources.resources
+C:\Users\ppangilinan.DEV\Documents\BPFAU\BPFAU\Building Permit and Licensing\Building Permit and Licensing\obj\Debug\Building Permit and Licensing.vbproj.GenerateResource.Cache

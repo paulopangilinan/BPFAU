@@ -321,6 +321,8 @@ Partial Public Class dsPaymentReport
         
         Private columnPaymentChange As Global.System.Data.DataColumn
         
+        Private columnPermitNo As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -509,6 +511,14 @@ Partial Public Class dsPaymentReport
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property PermitNoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPermitNo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -564,9 +574,10 @@ Partial Public Class dsPaymentReport
                     ByVal ORDate As String,  _
                     ByVal PaymentAssessment As String,  _
                     ByVal PaymentAmount As String,  _
-                    ByVal PaymentChange As String) As dtPaymentRow
+                    ByVal PaymentChange As String,  _
+                    ByVal PermitNo As String) As dtPaymentRow
             Dim rowdtPaymentRow As dtPaymentRow = CType(Me.NewRow,dtPaymentRow)
-            Dim columnValuesArray() As Object = New Object() {PaymentID, PaymentDate, Lastname, FirstName, MiddleName, ACNo, Project, Lot, Block, Phase, SubdivisionCode, OtherInfo, Zone, Barangay, PaymentOR, ORDate, PaymentAssessment, PaymentAmount, PaymentChange}
+            Dim columnValuesArray() As Object = New Object() {PaymentID, PaymentDate, Lastname, FirstName, MiddleName, ACNo, Project, Lot, Block, Phase, SubdivisionCode, OtherInfo, Zone, Barangay, PaymentOR, ORDate, PaymentAssessment, PaymentAmount, PaymentChange, PermitNo}
             rowdtPaymentRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowdtPaymentRow)
             Return rowdtPaymentRow
@@ -608,6 +619,7 @@ Partial Public Class dsPaymentReport
             Me.columnPaymentAssessment = MyBase.Columns("PaymentAssessment")
             Me.columnPaymentAmount = MyBase.Columns("PaymentAmount")
             Me.columnPaymentChange = MyBase.Columns("PaymentChange")
+            Me.columnPermitNo = MyBase.Columns("PermitNo")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -651,6 +663,8 @@ Partial Public Class dsPaymentReport
             MyBase.Columns.Add(Me.columnPaymentAmount)
             Me.columnPaymentChange = New Global.System.Data.DataColumn("PaymentChange", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPaymentChange)
+            Me.columnPermitNo = New Global.System.Data.DataColumn("PermitNo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPermitNo)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1082,6 +1096,21 @@ Partial Public Class dsPaymentReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property PermitNo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabledtPayment.PermitNoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'PermitNo' in table 'dtPayment' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabledtPayment.PermitNoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsPaymentIDNull() As Boolean
             Return Me.IsNull(Me.tabledtPayment.PaymentIDColumn)
         End Function
@@ -1306,6 +1335,18 @@ Partial Public Class dsPaymentReport
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetPaymentChangeNull()
             Me(Me.tabledtPayment.PaymentChangeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsPermitNoNull() As Boolean
+            Return Me.IsNull(Me.tabledtPayment.PermitNoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetPermitNoNull()
+            Me(Me.tabledtPayment.PermitNoColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
